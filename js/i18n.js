@@ -7,7 +7,7 @@ class I18nManager {
     constructor() {
         this.currentLang = 'zh-CN';
         this.fallbackLang = 'en';
-        this.supportedLangs = ['zh-CN', 'en', 'ja', 'ko', 'es', 'fr', 'de'];
+        this.supportedLangs = ['zh-CN', 'en', 'ja'];
         this.translations = {};
         this.init();
     }
@@ -235,11 +235,7 @@ class I18nManager {
         const flags = {
             'zh-CN': '🇨🇳',
             'en': '🇺🇸',
-            'ja': '🇯🇵',
-            'ko': '🇰🇷',
-            'es': '🇪🇸',
-            'fr': '🇫🇷',
-            'de': '🇩🇪'
+            'ja': '🇯🇵'
         };
         return flags[lang] || '🌐';
     }
@@ -248,11 +244,7 @@ class I18nManager {
         const names = {
             'zh-CN': '中文',
             'en': 'English',
-            'ja': '日本語',
-            'ko': '한국어',
-            'es': 'Español',
-            'fr': 'Français',
-            'de': 'Deutsch'
+            'ja': '日本語'
         };
         return names[lang] || lang;
     }
