@@ -1,0 +1,305 @@
+/**
+ * PageMiner 国际化样式文件
+ * 包含语言切换器和多语言相关的样式
+ */
+
+/* 语言切换器容器 */
+.language-switcher {
+    position: relative;
+    margin-left: 2rem;
+    z-index: 1000;
+}
+
+/* 当前语言显示 */
+.lang-current {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lang-current:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.lang-flag {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.lang-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: white;
+    white-space: nowrap;
+}
+
+.lang-arrow {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.language-switcher.active .lang-arrow {
+    transform: rotate(180deg);
+}
+
+/* 语言下拉菜单 */
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-light);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.language-switcher:hover .lang-dropdown,
+.language-switcher.active .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 语言选项 */
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.lang-option:last-child {
+    border-bottom: none;
+}
+
+.lang-option:hover {
+    background: var(--bg-secondary);
+}
+
+.lang-option.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.lang-option.active .lang-flag {
+    filter: brightness(1.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .language-switcher {
+        margin-left: 1rem;
+    }
+    
+    .lang-name {
+        display: none;
+    }
+    
+    .lang-dropdown {
+        min-width: 160px;
+        right: -0.5rem;
+    }
+}
+
+/* 多语言内容过渡动画 */
+[data-i18n] {
+    transition: opacity 0.3s ease;
+}
+
+[data-i18n].loading {
+    opacity: 0.6;
+}
+
+/* 语言检测提示 */
+.language-notice {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.language-notice.show {
+    transform: translateX(0);
+}
+
+.language-notice .notice-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.language-notice .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.language-notice .close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 语言切换按钮样式 */
+.lang-switch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+}
+
+.lang-switch-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* 多语言SEO优化 */
+.lang-alternate {
+    display: none;
+}
+
+.lang-alternate[data-lang] {
+    display: block;
+}
+
+/* 语言特定的样式调整 */
+[lang="ja"] .lang-specific-ja,
+[lang="ko"] .lang-specific-ko,
+[lang="zh-CN"] .lang-specific-zh {
+    display: block;
+}
+
+.lang-specific-ja,
+.lang-specific-ko,
+.lang-specific-zh {
+    display: none;
+}
+
+/* 日语和韩语的字体优化 */
+[lang="ja"] body,
+[lang="ko"] body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK JP", "Noto Sans CJK KR", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+/* 阿拉伯语和希伯来语的RTL支持 */
+[lang="ar"],
+[lang="he"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[lang="ar"] .lang-dropdown,
+[lang="he"] .lang-dropdown {
+    right: auto;
+    left: 0;
+}
+
+/* 语言加载状态 */
+.language-loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--border-light);
+    border-top: 2px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 语言切换成功提示 */
+.language-success {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--success-color);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.language-success.show {
+    transform: translateX(0);
+}
+
+.language-success .success-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 移动端语言切换器优化 */
+@media (max-width: 480px) {
+    .language-switcher {
+        position: static;
+        margin: 1rem 0;
+        width: 100%;
+    }
+    
+    .lang-current {
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .lang-dropdown {
+        position: static;
+        margin-top: 0.5rem;
+        box-shadow: none;
+        border: 1px solid var(--border-light);
+    }
+    
+    .language-notice,
+    .language-success {
+        left: 1rem;
+        right: 1rem;
+        transform: translateY(-100%);
+    }
+    
+    .language-notice.show,
+    .language-success.show {
+        transform: translateY(0);
+    }
+}

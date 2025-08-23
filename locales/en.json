@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "title": "PageMiner - Intelligent Web Data Extraction Assistant",
+    "description": "PageMiner is a powerful browser extension that helps users quickly and accurately extract structured data from any webpage through visual operations. Supporting multiple export formats, making data collection simple and efficient.",
+    "keywords": "web data extraction,data collection,web scraping,browser extension,data mining,automation tools",
+    "og": {
+      "title": "PageMiner - Intelligent Web Data Extraction Assistant",
+      "description": "Quickly extract web data through visual operations, supporting multiple export formats, making data collection simple and efficient."
+    },
+    "twitter": {
+      "title": "PageMiner - Intelligent Web Data Extraction Assistant",
+      "description": "Quickly extract web data through visual operations, supporting multiple export formats, making data collection simple and efficient."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "download": "Download",
+    "demo": "Tutorial",
+    "video": "Demo Video",
+    "downloadNow": "Download Now"
+  },
+  "hero": {
+    "title": "Intelligent Web Data Extraction Assistant",
+    "subtitle": "Easily extract structured data from any webpage through visual operations. No programming knowledge required, making data collection simple and efficient.",
+    "cta": "Get Started",
+    "watchDemo": "Watch Demo",
+    "download": "Free Download"
+  },
+  "features": {
+    "title": "Powerful Features",
+    "subtitle": "PageMiner provides a complete web data extraction solution",
+    "visual": {
+      "title": "🎯 Visual Selection",
+      "description": "Select data elements directly on webpages through mouse hover and click operations"
+    },
+    "smart": {
+      "title": "🧠 Smart Rule Generation",
+      "description": "Automatically analyze page structure and generate precise CSS selectors without manual coding"
+    },
+    "auto": {
+      "title": "⚡ Auto Execution",
+      "description": "Automatically execute data extraction on similar pages after configuration, greatly improving work efficiency"
+    },
+    "export": {
+      "title": "📊 Multiple Export Formats",
+      "description": "Support CSV, Excel, JSON and other formats, data can be directly used in analysis tools"
+    },
+    "storage": {
+      "title": "💾 Local Storage",
+      "description": "All data is saved locally by default, protecting user privacy, supporting rule import and export"
+    },
+    "sync": {
+      "title": "☁️ Cloud Sync",
+      "description": "Support cloud synchronization of rules and data, seamless collaboration across multiple devices"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Simple three steps to start intelligent data extraction",
+    "step1": {
+      "title": "Select Elements",
+      "description": "Click to select data elements on the webpage that need to be extracted"
+    },
+    "step2": {
+      "title": "Configure Rules",
+      "description": "The system automatically generates extraction rules, you can adjust as needed"
+    },
+    "step3": {
+      "title": "Extract Data",
+      "description": "One-click execution, automatically extract and export structured data"
+    }
+  },
+  "screenshots": {
+    "title": "Interface Showcase",
+    "subtitle": "Intuitive and friendly user interface, making data extraction simple"
+  },
+  "useCases": {
+    "title": "Use Cases",
+    "subtitle": "PageMiner is suitable for various data collection needs",
+    "ecommerce": {
+      "title": "🛒 E-commerce Operations",
+      "description": "Monitor competitor prices, collect product information, analyze market trends"
+    },
+    "research": {
+      "title": "📊 Market Research",
+      "description": "Collect industry reports, statistical data, news and information"
+    },
+    "hr": {
+      "title": "👥 Human Resources",
+      "description": "Scrape recruitment information, candidate profiles, salary data"
+    },
+    "content": {
+      "title": "📰 Content Creation",
+      "description": "Collect trending topics, user comments, trend data"
+    }
+  },
+  "pricing": {
+    "title": "Pricing Plans",
+    "subtitle": "Choose the plan that best suits you",
+    "free": {
+      "title": "Free",
+      "price": "$0",
+      "period": "/month",
+      "features": [
+        "✅ Basic data extraction features",
+        "✅ Save up to 10 rules",
+        "✅ CSV format export",
+        "✅ Local data storage",
+        "✅ Basic technical support"
+      ],
+      "cta": "Start Free"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$2.99",
+      "period": "/month",
+      "features": [
+        "✅ All free features",
+        "✅ Unlimited rule saving",
+        "✅ Multiple format export",
+        "✅ Rule cloud sync",
+        "✅ Scheduled tasks",
+        "✅ Priority customer support"
+      ],
+      "cta": "Upgrade Now"
+    }
+  },
+  "download": {
+    "title": "Start Using PageMiner Now",
+    "subtitle": "Join 10,000+ users and experience the charm of intelligent data extraction",
+    "chromeStore": "Download from Chrome Store",
+    "watchDemo": "Watch Demo Video",
+    "info": [
+      "Support Chrome, Edge, Firefox and other mainstream browsers",
+      "Ready to use after installation, no additional configuration required"
+    ]
+  },
+  "footer": {
+    "description": "Intelligent web data extraction assistant, making data collection simple and efficient.",
+    "product": "Product",
+    "support": "Support",
+    "company": "Company",
+    "copyright": "© 2025 PageMiner. All rights reserved."
+  },
+  "demo": {
+    "title": "PageMiner Feature Demo",
+    "subtitle": "Experience the powerful features of intelligent web data extraction, learn how to easily achieve data automation collection",
+    "startExperience": "Start Experience",
+    "coreFeatures": {
+      "title": "Core Feature Demo",
+      "subtitle": "Learn how PageMiner changes your data collection workflow",
+      "visual": {
+        "title": "🎯 Visual Selection",
+        "description": "Select data elements directly on webpages through mouse hover and click operations. The system automatically highlights selectable elements and generates unique CSS selectors.",
+        "cta": "Experience Selection"
+      },
+      "smart": {
+        "title": "🧠 Smart Rule Generation",
+        "description": "No need to manually write CSS selectors, PageMiner automatically analyzes page structure and generates precise extraction rules, supporting multiple data types such as text, images, and links.",
+        "cta": "View Rules"
+      },
+      "auto": {
+        "title": "⚡ Auto Execution",
+        "description": "After configuration, the system automatically executes data extraction on similar pages without repeated operations, greatly improving work efficiency.",
+        "cta": "Test Execution"
+      },
+      "data": {
+        "title": "📊 Data Management",
+        "description": "Extracted data is displayed in structured form, supporting multiple format exports, convenient for subsequent analysis and processing.",
+        "cta": "View Data"
+      }
+    },
+    "interactive": {
+      "title": "Interactive Experience",
+      "subtitle": "Personally experience PageMiner's data extraction process",
+      "step1": "Configure Rules",
+      "step2": "Select Fields",
+      "step3": "Extract Data",
+      "ruleName": "Rule Name",
+      "ruleNamePlaceholder": "e.g., E-commerce Product Info",
+      "ruleKey": "Rule Key",
+      "ruleKeyPlaceholder": "e.g., product-info",
+      "targetUrl": "Target Website",
+      "targetUrlPlaceholder": "e.g., https://example.com",
+      "fieldName": "Field Name",
+      "fieldNamePlaceholder": "e.g., Product Name",
+      "fieldSelector": "Selector",
+      "fieldSelectorPlaceholder": "e.g., .product-title",
+      "startExtraction": "Start Extraction",
+      "results": "Extraction Results",
+      "field": "Field",
+      "selector": "Selector",
+      "extractedValue": "Extracted Value",
+      "status": "Status",
+      "success": "✅ Success"
+    },
+    "showcase": {
+      "title": "Feature Showcase",
+      "subtitle": "Deeply understand PageMiner's technical advantages and usage methods",
+      "recognition": {
+        "title": "🔍 Smart Element Recognition",
+        "description": "PageMiner can intelligently recognize list structures, table data, and repeated elements on pages, automatically generating optimal extraction strategies. Supporting multiple element type detection."
+      },
+      "configuration": {
+        "title": "⚙️ Rule Configuration",
+        "description": "Support multiple selector types including CSS selectors, XPath, DOM paths, etc., meeting different scenario requirements. Automatically generate unique selectors."
+      },
+      "reuse": {
+        "title": "🔄 Rule Reuse",
+        "description": "Configure once, use everywhere. Support rule import and export, efficient team collaboration."
+      },
+      "export": {
+        "title": "📈 Data Export",
+        "description": "Support CSV, Excel, JSON and other format exports, data can be directly used in analysis tools or databases."
+      }
+    },
+    "pluginFeatures": {
+      "title": "Plugin Features",
+      "subtitle": "Core feature showcase based on actual code implementation",
+      "visualMode": {
+        "title": "🎨 Visual Extraction Mode",
+        "description": "After starting extraction mode, hovering over page elements shows red border highlighting, clicking elements to select and configure extraction rules."
+      },
+      "typeDetection": {
+        "title": "🔍 Smart Type Detection",
+        "description": "Automatically detect element types, intelligently recommend field types, supporting multiple data types such as text, images, and links."
+      },
+      "progress": {
+        "title": "⚡ Real-time Extraction Progress",
+        "description": "Display real-time progress during extraction, highlight elements being extracted, provide visual feedback and status indication."
+      },
+      "storage": {
+        "title": "💾 Local Data Storage",
+        "description": "All extraction rules and data are saved locally by default, protecting user privacy, supporting rule import and export."
+      }
+    },
+    "scenarios": {
+      "title": "Practical Application Scenarios",
+      "subtitle": "Understand PageMiner's application value in different industries",
+      "ecommerce": {
+        "title": "🛒 E-commerce Operations",
+        "description": "Monitor competitor prices, collect product information, analyze market trends, providing data support for product strategies.",
+        "applicable": "Applicable: Price monitoring, competitor analysis, product research"
+      },
+      "research": {
+        "title": "📊 Market Research",
+        "description": "Collect industry reports, statistical data, news and information, building complete research databases.",
+        "applicable": "Applicable: Industry analysis, trend research, data collection"
+      },
+      "hr": {
+        "title": "👥 Human Resources",
+        "description": "Scrape recruitment information, candidate profiles, salary data, optimizing recruitment and talent management processes.",
+        "applicable": "Applicable: Recruitment info, talent analysis, market research"
+      },
+      "content": {
+        "title": "📰 Content Creation",
+        "description": "Collect trending topics, user comments, trend data, providing inspiration and materials for content creation.",
+        "applicable": "Applicable: Trend tracking, user insights, content planning"
+      }
+    }
+  },
+  "video": {
+    "meta": {
+      "title": "PageMiner Demo Video - Watch Intelligent Data Extraction Demo",
+      "description": "Watch the complete operation demo of PageMiner to understand the powerful features and usage methods of intelligent web data extraction.",
+      "keywords": "PageMiner demo video,data extraction demo,smart rule generation,visual selection,automated execution",
+      "og": {
+        "title": "PageMiner Demo Video",
+        "description": "Watch the complete operation demo of PageMiner to understand the powerful features and usage methods of intelligent web data extraction."
+      }
+    },
+    "title": "🎥 PageMiner Demo Video",
+    "subtitle": "Watch the complete demo of intelligent web data extraction to understand how PageMiner makes data collection simple and efficient",
+    "demo": {
+      "title": "Feature Demo Video",
+      "subtitle": "Understand PageMiner's complete workflow through actual operation demonstrations",
+      "description": "This video demonstrates the complete usage process of the PageMiner plugin, including visual selection, intelligent rule generation, data extraction, and result management.",
+      "visual": {
+        "title": "Visual Selection",
+        "description": "Demonstrates how to select page elements through mouse hover and click operations, with the system automatically highlighting selectable elements."
+      },
+      "smart": {
+        "title": "Smart Rule Generation",
+        "description": "Shows how the system automatically analyzes page structure to generate precise CSS selectors and extraction rules."
+      },
+      "execution": {
+        "title": "Data Extraction Execution",
+        "description": "Demonstrates how to automatically execute data extraction after configuration, showing real-time progress and results."
+      },
+      "management": {
+        "title": "Result Management",
+        "description": "Shows structured display of extracted data, export functionality, and local storage management."
+      }
+    },
+    "overview": {
+      "title": "📋 Video Content Overview",
+      "timeline": {
+        "0": "Plugin installation and basic interface introduction",
+        "1": "Visual element selection demonstration",
+        "2": "Smart rule configuration and optimization",
+        "3": "Data extraction execution and progress monitoring",
+        "4": "Result viewing, export and management",
+        "5": "Advanced features and usage tips"
+      },
+      "tip": "💡 Tip"
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "After watching the demo video, you can:",
+      "tutorial": "View Usage Tutorial",
+      "download": "Download Plugin Now"
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "support": "Technical Support",
+    "feedback": "Feedback",
+    "community": "User Community",
+    "about": "About Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "careers": "Join Us",
+    "help": "Help Center"
+  }
+}

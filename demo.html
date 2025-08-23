@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PageMiner 功能演示 - 体验智能数据提取</title>
-    <meta name="description" content="体验PageMiner的强大功能，包括可视化数据提取、智能规则生成、自动化执行等特性。">
+    <title data-i18n="demo.meta.title">PageMiner 功能演示 - 体验智能数据提取</title>
+    <meta name="description" data-i18n="demo.meta.description" content="体验PageMiner的强大功能，包括可视化数据提取、智能规则生成、自动化执行等特性。">
+    <meta name="keywords" data-i18n="demo.meta.keywords" content="PageMiner演示,数据提取演示,智能规则生成,可视化选择,自动化执行">
+    
+    <!-- SEO优化 -->
+    <meta name="author" content="PageMiner Team">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" data-i18n="demo.meta.og.title" content="PageMiner 功能演示">
+    <meta property="og:description" data-i18n="demo.meta.og.description" content="体验PageMiner的强大功能，包括可视化数据提取、智能规则生成、自动化执行等特性。">
+    <meta property="og:image" content="https://pageminer.com/images/demo-og.png">
+    
+    <!-- 多语言支持 -->
+    <link rel="alternate" hreflang="zh-CN" href="https://pageminer.com/demo.html">
+    <link rel="alternate" hreflang="en" href="https://pageminer.com/demo.html?lang=en">
+    <link rel="alternate" hreflang="ja" href="https://pageminer.com/demo.html?lang=ja">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/i18n.css">
     <link rel="icon" href="images/icon_48.png">
     <style>
         .demo-hero {
@@ -256,11 +274,11 @@
                 </div>
             </div>
             <div class="nav-menu">
-                <a href="index.html" class="nav-link">首页</a>
-                <a href="#features" class="nav-link">功能演示</a>
-                <a href="#interactive" class="nav-link">交互体验</a>
-                <a href="#showcase" class="nav-link">功能展示</a>
-                <a href="index.html#download" class="nav-link download-btn">立即下载</a>
+                <a href="index.html" class="nav-link" data-i18n="nav.home">首页</a>
+                <a href="#features" class="nav-link" data-i18n="nav.demo">功能演示</a>
+                <a href="#interactive" class="nav-link" data-i18n="demo.interactive.title">交互体验</a>
+                <a href="#showcase" class="nav-link" data-i18n="demo.showcase.title">功能展示</a>
+                <a href="index.html#download" class="nav-link download-btn" data-i18n="nav.downloadNow">立即下载</a>
             </div>
             <div class="nav-toggle">
                 <span></span>
@@ -273,9 +291,9 @@
     <!-- 演示英雄区域 -->
     <section class="demo-hero">
         <div class="container">
-            <h1>🚀 PageMiner 功能演示</h1>
-            <p>体验智能网页数据提取的强大功能，了解如何轻松实现数据自动化采集</p>
-            <a href="#interactive" class="btn-primary">开始体验</a>
+            <h1 data-i18n="demo.title">🚀 PageMiner 功能演示</h1>
+            <p data-i18n="demo.subtitle">体验智能网页数据提取的强大功能，了解如何轻松实现数据自动化采集</p>
+            <a href="#interactive" class="btn-primary" data-i18n="demo.startExperience">开始体验</a>
         </div>
     </section>
 
@@ -283,33 +301,33 @@
     <section id="features" class="demo-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">核心功能演示</h2>
-                <p class="section-subtitle">了解PageMiner如何改变您的数据采集工作流程</p>
+                <h2 class="section-title" data-i18n="demo.coreFeatures.title">核心功能演示</h2>
+                <p class="section-subtitle" data-i18n="demo.coreFeatures.subtitle">了解PageMiner如何改变您的数据采集工作流程</p>
             </div>
             
             <div class="demo-grid">
                 <div class="demo-card">
-                    <h3>🎯 可视化选择</h3>
-                    <p>通过鼠标悬停和点击操作，直接在网页上选择需要提取的数据元素。系统会自动高亮显示可选择的元素，并生成唯一的CSS选择器。</p>
-                    <a href="#interactive" class="demo-btn">体验选择</a>
+                    <h3 data-i18n="demo.coreFeatures.visual.title">🎯 可视化选择</h3>
+                    <p data-i18n="demo.coreFeatures.visual.description">通过鼠标悬停和点击操作，直接在网页上选择需要提取的数据元素。系统会自动高亮显示可选择的元素，并生成唯一的CSS选择器。</p>
+                    <a href="#interactive" class="demo-btn" data-i18n="demo.coreFeatures.visual.cta">体验选择</a>
                 </div>
                 
                 <div class="demo-card">
-                    <h3>🧠 智能规则生成</h3>
-                    <p>无需手动编写CSS选择器，PageMiner会自动分析页面结构，生成精确的提取规则，支持文本、图片、链接等多种数据类型。</p>
-                    <a href="#showcase" class="demo-btn">查看规则</a>
+                    <h3 data-i18n="demo.coreFeatures.smart.title">🧠 智能规则生成</h3>
+                    <p data-i18n="demo.coreFeatures.smart.description">无需手动编写CSS选择器，PageMiner会自动分析页面结构，生成精确的提取规则，支持文本、图片、链接等多种数据类型。</p>
+                    <a href="#showcase" class="demo-btn" data-i18n="demo.coreFeatures.smart.cta">查看规则</a>
                 </div>
                 
                 <div class="demo-card">
-                    <h3>⚡ 自动执行</h3>
-                    <p>配置完成后，系统会自动在相似页面上执行数据提取，无需重复操作，大大提高工作效率。</p>
-                    <a href="#interactive" class="demo-btn">测试执行</a>
+                    <h3 data-i18n="demo.coreFeatures.auto.title">⚡ 自动执行</h3>
+                    <p data-i18n="demo.coreFeatures.auto.description">配置完成后，系统会自动在相似页面上执行数据提取，无需重复操作，大大提高工作效率。</p>
+                    <a href="#interactive" class="demo-btn" data-i18n="demo.coreFeatures.auto.cta">测试执行</a>
                 </div>
                 
                 <div class="demo-card">
-                    <h3>📊 数据管理</h3>
-                    <p>提取的数据以结构化形式展示，支持多种格式导出，方便后续分析和处理。</p>
-                    <a href="#showcase" class="demo-btn">查看数据</a>
+                    <h3 data-i18n="demo.coreFeatures.data.title">📊 数据管理</h3>
+                    <p data-i18n="demo.coreFeatures.data.description">提取的数据以结构化形式展示，支持多种格式导出，方便后续分析和处理。</p>
+                    <a href="#showcase" class="demo-btn" data-i18n="demo.coreFeatures.data.cta">查看数据</a>
                 </div>
             </div>
         </div>
@@ -319,67 +337,67 @@
     <section id="interactive" class="demo-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">交互式体验</h2>
-                <p class="section-subtitle">亲身体验PageMiner的数据提取流程</p>
+                <h2 class="section-title" data-i18n="demo.interactive.title">交互式体验</h2>
+                <p class="section-subtitle" data-i18n="demo.interactive.subtitle">亲身体验PageMiner的数据提取流程</p>
             </div>
             
             <div class="interactive-demo">
                 <div class="step-indicator">
                     <div class="step active" data-step="1">
                         <div class="step-number">1</div>
-                        <span>配置规则</span>
+                        <span data-i18n="demo.interactive.step1">配置规则</span>
                     </div>
                     <div class="step-line"></div>
                     <div class="step" data-step="2">
                         <div class="step-number">2</div>
-                        <span>选择字段</span>
+                        <span data-i18n="demo.interactive.step2">选择字段</span>
                     </div>
                     <div class="step-line"></div>
                     <div class="step" data-step="3">
                         <div class="step-number">3</div>
-                        <span>提取数据</span>
+                        <span data-i18n="demo.interactive.step3">提取数据</span>
                     </div>
                 </div>
                 
                 <div class="demo-form">
                     <div class="form-group">
-                        <label for="ruleName">规则名称</label>
-                        <input type="text" id="ruleName" placeholder="例如：电商产品信息" value="电商产品信息">
+                        <label for="ruleName" data-i18n="demo.interactive.ruleName">规则名称</label>
+                        <input type="text" id="ruleName" data-i18n="demo.interactive.ruleNamePlaceholder" placeholder="例如：电商产品信息" value="电商产品信息">
                     </div>
                     
                     <div class="form-group">
-                        <label for="ruleKey">规则标识</label>
-                        <input type="text" id="ruleKey" placeholder="例如：product-info" value="product-info">
+                        <label for="ruleKey" data-i18n="demo.interactive.ruleKey">规则标识</label>
+                        <input type="text" id="ruleKey" data-i18n="demo.interactive.ruleKeyPlaceholder" placeholder="例如：product-info" value="product-info">
                     </div>
                     
                     <div class="form-group">
-                        <label for="targetUrl">目标网站</label>
-                        <input type="url" id="targetUrl" placeholder="例如：https://example.com" value="https://example.com">
+                        <label for="targetUrl" data-i18n="demo.interactive.targetUrl">目标网站</label>
+                        <input type="url" id="targetUrl" data-i18n="demo.interactive.targetUrlPlaceholder" placeholder="例如：https://example.com" value="https://example.com">
                     </div>
                     
                     <div class="form-group">
-                        <label for="fieldName">字段名称</label>
-                        <input type="text" id="fieldName" placeholder="例如：产品名称" value="产品名称">
+                        <label for="fieldName" data-i18n="demo.interactive.fieldName">字段名称</label>
+                        <input type="text" id="fieldName" data-i18n="demo.interactive.fieldNamePlaceholder" placeholder="例如：产品名称" value="产品名称">
                     </div>
                     
                     <div class="form-group">
-                        <label for="fieldSelector">选择器</label>
-                        <input type="text" id="fieldSelector" placeholder="例如：.product-title" value=".product-title">
+                        <label for="fieldSelector" data-i18n="demo.interactive.fieldSelector">选择器</label>
+                        <input type="text" id="fieldSelector" data-i18n="demo.interactive.fieldSelectorPlaceholder" placeholder="例如：.product-title" value=".product-title">
                     </div>
                     
-                    <button type="button" class="btn-primary" onclick="simulateExtraction()">开始提取</button>
+                    <button type="button" class="btn-primary" onclick="simulateExtraction()" data-i18n="demo.interactive.startExtraction">开始提取</button>
                 </div>
                 
                 <div class="demo-results" id="demoResults">
-                    <h3>提取结果</h3>
+                    <h3 data-i18n="demo.interactive.results">提取结果</h3>
                     <div class="result-table-container">
                         <table class="result-table">
                             <thead>
                                 <tr>
-                                    <th>字段</th>
-                                    <th>选择器</th>
-                                    <th>提取值</th>
-                                    <th>状态</th>
+                                    <th data-i18n="demo.interactive.field">字段</th>
+                                    <th data-i18n="demo.interactive.selector">选择器</th>
+                                    <th data-i18n="demo.interactive.extractedValue">提取值</th>
+                                    <th data-i18n="demo.interactive.status">状态</th>
                                 </tr>
                             </thead>
                             <tbody id="resultTableBody">
@@ -396,14 +414,14 @@
     <section id="showcase" class="demo-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">功能特性展示</h2>
-                <p class="section-subtitle">深入了解PageMiner的技术优势和使用方法</p>
+                <h2 class="section-title" data-i18n="demo.showcase.title">功能特性展示</h2>
+                <p class="section-subtitle" data-i18n="demo.showcase.subtitle">深入了解PageMiner的技术优势和使用方法</p>
             </div>
             
             <div class="feature-showcase">
                 <div class="showcase-item">
-                    <h4><span class="icon">🔍</span>智能元素识别</h4>
-                    <p>PageMiner能够智能识别页面中的列表结构、表格数据、重复元素等，自动生成最优的提取策略。支持多种元素类型检测。</p>
+                    <h4><span class="icon">🔍</span><span data-i18n="demo.showcase.recognition.title">智能元素识别</span></h4>
+                    <p data-i18n="demo.showcase.recognition.description">PageMiner能够智能识别页面中的列表结构、表格数据、重复元素等，自动生成最优的提取策略。支持多种元素类型检测。</p>
                     <div class="code-block">
 // 自动识别的选择器示例
 .product-list .product-item:nth-of-type(1) {
@@ -422,8 +440,8 @@ function detectElementType(element) {
                 </div>
                 
                 <div class="showcase-item">
-                    <h4><span class="icon">⚙️</span>规则配置</h4>
-                    <p>支持多种选择器类型，包括CSS选择器、XPath、DOM路径等，满足不同场景的需求。自动生成唯一选择器。</p>
+                    <h4><span class="icon">⚙️</span><span data-i18n="demo.showcase.configuration.title">规则配置</span></h4>
+                    <p data-i18n="demo.showcase.configuration.description">支持多种选择器类型，包括CSS选择器、XPath、DOM路径等，满足不同场景的需求。自动生成唯一选择器。</p>
                     <div class="code-block">
 // 支持的规则类型
 CSS: .product-title
@@ -455,8 +473,8 @@ function getUniqueSelector(el) {
                 </div>
                 
                 <div class="showcase-item">
-                    <h4><span class="icon">🔄</span>规则复用</h4>
-                    <p>一次配置，多处使用。支持规则的导入导出，团队协作更高效。</p>
+                    <h4><span class="icon">🔄</span><span data-i18n="demo.showcase.reuse.title">规则复用</span></h4>
+                    <p data-i18n="demo.showcase.reuse.description">一次配置，多处使用。支持规则的导入导出，团队协作更高效。</p>
                     <div class="code-block">
 // 规则导出格式
 {
@@ -469,8 +487,8 @@ function getUniqueSelector(el) {
                 </div>
                 
                 <div class="showcase-item">
-                    <h4><span class="icon">📈</span>数据导出</h4>
-                    <p>支持CSV、Excel、JSON等多种格式导出，数据可直接用于分析工具或数据库。</p>
+                    <h4><span class="icon">📈</span><span data-i18n="demo.showcase.export.title">数据导出</span></h4>
+                    <p data-i18n="demo.showcase.export.description">支持CSV、Excel、JSON等多种格式导出，数据可直接用于分析工具或数据库。</p>
                     <div class="code-block">
 // 导出格式示例
 CSV: title,price,image
@@ -486,14 +504,14 @@ JSON: 结构化数据
     <section class="demo-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">插件功能特性</h2>
-                <p class="section-subtitle">基于实际代码实现的核心功能展示</p>
+                <h2 class="section-title" data-i18n="demo.pluginFeatures.title">插件功能特性</h2>
+                <p class="section-subtitle" data-i18n="demo.pluginFeatures.subtitle">基于实际代码实现的核心功能展示</p>
             </div>
             
             <div class="feature-showcase">
                 <div class="showcase-item">
-                    <h4><span class="icon">🎨</span>可视化提取模式</h4>
-                    <p>启动提取模式后，鼠标悬停页面元素会显示红色边框高亮，点击元素即可选择并配置提取规则。</p>
+                    <h4><span class="icon">🎨</span><span data-i18n="demo.pluginFeatures.visualMode.title">可视化提取模式</span></h4>
+                    <p data-i18n="demo.pluginFeatures.visualMode.description">启动提取模式后，鼠标悬停页面元素会显示红色边框高亮，点击元素即可选择并配置提取规则。</p>
                     <div class="code-block">
 // 提取模式启动
 function enableExtractionMode() {
@@ -513,8 +531,8 @@ function highlight(el) {
                 </div>
                 
                 <div class="showcase-item">
-                    <h4><span class="icon">🔍</span>智能类型检测</h4>
-                    <p>自动检测元素类型，智能推荐字段类型，支持文本、图片、链接等多种数据类型。</p>
+                    <h4><span class="icon">🔍</span><span data-i18n="demo.pluginFeatures.typeDetection.title">智能类型检测</span></h4>
+                    <p data-i18n="demo.pluginFeatures.typeDetection.description">自动检测元素类型，智能推荐字段类型，支持文本、图片、链接等多种数据类型。</p>
                     <div class="code-block">
 // 智能类型检测
 function detectElementType(target) {
@@ -530,8 +548,8 @@ const supportedTypes = ['text', 'image', 'link', 'input', 'auto'];
                 </div>
                 
                 <div class="showcase-item">
-                    <h4><span class="icon">⚡</span>实时提取进度</h4>
-                    <p>提取过程中显示实时进度，高亮正在提取的元素，提供视觉反馈和状态指示。</p>
+                    <h4><span class="icon">⚡</span><span data-i18n="demo.pluginFeatures.progress.title">实时提取进度</span></h4>
+                    <p data-i18n="demo.pluginFeatures.progress.description">提取过程中显示实时进度，高亮正在提取的元素，提供视觉反馈和状态指示。</p>
                     <div class="code-block">
 // 提取进度高亮
 function highlightExtractingElement(selector, fieldName) {
@@ -553,8 +571,8 @@ function highlightExtractingElement(selector, fieldName) {
                 </div>
                 
                 <div class="showcase-item">
-                    <h4><span class="icon">💾</span>本地数据存储</h4>
-                    <p>所有提取规则和数据默认保存在本地，保护用户隐私，支持规则导入导出。</p>
+                    <h4><span class="icon">💾</span><span data-i18n="demo.pluginFeatures.storage.title">本地数据存储</span></h4>
+                    <p data-i18n="demo.pluginFeatures.storage.description">所有提取规则和数据默认保存在本地，保护用户隐私，支持规则导入导出。</p>
                     <div class="code-block">
 // 数据存储结构
 const ruleData = {
@@ -580,33 +598,33 @@ chrome.storage.local.set({ [ruleData.key]: ruleData });
     <section class="demo-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">实际应用场景</h2>
-                <p class="section-subtitle">了解PageMiner在不同行业中的应用价值</p>
+                <h2 class="section-title" data-i18n="demo.scenarios.title">实际应用场景</h2>
+                <p class="section-subtitle" data-i18n="demo.scenarios.subtitle">了解PageMiner在不同行业中的应用价值</p>
             </div>
             
             <div class="demo-grid">
                 <div class="demo-card">
-                    <h3>🛒 电商运营</h3>
-                    <p>监控竞品价格、收集产品信息、分析市场趋势，为产品策略提供数据支持。</p>
-                    <div class="highlight">适用：价格监控、竞品分析、产品调研</div>
+                    <h3 data-i18n="demo.scenarios.ecommerce.title">🛒 电商运营</h3>
+                    <p data-i18n="demo.scenarios.ecommerce.description">监控竞品价格、收集产品信息、分析市场趋势，为产品策略提供数据支持。</p>
+                    <div class="highlight" data-i18n="demo.scenarios.ecommerce.applicable">适用：价格监控、竞品分析、产品调研</div>
                 </div>
                 
                 <div class="demo-card">
-                    <h3>📊 市场研究</h3>
-                    <p>收集行业报告、统计数据、新闻资讯，构建完整的研究数据库。</p>
-                    <div class="highlight">适用：行业分析、趋势研究、数据收集</div>
+                    <h3 data-i18n="demo.scenarios.research.title">📊 市场研究</h3>
+                    <p data-i18n="demo.scenarios.research.description">收集行业报告、统计数据、新闻资讯，构建完整的研究数据库。</p>
+                    <div class="highlight" data-i18n="demo.scenarios.research.applicable">适用：行业分析、趋势研究、数据收集</div>
                 </div>
                 
                 <div class="demo-card">
-                    <h3>👥 人力资源</h3>
-                    <p>抓取招聘信息、候选人资料、薪资数据，优化招聘和人才管理流程。</p>
-                    <div class="highlight">适用：招聘信息、人才分析、市场调研</div>
+                    <h3 data-i18n="demo.scenarios.hr.title">👥 人力资源</h3>
+                    <p data-i18n="demo.scenarios.hr.description">抓取招聘信息、候选人资料、薪资数据，优化招聘和人才管理流程。</p>
+                    <div class="highlight" data-i18n="demo.scenarios.hr.applicable">适用：招聘信息、人才分析、市场调研</div>
                 </div>
                 
                 <div class="demo-card">
-                    <h3>📰 内容创作</h3>
-                    <p>收集热点话题、用户评论、趋势数据，为内容创作提供灵感和素材。</p>
-                    <div class="highlight">适用：热点追踪、用户洞察、内容策划</div>
+                    <h3 data-i18n="demo.scenarios.content.title">📰 内容创作</h3>
+                    <p data-i18n="demo.scenarios.content.description">收集热点话题、用户评论、趋势数据，为内容创作提供灵感和素材。</p>
+                    <div class="highlight" data-i18n="demo.scenarios.content.applicable">适用：热点追踪、用户洞察、内容策划</div>
                 </div>
             </div>
         </div>
@@ -621,50 +639,52 @@ chrome.storage.local.set({ [ruleData.key]: ruleData });
                         <span class="logo-icon">⛏️</span>
                         <span class="logo-text">PageMiner</span>
                     </div>
-                    <p class="footer-description">
+                    <p class="footer-description" data-i18n="footer.description">
                         智能网页数据提取助手，让数据采集变得简单高效。
                     </p>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-title">产品</h4>
+                    <h4 class="footer-title" data-i18n="footer.product">产品</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html#features">功能特性</a></li>
-                        <li><a href="index.html#pricing">价格方案</a></li>
-                        <li><a href="index.html#download">下载安装</a></li>
-                        <li><a href="#interactive">功能演示</a></li>
+                        <li><a href="index.html#features" data-i18n="nav.features">功能特性</a></li>
+                        <li><a href="index.html#pricing" data-i18n="nav.pricing">价格方案</a></li>
+                        <li><a href="index.html#download" data-i18n="nav.download">下载安装</a></li>
+                        <li><a href="#interactive" data-i18n="nav.demo">功能演示</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-title">支持</h4>
+                    <h4 class="footer-title" data-i18n="footer.support">支持</h4>
                     <ul class="footer-links">
-                        <li><a href="#help">帮助中心</a></li>
-                        <li><a href="mailto:xuzhoulight@gmail.com">联系我们</a></li>
-                        <li><a href="mailto:xuzhoulight@gmail.com">意见反馈</a></li>
-                        <li><a href="#community">用户社区</a></li>
+                        <li><a href="#help" data-i18n="common.help">帮助中心</a></li>
+                        <li><a href="mailto:support@pageminer.com" data-i18n="common.support">联系我们</a></li>
+                        <li><a href="#feedback" data-i18n="common.feedback">意见反馈</a></li>
+                        <li><a href="#community" data-i18n="common.community">用户社区</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-title">公司</h4>
+                    <h4 class="footer-title" data-i18n="footer.company">公司</h4>
                     <ul class="footer-links">
-                        <li><a href="#about">关于我们</a></li>
-                        <li><a href="#privacy">隐私政策</a></li>
-                        <li><a href="#terms">服务条款</a></li>
-                        <li><a href="#careers">加入我们</a></li>
+                        <li><a href="#about" data-i18n="common.about">关于我们</a></li>
+                        <li><a href="#privacy" data-i18n="common.privacy">隐私政策</a></li>
+                        <li><a href="#terms" data-i18n="common.terms">服务条款</a></li>
+                        <li><a href="#careers" data-i18n="common.careers">加入我们</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 PageMiner. 保留所有权利。</p>
+                <p data-i18n="footer.copyright">&copy; 2025 PageMiner. 保留所有权利。</p>
                 <div class="footer-social">
-                    <a href="#" class="social-link">📧</a>
-                    <a href="#" class="social-link">🐦</a>
-                    <a href="#" class="social-link">💬</a>
-                    <a href="#" class="social-link">📱</a>
+                    <a href="mailto:support@pageminer.com" class="social-link" title="技术支持">📧</a>
+                    <a href="#community" class="social-link" title="用户社区">💬</a>
+                    <a href="#feedback" class="social-link" title="意见反馈">📝</a>
+                    <a href="#help" class="social-link" title="帮助中心">❓</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- 国际化脚本 -->
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script>
         // 演示页面的特殊功能
