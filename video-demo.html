@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageMiner 演示视频 - 观看智能数据提取演示</title>
+    <meta name="description" content="观看PageMiner的演示视频，了解智能网页数据提取的强大功能和操作流程。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/icon_48.png">
+    <style>
+        .video-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .video-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .video-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .video-section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .video-section:last-child {
+            border-bottom: none;
+        }
+
+        .video-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .video-player {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 宽高比 */
+            position: relative;
+            background: #000;
+        }
+
+        .video-player video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .play-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        .video-info {
+            padding: 2rem;
+        }
+
+        .video-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .video-info p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .video-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .feature-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-item .icon {
+            font-size: 1.2rem;
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .video-description {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .video-description h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .video-description ul {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding-left: 1.5rem;
+        }
+
+        .video-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .video-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .video-container {
+                margin: 0 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-icon">⛏️</span>
+                    <span class="logo-text">PageMiner</span>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="demo.html" class="nav-link">使用教程</a>
+                <a href="#video" class="nav-link">演示视频</a>
+                <a href="index.html#download" class="nav-link download-btn">立即下载</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 视频英雄区域 -->
+    <section class="video-hero">
+        <div class="container">
+            <h1>🎥 PageMiner 演示视频</h1>
+            <p>观看智能网页数据提取的完整操作演示，了解PageMiner如何让数据采集变得简单高效</p>
+        </div>
+    </section>
+
+    <!-- 视频演示区域 -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">功能演示视频</h2>
+                <p class="section-subtitle">通过实际操作演示，了解PageMiner的完整工作流程</p>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-player">
+                    <video id="demoVideo" controls poster="images/plugin.png">
+                        <source src="images/PageMiner_video-1.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                </div>
+                
+                <div class="video-info">
+                    <h3>🎯 PageMiner 智能数据提取演示</h3>
+                    <p>本视频展示了PageMiner插件的完整使用流程，包括可视化选择、智能规则生成、数据提取和结果管理等核心功能。</p>
+                    
+                    <div class="video-features">
+                        <div class="feature-item">
+                            <h4><span class="icon">🎨</span>可视化选择</h4>
+                            <p>演示如何通过鼠标悬停和点击操作选择页面元素，系统自动高亮显示可选择的元素。</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h4><span class="icon">🧠</span>智能规则生成</h4>
+                            <p>展示系统如何自动分析页面结构，生成精确的CSS选择器和提取规则。</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h4><span class="icon">⚡</span>数据提取执行</h4>
+                            <p>演示配置完成后如何自动执行数据提取，显示实时进度和结果。</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h4><span class="icon">📊</span>结果管理</h4>
+                            <p>展示提取数据的结构化展示、导出功能和本地存储管理。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 行动号召区域 -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="section-title">准备好开始了吗？</h2>
+            <p class="section-subtitle">观看完演示视频后，您可以：</p>
+            
+            <div class="cta-buttons">
+                <a href="demo.html" class="btn-outline">
+                    <span class="btn-icon">📚</span>
+                    查看使用教程
+                </a>
+                <a href="index.html#download" class="btn-primary">
+                    <span class="btn-icon">⬇️</span>
+                    立即下载插件
+                </a>
+                <a href="mailto:xuzhoulight@gmail.com" class="btn-outline">
+                    <span class="btn-icon">📧</span>
+                    联系技术支持
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⛏️</span>
+                        <span class="logo-text">PageMiner</span>
+                    </div>
+                    <p class="footer-description">
+                        智能网页数据提取助手，让数据采集变得简单高效。
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">产品</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">功能特性</a></li>
+                        <li><a href="index.html#pricing">价格方案</a></li>
+                        <li><a href="index.html#download">下载安装</a></li>
+                        <li><a href="demo.html">使用教程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="demo.html">使用教程</a></li>
+                        <li><a href="mailto:support@pageminer.com">技术支持</a></li>
+                        <li><a href="#feedback">意见反馈</a></li>
+                        <li><a href="#community">用户社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">公司</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#privacy">隐私政策</a></li>
+                        <li><a href="#terms">服务条款</a></li>
+                        <li><a href="#careers">加入我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PageMiner. 保留所有权利。</p>
+                <div class="footer-social">
+                    <a href="mailto:support@pageminer.com" class="social-link" title="技术支持">📧</a>
+                    <a href="#community" class="social-link" title="用户社区">💬</a>
+                    <a href="#feedback" class="social-link" title="意见反馈">📝</a>
+                    <a href="#help" class="social-link" title="帮助中心">❓</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // 视频播放器功能
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('demoVideo');
+            
+            // 视频加载完成后显示播放按钮
+            video.addEventListener('loadeddata', () => {
+                console.log('PageMiner 演示视频已加载完成！🎥');
+            });
+            
+            // 视频播放错误处理
+            video.addEventListener('error', (e) => {
+                console.error('视频加载失败:', e);
+                // 显示错误提示
+                const videoContainer = document.querySelector('.video-player');
+                videoContainer.innerHTML = `
+                    <div class="video-placeholder">
+                        <div class="play-icon">❌</div>
+                        <h3>视频加载失败</h3>
+                        <p>请检查视频文件是否存在或联系技术支持</p>
+                        <a href="mailto:support@pageminer.com" class="btn-primary">联系支持</a>
+                    </div>
+                `;
+            });
+        });
+    </script>
+</body>
+</html>

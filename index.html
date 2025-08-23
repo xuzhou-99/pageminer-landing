@@ -1,106 +1,386 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
-    <title>PageMiner - Web Data Extraction & Automation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageMiner - 智能网页数据提取助手</title>
+    <meta name="description" content="PageMiner是一款强大的浏览器扩展，帮助您快速、可视化地从任意网页中提取结构化数据，支持自动化提取、规则管理、数据导出等功能。">
+    <meta name="keywords" content="网页数据提取,数据采集,爬虫工具,浏览器扩展,自动化,PageMiner">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="images/icon_48.png">
 </head>
+
 <body>
-
-<header class="header">
-    <div class="container">
-        <h1>PageMiner</h1>
-        <p>Automate web data extraction. Teach me once, auto-extract forever.</p>
-        <a href="#features" class="btn-primary">Explore Features</a>
-    </div>
-</header>
-
-<section id="features" class="section">
-    <div class="container">
-        <h2>✨ Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>🖱️ Point & Click Extraction</h3>
-                <p>Define data fields directly on any webpage with ease.</p>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-icon">⛏️</span>
+                    <span class="logo-text">PageMiner</span>
+                </div>
             </div>
-            <div class="feature-card">
-                <h3>♻️ Reusable Rules</h3>
-                <p>Save and manage your extraction rules for repeated use.</p>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="#features" class="nav-link">功能特性</a>
+                <a href="#how-it-works" class="nav-link">使用方法</a>
+                <a href="#screenshots" class="nav-link">界面展示</a>
+                <a href="#pricing" class="nav-link">价格方案</a>
+                <a href="#download" class="nav-link download-btn">立即下载</a>
             </div>
-            <div class="feature-card">
-                <h3>⚡ Automation</h3>
-                <p>Automatically extract structured data when visiting similar pages.</p>
-            </div>
-            <div class="feature-card">
-                <h3>📤 Export Options</h3>
-                <p>Export data in CSV, Excel, JSON, or other formats for analysis.</p>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<section id="how-it-works" class="section bg-light">
-    <div class="container">
-        <h2>🎯 How It Works</h2>
-        <ol class="steps">
-            <li>Install the PageMiner browser extension.</li>
-            <li>Define extraction rules using point & click.</li>
-            <li>Open matching webpages and let PageMiner auto-extract data.</li>
-            <li>Export your structured data in your preferred format.</li>
-        </ol>
-    </div>
-</section>
-
-<section id="screenshots" class="section">
-    <div class="container">
-        <h2>📸 Screenshots</h2>
-        <div class="screenshots-grid">
-            <img src="images/plugin.png" alt="Overview" class="screenshot">
-            <img src="images/extraction.png" alt="Record Rules" class="screenshot">
-            <img src="images/plugin-work-1.png" alt="Auto Extract" class="screenshot">
-            <img src="images/view-rule.png" alt="Manage Rules" class="screenshot">
-            <img src="images/view-data.png" alt="Export Data" class="screenshot">
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        智能网页数据提取
+                        <span class="gradient-text">自动化工具</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        无需编程知识，通过可视化操作即可从任意网页中提取结构化数据。
+                        一次配置，自动提取，让数据采集变得简单高效。
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn-primary">免费下载</a>
+                        <a href="#demo" class="btn-secondary">观看演示</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">活跃用户</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1M+</span>
+                            <span class="stat-label">数据提取</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">成功率</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image">
+                        <img src="images/plugin.png" alt="PageMiner插件界面" class="main-image">
+                        <div class="floating-card card-1">
+                            <span class="card-icon">📊</span>
+                            <span class="card-text">数据提取</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <span class="card-icon">⚡</span>
+                            <span class="card-text">自动执行</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <span class="card-icon">💾</span>
+                            <span class="card-text">规则保存</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="who-is-it-for" class="section bg-light">
-    <div class="container">
-        <h2>🎯 Who Is It For?</h2>
-        <ul class="user-list">
-            <li><strong>Marketers:</strong> Collect and organize product or campaign information</li>
-            <li><strong>HR Managers:</strong> Capture job listings or candidate information from public sources</li>
-            <li><strong>Researchers & Analysts:</strong> Gather structured data for studies or reports</li>
-        </ul>
-    </div>
-</section>
+    <!-- 功能特性 -->
+    <section id="features" class="section features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">强大功能，简单易用</h2>
+                <p class="section-subtitle">PageMiner提供专业级的数据提取能力，同时保持极简的用户体验</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🖱️</div>
+                    <h3 class="feature-title">可视化选择</h3>
+                    <p class="feature-description">鼠标悬停高亮元素，点击选择字段，无需编写任何代码即可定义数据提取规则。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">♻️</div>
+                    <h3 class="feature-title">智能规则</h3>
+                    <p class="feature-description">自动识别列表结构和相似节点，生成精确的CSS选择器，确保数据提取的准确性。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">自动执行</h3>
+                    <p class="feature-description">基于URL或域名存储规则，再次访问相似网页时自动提取并展示数据。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">数据管理</h3>
+                    <p class="feature-description">表格形式展示已提取数据，支持CSV、Excel、JSON等多种格式导出。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">本地存储</h3>
+                    <p class="feature-description">所有提取规则与数据默认保存在本地，保护您的隐私和数据安全。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">规则同步</h3>
+                    <p class="feature-description">支持规则分享和导入，团队协作更高效，规则市场持续更新。</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="privacy" class="section">
-    <div class="container">
-        <h2>🔒 Privacy & Compliance</h2>
-        <ul class="privacy-list">
-            <li>🚫 Does not collect personal browsing history</li>
-            <li>✅ Works only based on user-defined rules</li>
-            <li>🛠️ Focused on efficiency and productivity for professionals</li>
-        </ul>
-    </div>
-</section>
+    <!-- 使用方法 -->
+    <section id="how-it-works" class="section how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">三步完成数据提取</h2>
+                <p class="section-subtitle">简单直观的操作流程，让数据采集变得轻而易举</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">安装扩展</h3>
+                        <p class="step-description">从Chrome Web Store下载安装PageMiner扩展，一键安装，无需配置。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">配置规则</h3>
+                        <p class="step-description">在目标网页上点击需要提取的元素，为字段命名，系统自动生成提取规则。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">自动提取</h3>
+                        <p class="step-description">保存规则后，访问相似网页时自动提取数据，支持批量处理和定时任务。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="cta" class="section bg-cta">
-    <div class="container">
-        <h2>Ready to get started?</h2>
-        <a href="https://creem.com/checkout" target="_blank" class="btn-primary">Get PageMiner Now</a>
-    </div>
-</section>
+    <!-- 界面展示 -->
+    <section id="screenshots" class="section screenshots">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">直观的界面设计</h2>
+                <p class="section-subtitle">简洁美观的界面，让数据提取变得轻松愉快</p>
+            </div>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="images/plugin.png" alt="插件主界面" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>插件主界面</h4>
+                        <p>清晰的功能布局，一键启动数据提取</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/extraction.png" alt="数据提取过程" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>数据提取过程</h4>
+                        <p>可视化选择元素，实时预览提取结果</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/plugin-work-1.png" alt="自动提取" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>自动提取</h4>
+                        <p>基于规则自动提取数据，无需重复操作</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/view-rule.png" alt="规则管理" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>规则管理</h4>
+                        <p>集中管理所有提取规则，支持编辑和删除</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/view-data.png" alt="数据查看" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>数据查看</h4>
+                        <p>表格形式展示提取数据，支持多种导出格式</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer class="footer">
-    <div class="container">
-        <p>© 2025 PageMiner. All rights reserved.</p>
-    </div>
-</footer>
+    <!-- 适用场景 -->
+    <section class="section use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">适用于各种场景</h2>
+                <p class="section-subtitle">无论您是个人用户还是企业团队，PageMiner都能满足您的数据提取需求</p>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-icon">💼</div>
+                    <h3 class="use-case-title">市场营销</h3>
+                    <p class="use-case-description">收集竞品信息、产品价格、营销活动等数据，为市场策略提供数据支持。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">👥</div>
+                    <h3 class="use-case-title">人力资源</h3>
+                    <p class="use-case-description">抓取招聘信息、候选人资料、薪资数据等，优化招聘和人才管理流程。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">📊</div>
+                    <h3 class="use-case-title">数据分析</h3>
+                    <p class="use-case-description">收集研究数据、行业报告、统计数据等，为分析和决策提供数据基础。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🛒</div>
+                    <h3 class="use-case-title">电商运营</h3>
+                    <p class="use-case-description">监控产品价格、库存状态、用户评价等，优化产品策略和定价。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">📰</div>
+                    <h3 class="use-case-title">新闻媒体</h3>
+                    <p class="use-case-description">收集新闻资讯、热点话题、舆论数据等，为内容创作和传播提供素材。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-title">🏢</div>
+                    <h3 class="use-case-title">企业情报</h3>
+                    <p class="use-case-description">监控竞争对手动态、行业趋势、政策变化等，为企业战略提供情报支持。</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="js/main.js"></script>
+    <!-- 价格方案 -->
+    <section id="pricing" class="section pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">灵活的价格方案</h2>
+                <p class="section-subtitle">选择最适合您需求的方案，从小团队到企业级应用</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">免费版</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">¥0</span>
+                            <span class="price-period">/月</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ 基础数据提取功能</li>
+                        <li>✅ 最多保存10个规则</li>
+                        <li>✅ 本地数据存储</li>
+                        <li>✅ CSV格式导出</li>
+                        <li>❌ 高级功能</li>
+                        <li>❌ 云同步</li>
+                    </ul>
+                    <a href="#download" class="pricing-btn">免费使用</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">推荐</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">专业版</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">¥14.9</span>
+                            <span class="price-period">/月</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✅ 所有免费版功能</li>
+                        <li>✅ 无限规则保存</li>
+                        <li>✅ 多种格式导出</li>
+                        <li>✅ 规则云同步</li>
+                        <li>✅ 定时任务</li>
+                        <li>✅ 优先客服支持</li>
+                    </ul>
+                    <a href="#download" class="pricing-btn featured">立即升级</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section id="download" class="section download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="download-title">立即开始使用PageMiner</h2>
+                <p class="download-subtitle">加入10,000+用户的行列，体验智能数据提取的魅力</p>
+                <div class="download-actions">
+                    <a href="https://chrome.google.com/webstore/detail/pageminer" class="btn-primary" target="_blank">
+                        <span class="btn-icon">🌐</span>
+                        从Chrome商店下载
+                    </a>
+                    <a href="video-demo.html" class="btn-secondary">
+                        <span class="btn-icon">🎥</span>
+                        观看演示视频
+                    </a>
+                </div>
+                <div class="download-info">
+                    <p>支持Chrome、Edge、Firefox等主流浏览器</p>
+                    <p>安装后即可使用，无需额外配置</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⛏️</span>
+                        <span class="logo-text">PageMiner</span>
+                    </div>
+                    <p class="footer-description">
+                        智能网页数据提取助手，让数据采集变得简单高效。
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">产品</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">功能特性</a></li>
+                        <li><a href="#pricing">价格方案</a></li>
+                        <li><a href="#download">下载安装</a></li>
+                        <li><a href="#demo">使用教程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">支持</h4>
+                    <ul class="footer-links">
+                        <li><a href="#help">帮助中心</a></li>
+                        <li><a href="mailto:xuzhoulight@gmail.com">联系我们</a></li>
+                        <li><a href="mailto:xuzhoulight@gmail.com">意见反馈</a></li>
+                        <li><a href="#community">用户社区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">公司</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#privacy">隐私政策</a></li>
+                        <li><a href="#terms">服务条款</a></li>
+                        <li><a href="#careers">加入我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PageMiner. 保留所有权利。</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">📧</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">💬</a>
+                    <a href="#" class="social-link">📱</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
