@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="meta.title">PageMiner - 智能网页数据提取助手</title>
-    <meta name="description" data-i18n="meta.description" content="PageMiner是一款强大的浏览器扩展，帮助用户通过可视化操作快速、准确地从任意网页中提取结构化数据。支持多种格式导出，让数据采集变得简单高效。">
+    <meta name="description" data-i18n="meta.description"
+        content="PageMiner是一款强大的浏览器扩展，帮助用户通过可视化操作快速、准确地从任意网页中提取结构化数据。支持多种格式导出，让数据采集变得简单高效。">
     <meta name="keywords" data-i18n="meta.keywords" content="网页数据提取,数据采集,网页爬虫,浏览器扩展,数据挖掘,自动化工具">
-    
+
     <!-- SEO优化 -->
     <meta name="author" content="PageMiner Team">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pageminer.com/">
@@ -20,20 +22,20 @@
     <meta property="og:image" content="https://pageminer.com/images/og-image.png">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="PageMiner">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pageminer.com/">
     <meta property="twitter:title" data-i18n="meta.twitter.title" content="PageMiner - 智能网页数据提取助手">
-    <meta property="twitter:description" data-i18n="meta.twitter.description" content="通过可视化操作快速提取网页数据，支持多种格式导出，让数据采集变得简单高效。">
+    <meta property="twitter:description" data-i18n="meta.twitter.description"
+        content="通过可视化操作快速提取网页数据，支持多种格式导出，让数据采集变得简单高效。">
     <meta property="twitter:image" content="https://pageminer.com/images/twitter-image.png">
-    
+
     <!-- 多语言支持 -->
     <link rel="alternate" hreflang="zh-CN" href="https://pageminer.com/">
     <link rel="alternate" hreflang="en" href="https://pageminer.com/?lang=en">
-    <link rel="alternate" hreflang="ja" href="https://pageminer.com/?lang=ja">
     <link rel="alternate" hreflang="x-default" href="https://pageminer.com/">
-    
+
     <!-- 结构化数据 -->
     <script type="application/ld+json">
     {
@@ -55,11 +57,12 @@
         }
     }
     </script>
-    
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/i18n.css">
     <link rel="icon" href="images/icon_48.png">
 </head>
+
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
@@ -91,16 +94,47 @@
     <section id="hero" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title" data-i18n="hero.title">智能网页数据提取助手</h1>
-                <p class="hero-subtitle" data-i18n="hero.subtitle">通过可视化操作，轻松从任意网页中提取结构化数据。无需编程知识，让数据采集变得简单高效。</p>
-                <div class="hero-actions">
-                    <a href="#download" class="btn-primary" data-i18n="hero.cta">立即开始</a>
-                    <a href="video-demo.html" class="btn-secondary" data-i18n="hero.watchDemo">观看演示</a>
+                <div class="hero-text">
+                    <h1 class="hero-title" data-i18n="hero.title">智能网页数据提取助手</h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">通过可视化操作，轻松从任意网页中提取结构化数据。无需编程知识，让数据采集变得简单高效。</p>
+                    <div class="hero-actions">
+                        <a href="#download" class="btn-primary" data-i18n="hero.cta">立即开始</a>
+                        <a href="video-demo.html" class="btn-secondary" data-i18n="hero.watchDemo">观看演示</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">活跃用户</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">1M+</span>
+                            <span class="stat-label">数据提取</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">成功率</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image">
+                        <img src="images/plugin.png" alt="PageMiner Plugin Interface" class="main-image">
+                        <div class="floating-card card-1">
+                            <span class="card-icon">📊</span>
+                            <span class="card-text">数据提取</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <span class="card-icon">⚡</span>
+                            <span class="card-text">自动执行</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <span class="card-icon">💾</span>
+                            <span class="card-text">规则保存</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/plugin.png" alt="PageMiner Plugin Interface" loading="lazy">
-            </div>
+
         </div>
     </section>
 
@@ -111,38 +145,38 @@
                 <h2 class="section-title" data-i18n="features.title">强大功能特性</h2>
                 <p class="section-subtitle" data-i18n="features.subtitle">PageMiner提供完整的网页数据提取解决方案</p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
                     <h3 data-i18n="features.visual.title">可视化选择</h3>
                     <p data-i18n="features.visual.description">通过鼠标悬停和点击操作，直接在网页上选择需要提取的数据元素</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">🧠</div>
                     <h3 data-i18n="features.smart.title">智能规则生成</h3>
                     <p data-i18n="features.smart.description">自动分析页面结构，生成精确的CSS选择器，无需手动编写代码</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3 data-i18n="features.auto.title">自动执行</h3>
                     <p data-i18n="features.auto.description">配置完成后自动在相似页面上执行数据提取，大大提高工作效率</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3 data-i18n="features.export.title">多种格式导出</h3>
-                    <p data-i18n="features.export.description">支持CSV、Excel、JSON等多种格式，数据可直接用于分析工具</p>
+                    <h3 data-i18n="features.export.title">数据管理</h3>
+                    <p data-i18n="features.export.description">表格形式展示已提取数据，支持CSV、Excel、JSON等多种格式，数据可直接用于分析工具</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">💾</div>
                     <h3 data-i18n="features.storage.title">本地存储</h3>
-                    <p data-i18n="features.storage.description">所有数据默认保存在本地，保护用户隐私，支持规则导入导出</p>
+                    <p data-i18n="features.storage.description">所有数据默认保存在本地，保护您的隐私和数据安全，支持规则导入导出</p>
                 </div>
-                
+
                 <div class="feature-card">
                     <div class="feature-icon">☁️</div>
                     <h3 data-i18n="features.sync.title">云端同步</h3>
@@ -159,7 +193,7 @@
                 <h2 class="section-title" data-i18n="howItWorks.title">如何使用</h2>
                 <p class="section-subtitle" data-i18n="howItWorks.subtitle">简单三步，开始智能数据提取</p>
             </div>
-            
+
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
@@ -168,7 +202,7 @@
                         <p data-i18n="howItWorks.step1.description">在网页上点击选择需要提取的数据元素</p>
                     </div>
                 </div>
-                
+
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
@@ -176,7 +210,7 @@
                         <p data-i18n="howItWorks.step2.description">系统自动生成提取规则，您可以根据需要调整</p>
                     </div>
                 </div>
-                
+
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
@@ -195,23 +229,42 @@
                 <h2 class="section-title" data-i18n="screenshots.title">界面展示</h2>
                 <p class="section-subtitle" data-i18n="screenshots.subtitle">直观友好的用户界面，让数据提取变得简单</p>
             </div>
-            
+
             <div class="screenshots-grid">
                 <div class="screenshot-item">
-                    <img src="images/plugin.png" alt="PageMiner Plugin Interface" loading="lazy">
-                    <h4>插件界面</h4>
+                    <img src="images/plugin.png" alt="插件主界面" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>插件主界面</h4>
+                        <p>清晰的功能布局，一键启动数据提取</p>
+                    </div>
                 </div>
                 <div class="screenshot-item">
-                    <img src="images/extraction.png" alt="Data Extraction Process" loading="lazy">
-                    <h4>数据提取</h4>
+                    <img src="images/extraction.png" alt="数据提取过程" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>数据提取过程</h4>
+                        <p>可视化选择元素，实时预览提取结果</p>
+                    </div>
                 </div>
                 <div class="screenshot-item">
-                    <img src="images/view-data.png" alt="Data View and Export" loading="lazy">
-                    <h4>数据查看</h4>
+                    <img src="images/plugin-work-1.png" alt="自动提取" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>自动提取</h4>
+                        <p>基于规则自动提取数据，无需重复操作</p>
+                    </div>
                 </div>
                 <div class="screenshot-item">
-                    <img src="images/view-rule.png" alt="Rule Management" loading="lazy">
-                    <h4>规则管理</h4>
+                    <img src="images/view-rule.png" alt="规则管理" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>规则管理</h4>
+                        <p>集中管理所有提取规则，支持编辑和删除</p>
+                    </div>
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/view-data.png" alt="数据查看" class="screenshot-image">
+                    <div class="screenshot-overlay">
+                        <h4>数据查看</h4>
+                        <p>表格形式展示提取数据，支持多种导出格式</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -222,32 +275,62 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="useCases.title">适用场景</h2>
-                <p class="section-subtitle" data-i18n="useCases.subtitle">PageMiner适用于各种数据采集需求</p>
+                <p class="section-subtitle" data-i18n="useCases.subtitle">无论您是个人用户还是企业团队，PageMiner适用于各种数据采集需求</p>
             </div>
-            
+
             <div class="use-cases-grid">
                 <div class="use-case-card">
                     <div class="use-case-icon">🛒</div>
                     <h3 data-i18n="useCases.ecommerce.title">电商运营</h3>
                     <p data-i18n="useCases.ecommerce.description">监控竞品价格、收集产品信息、分析市场趋势</p>
                 </div>
-                
+
                 <div class="use-case-card">
                     <div class="use-case-icon">📊</div>
                     <h3 data-i18n="useCases.research.title">市场研究</h3>
                     <p data-i18n="useCases.research.description">收集行业报告、统计数据、新闻资讯</p>
                 </div>
-                
+
                 <div class="use-case-card">
                     <div class="use-case-icon">👥</div>
                     <h3 data-i18n="useCases.hr.title">人力资源</h3>
                     <p data-i18n="useCases.hr.description">抓取招聘信息、候选人资料、薪资数据</p>
                 </div>
-                
+
                 <div class="use-case-card">
                     <div class="use-case-icon">📰</div>
                     <h3 data-i18n="useCases.content.title">内容创作</h3>
                     <p data-i18n="useCases.content.description">收集热点话题、用户评论、趋势数据</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">💼</div>
+                    <h3 class="use-case-title">市场营销</h3>
+                    <p class="use-case-description">收集竞品信息、产品价格、营销活动等数据，为市场策略提供数据支持。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">👥</div>
+                    <h3 class="use-case-title">人力资源</h3>
+                    <p class="use-case-description">抓取招聘信息、候选人资料、薪资数据等，优化招聘和人才管理流程。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">📊</div>
+                    <h3 class="use-case-title">数据分析</h3>
+                    <p class="use-case-description">收集研究数据、行业报告、统计数据等，为分析和决策提供数据基础。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">🛒</div>
+                    <h3 class="use-case-title">电商运营</h3>
+                    <p class="use-case-description">监控产品价格、库存状态、用户评价等，优化产品策略和定价。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-icon">📰</div>
+                    <h3 class="use-case-title">新闻媒体</h3>
+                    <p class="use-case-description">收集新闻资讯、热点话题、舆论数据等，为内容创作和传播提供素材。</p>
+                </div>
+                <div class="use-case-card">
+                    <div class="use-case-title">🏢</div>
+                    <h3 class="use-case-title">企业情报</h3>
+                    <p class="use-case-description">监控竞争对手动态、行业趋势、政策变化等，为企业战略提供情报支持。</p>
                 </div>
             </div>
         </div>
@@ -257,10 +340,10 @@
     <section id="pricing" class="section pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="pricing.title">价格方案</h2>
+                <h2 class="section-title" data-i18n="pricing.title">灵活的价格方案</h2>
                 <p class="section-subtitle" data-i18n="pricing.subtitle">选择最适合您的方案</p>
             </div>
-            
+
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-header">
@@ -276,11 +359,14 @@
                         <li data-i18n="pricing.free.features.2">✅ CSV格式导出</li>
                         <li data-i18n="pricing.free.features.3">✅ 本地数据存储</li>
                         <li data-i18n="pricing.free.features.4">✅ 基础技术支持</li>
+                        <li>❌ 高级功能</li>
+                        <li>❌ 云同步</li>
                     </ul>
                     <a href="#download" class="pricing-btn" data-i18n="pricing.free.cta">免费使用</a>
                 </div>
-                
+
                 <div class="pricing-card featured">
+                    <div class="pricing-badge">推荐</div>
                     <div class="pricing-header">
                         <h3 data-i18n="pricing.pro.title">专业版</h3>
                         <div class="pricing-price">
@@ -383,4 +469,5 @@
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

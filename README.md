@@ -12,46 +12,6 @@ PageMiner是一款智能网页数据提取助手，通过可视化操作帮助�
 
 ## 🚀 快速开始
 
-### 方法1：使用本地服务器（推荐）
-
-由于浏览器的CORS策略限制，直接打开HTML文件可能无法正常加载国际化资源。我们提供了本地服务器解决方案：
-
-#### Windows用户
-```bash
-# 双击运行
-start-server.bat
-
-# 或在命令行中运行
-python start-server.py
-```
-
-#### macOS/Linux用户
-```bash
-# 运行Python脚本
-python3 start-server.py
-
-# 或使用内置HTTP服务器
-python3 -m http.server 8000
-```
-
-启动后，在浏览器中访问：`http://localhost:8000`
-
-### 方法2：使用其他本地服务器
-
-#### Node.js
-```bash
-# 安装http-server
-npm install -g http-server
-
-# 启动服务
-http-server -p 8000
-```
-
-#### PHP
-```bash
-# 启动PHP内置服务器
-php -S localhost:8000
-```
 
 ### 方法3：测试国际化系统
 
