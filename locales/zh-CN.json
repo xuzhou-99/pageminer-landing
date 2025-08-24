@@ -103,39 +103,53 @@
       "title": "免费版",
       "price": "¥0",
       "period": "/月",
+      "description": "适合个人用户和小型项目",
       "features": [
-        "✅ 基础数据提取功能",
-        "✅ 最多保存10个规则",
-        "✅ CSV格式导出",
-        "✅ 本地数据存储",
-        "✅ 基础技术支持"
-      ],
-      "cta": "免费使用"
+        "基础数据提取功能",
+        "最多10个提取规则",
+        "CSV格式导出",
+        "本地数据存储",
+        "基础技术支持"
+      ]
     },
     "pro": {
       "title": "专业版",
-      "price": "¥14.9",
+      "price": "¥99",
       "period": "/月",
+      "description": "适合专业用户和团队",
       "features": [
-        "✅ 所有免费版功能",
-        "✅ 无限规则保存",
-        "✅ 多种格式导出",
-        "✅ 规则云同步",
-        "✅ 定时任务",
-        "✅ 优先客服支持"
+        "所有免费版功能",
+        "无限提取规则",
+        "多种格式导出",
+        "云端同步",
+        "高级技术支持",
+        "团队协作功能"
       ],
-      "cta": "立即升级"
+      "popular": "最受欢迎"
+    },
+    "enterprise": {
+      "title": "企业版",
+      "price": "定制",
+      "period": "",
+      "description": "适合大型企业和机构",
+      "features": [
+        "所有专业版功能",
+        "定制化开发",
+        "专属技术支持",
+        "API接口",
+        "数据安全保证",
+        "SLA服务承诺"
+      ]
     }
   },
   "download": {
-    "title": "立即开始使用PageMiner",
-    "subtitle": "加入10,000+用户的行列，体验智能数据提取的魅力",
-    "chromeStore": "从Chrome商店下载",
-    "watchDemo": "观看演示视频",
-    "info": [
-      "支持Chrome、Edge、Firefox等主流浏览器",
-      "安装后即可使用，无需额外配置"
-    ]
+    "title": "立即开始使用",
+    "subtitle": "下载PageMiner，体验智能数据提取的强大功能",
+    "chrome": "从Chrome商店下载",
+    "manual": "手动安装",
+    "manualDesc": "下载CRX文件，拖拽到Chrome扩展页面安装",
+    "requirements": "系统要求",
+    "requirementsDesc": "Chrome 88+ / Edge 88+ / Firefox 85+"
   },
   "footer": {
     "description": "智能网页数据提取助手，让数据采集变得简单高效。",
@@ -145,7 +159,16 @@
     "copyright": "© 2025 PageMiner. 保留所有权利。"
   },
   "demo": {
-    "title": "PageMiner 功能演示",
+    "meta": {
+      "title": "PageMiner 功能演示 - 体验智能数据提取",
+      "description": "体验PageMiner的强大功能，包括可视化数据提取、智能规则生成、自动化执行等特性。",
+      "keywords": "PageMiner演示,数据提取演示,智能规则生成,可视化选择,自动化执行",
+      "og": {
+        "title": "PageMiner 功能演示",
+        "description": "体验PageMiner的强大功能，包括可视化数据提取、智能规则生成、自动化执行等特性。"
+      }
+    },
+    "title": "🚀 PageMiner 功能演示",
     "subtitle": "体验智能网页数据提取的强大功能，了解如何轻松实现数据自动化采集",
     "startExperience": "开始体验",
     "coreFeatures": {
@@ -193,8 +216,7 @@
       "field": "字段",
       "selector": "选择器",
       "extractedValue": "提取值",
-      "status": "状态",
-      "success": "✅ 成功"
+      "status": "状态"
     },
     "showcase": {
       "title": "功能特性展示",
@@ -325,5 +347,38 @@
     "terms": "服务条款",
     "careers": "加入我们",
     "help": "帮助中心"
+  },
+  "test": {
+    "meta": {
+      "title": "国际化测试页面",
+      "description": "测试国际化系统是否正常工作"
+    },
+    "hero": {
+      "title": "国际化测试页面",
+      "subtitle": "这是一个用于测试PageMiner网站国际化系统的简单页面"
+    },
+    "basic": {
+      "title": "基础功能测试",
+      "description": "测试基本的文本翻译功能",
+      "item1": "导航菜单翻译",
+      "item2": "页面标题翻译",
+      "item3": "按钮文本翻译"
+    },
+    "interactive": {
+      "title": "交互功能测试",
+      "description": "测试语言切换和动态更新功能",
+      "button1": "测试按钮1",
+      "button2": "测试按钮2",
+      "label": "测试标签：",
+      "placeholder": "请输入测试文本"
+    },
+    "meta": {
+      "title": "Meta标签测试",
+      "description": "测试页面标题和描述的动态更新"
+    },
+    "debug": {
+      "title": "调试信息",
+      "description": "查看国际化系统的运行状态"
+    }
   }
 }

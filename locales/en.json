@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "PageMiner - Intelligent Web Data Extraction Assistant",
-    "description": "PageMiner is a powerful browser extension that helps users quickly and accurately extract structured data from any webpage through visual operations. Supporting multiple export formats, making data collection simple and efficient.",
+    "description": "PageMiner is a powerful browser extension that helps users quickly and accurately extract structured data from any webpage through visual operations. Supports multiple export formats, making data collection simple and efficient.",
     "keywords": "web data extraction,data collection,web scraping,browser extension,data mining,automation tools",
     "og": {
       "title": "PageMiner - Intelligent Web Data Extraction Assistant",
@@ -33,7 +33,7 @@
     "subtitle": "PageMiner provides a complete web data extraction solution",
     "visual": {
       "title": "🎯 Visual Selection",
-      "description": "Select data elements directly on webpages through mouse hover and click operations"
+      "description": "Directly select data elements on webpages through mouse hover and click operations"
     },
     "smart": {
       "title": "🧠 Smart Rule Generation",
@@ -57,7 +57,7 @@
     }
   },
   "howItWorks": {
-    "title": "How It Works",
+    "title": "How to Use",
     "subtitle": "Simple three steps to start intelligent data extraction",
     "step1": {
       "title": "Select Elements",
@@ -65,7 +65,7 @@
     },
     "step2": {
       "title": "Configure Rules",
-      "description": "The system automatically generates extraction rules, you can adjust as needed"
+      "description": "The system automatically generates extraction rules, which you can adjust as needed"
     },
     "step3": {
       "title": "Extract Data",
@@ -74,7 +74,7 @@
   },
   "screenshots": {
     "title": "Interface Showcase",
-    "subtitle": "Intuitive and friendly user interface, making data extraction simple"
+    "subtitle": "Intuitive and friendly user interface makes data extraction simple"
   },
   "useCases": {
     "title": "Use Cases",
@@ -103,39 +103,53 @@
       "title": "Free",
       "price": "$0",
       "period": "/month",
+      "description": "Suitable for individual users and small projects",
       "features": [
-        "✅ Basic data extraction features",
-        "✅ Save up to 10 rules",
-        "✅ CSV format export",
-        "✅ Local data storage",
-        "✅ Basic technical support"
-      ],
-      "cta": "Start Free"
+        "Basic data extraction features",
+        "Up to 10 extraction rules",
+        "CSV format export",
+        "Local data storage",
+        "Basic technical support"
+      ]
     },
     "pro": {
       "title": "Pro",
-      "price": "$2.99",
+      "price": "$14.99",
       "period": "/month",
+      "description": "Suitable for professional users and teams",
       "features": [
-        "✅ All free features",
-        "✅ Unlimited rule saving",
-        "✅ Multiple format export",
-        "✅ Rule cloud sync",
-        "✅ Scheduled tasks",
-        "✅ Priority customer support"
+        "All free features",
+        "Unlimited extraction rules",
+        "Multiple format export",
+        "Cloud synchronization",
+        "Priority technical support",
+        "Team collaboration features"
       ],
-      "cta": "Upgrade Now"
+      "popular": "Most Popular"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "price": "Custom",
+      "period": "",
+      "description": "Suitable for large enterprises and institutions",
+      "features": [
+        "All pro features",
+        "Custom development",
+        "Dedicated technical support",
+        "API interface",
+        "Data security guarantee",
+        "SLA service commitment"
+      ]
     }
   },
   "download": {
-    "title": "Start Using PageMiner Now",
-    "subtitle": "Join 10,000+ users and experience the charm of intelligent data extraction",
-    "chromeStore": "Download from Chrome Store",
-    "watchDemo": "Watch Demo Video",
-    "info": [
-      "Support Chrome, Edge, Firefox and other mainstream browsers",
-      "Ready to use after installation, no additional configuration required"
-    ]
+    "title": "Get Started Now",
+    "subtitle": "Download PageMiner and experience the powerful features of intelligent data extraction",
+    "chrome": "Download from Chrome Store",
+    "manual": "Manual Installation",
+    "manualDesc": "Download CRX file and drag to Chrome extensions page to install",
+    "requirements": "System Requirements",
+    "requirementsDesc": "Chrome 88+ / Edge 88+ / Firefox 85+"
   },
   "footer": {
     "description": "Intelligent web data extraction assistant, making data collection simple and efficient.",
@@ -145,20 +159,29 @@
     "copyright": "© 2025 PageMiner. All rights reserved."
   },
   "demo": {
-    "title": "PageMiner Feature Demo",
-    "subtitle": "Experience the powerful features of intelligent web data extraction, learn how to easily achieve data automation collection",
+    "meta": {
+      "title": "PageMiner Feature Demo - Experience Intelligent Data Extraction",
+      "description": "Experience PageMiner's powerful features including visual data extraction, intelligent rule generation, automated execution and more.",
+      "keywords": "PageMiner demo,data extraction demo,smart rule generation,visual selection,automated execution",
+      "og": {
+        "title": "PageMiner Feature Demo",
+        "description": "Experience PageMiner's powerful features including visual data extraction, intelligent rule generation, automated execution and more."
+      }
+    },
+    "title": "🚀 PageMiner Feature Demo",
+    "subtitle": "Experience the powerful features of intelligent web data extraction and learn how to easily achieve data automation collection",
     "startExperience": "Start Experience",
     "coreFeatures": {
       "title": "Core Feature Demo",
       "subtitle": "Learn how PageMiner changes your data collection workflow",
       "visual": {
         "title": "🎯 Visual Selection",
-        "description": "Select data elements directly on webpages through mouse hover and click operations. The system automatically highlights selectable elements and generates unique CSS selectors.",
+        "description": "Directly select data elements on webpages through mouse hover and click operations. The system automatically highlights selectable elements and generates unique CSS selectors.",
         "cta": "Experience Selection"
       },
       "smart": {
         "title": "🧠 Smart Rule Generation",
-        "description": "No need to manually write CSS selectors, PageMiner automatically analyzes page structure and generates precise extraction rules, supporting multiple data types such as text, images, and links.",
+        "description": "No need to manually write CSS selectors, PageMiner automatically analyzes page structure and generates precise extraction rules, supporting text, images, links and other data types.",
         "cta": "View Rules"
       },
       "auto": {
@@ -168,7 +191,7 @@
       },
       "data": {
         "title": "📊 Data Management",
-        "description": "Extracted data is displayed in structured form, supporting multiple format exports, convenient for subsequent analysis and processing.",
+        "description": "Extracted data is displayed in structured form, supporting multiple format exports for convenient subsequent analysis and processing.",
         "cta": "View Data"
       }
     },
@@ -193,43 +216,42 @@
       "field": "Field",
       "selector": "Selector",
       "extractedValue": "Extracted Value",
-      "status": "Status",
-      "success": "✅ Success"
+      "status": "Status"
     },
     "showcase": {
       "title": "Feature Showcase",
       "subtitle": "Deeply understand PageMiner's technical advantages and usage methods",
       "recognition": {
         "title": "🔍 Smart Element Recognition",
-        "description": "PageMiner can intelligently recognize list structures, table data, and repeated elements on pages, automatically generating optimal extraction strategies. Supporting multiple element type detection."
+        "description": "PageMiner can intelligently recognize list structures, table data, repeated elements and more in pages, automatically generating optimal extraction strategies. Supports multiple element type detection."
       },
       "configuration": {
         "title": "⚙️ Rule Configuration",
-        "description": "Support multiple selector types including CSS selectors, XPath, DOM paths, etc., meeting different scenario requirements. Automatically generate unique selectors."
+        "description": "Supports multiple selector types including CSS selectors, XPath, DOM paths, etc., meeting different scenario needs. Automatically generates unique selectors."
       },
       "reuse": {
         "title": "🔄 Rule Reuse",
-        "description": "Configure once, use everywhere. Support rule import and export, efficient team collaboration."
+        "description": "Configure once, use everywhere. Supports rule import and export for more efficient team collaboration."
       },
       "export": {
         "title": "📈 Data Export",
-        "description": "Support CSV, Excel, JSON and other format exports, data can be directly used in analysis tools or databases."
+        "description": "Supports CSV, Excel, JSON and other format exports, data can be directly used in analysis tools or databases."
       }
     },
     "pluginFeatures": {
-      "title": "Plugin Features",
-      "subtitle": "Core feature showcase based on actual code implementation",
+      "title": "Plugin Feature Showcase",
+      "subtitle": "Core feature display based on actual code implementation",
       "visualMode": {
         "title": "🎨 Visual Extraction Mode",
         "description": "After starting extraction mode, hovering over page elements shows red border highlighting, clicking elements to select and configure extraction rules."
       },
       "typeDetection": {
         "title": "🔍 Smart Type Detection",
-        "description": "Automatically detect element types, intelligently recommend field types, supporting multiple data types such as text, images, and links."
+        "description": "Automatically detect element types, intelligently recommend field types, supporting text, images, links and other data types."
       },
       "progress": {
         "title": "⚡ Real-time Extraction Progress",
-        "description": "Display real-time progress during extraction, highlight elements being extracted, provide visual feedback and status indication."
+        "description": "Shows real-time progress during extraction, highlighting elements being extracted, providing visual feedback and status indication."
       },
       "storage": {
         "title": "💾 Local Data Storage",
@@ -252,7 +274,7 @@
       "hr": {
         "title": "👥 Human Resources",
         "description": "Scrape recruitment information, candidate profiles, salary data, optimizing recruitment and talent management processes.",
-        "applicable": "Applicable: Recruitment info, talent analysis, market research"
+        "applicable": "Applicable: Recruitment information, talent analysis, market research"
       },
       "content": {
         "title": "📰 Content Creation",
@@ -325,5 +347,38 @@
     "terms": "Terms of Service",
     "careers": "Join Us",
     "help": "Help Center"
+  },
+  "test": {
+    "meta": {
+      "title": "Internationalization Test Page",
+      "description": "Test if the internationalization system is working properly"
+    },
+    "hero": {
+      "title": "Internationalization Test Page",
+      "subtitle": "This is a simple page for testing the PageMiner website internationalization system"
+    },
+    "basic": {
+      "title": "Basic Function Test",
+      "description": "Test basic text translation functionality",
+      "item1": "Navigation menu translation",
+      "item2": "Page title translation",
+      "item3": "Button text translation"
+    },
+    "interactive": {
+      "title": "Interactive Function Test",
+      "description": "Test language switching and dynamic update functionality",
+      "button1": "Test Button 1",
+      "button2": "Test Button 2",
+      "label": "Test Label:",
+      "placeholder": "Please enter test text"
+    },
+    "meta": {
+      "title": "Meta Tag Test",
+      "description": "Test dynamic update of page title and description"
+    },
+    "debug": {
+      "title": "Debug Information",
+      "description": "View the running status of the internationalization system"
+    }
   }
 }
