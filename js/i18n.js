@@ -90,28 +90,23 @@ class I18nManager {
                     console.warn(`⚠️ 加载语言文件出错: ${lang}`, error);
                 }
 
-                if (!response) {
-                    try {
-                        console.log(`🌐 尝试加载语言文件: ${lang}`);
-
-                        // 如果失败，尝试从GitHub Pages加载
-                        if (!response || !response.ok) {
-                            console.log(`🌐 尝试从GitHub Pages加载: ${lang}`);
-                            response = await fetch(`https://xuzhou-99.github.io/pageminer-landing/locales/${lang}.json`);
-                            console.log(`🌐 GitHub Pages加载结果: ${lang}, 状态: ${response.status}`);
-                        }
-
-                        if (response.ok) {
-                            this.translations[lang] = await response.json();
-                            console.log(`✅ 加载语言文件成功: ${lang}, 翻译键数量: ${Object.keys(this.translations[lang]).length}`);
-                        } else {
-                            console.warn(`⚠️ 加载语言文件失败: ${lang}, 状态: ${response.status}`);
-                        }
-                    } catch (error) {
-                        console.warn(`⚠️ 加载语言文件出错: ${lang}`, error);
+                try {
+                    // 如果失败，尝试从GitHub Pages加载
+                    if (!response || !response.ok) {
+                        console.log(`🌐 尝试从GitHub Pages加载: ${lang}`);
+                        response = await fetch(`https://xuzhou-99.github.io/pageminer-landing/locales/${lang}.json`);
+                        console.log(`🌐 GitHub Pages加载结果: ${lang}, 状态: ${response.status}`);
                     }
-                }
 
+                    if (response.ok) {
+                        this.translations[lang] = await response.json();
+                        console.log(`✅ 加载语言文件成功: ${lang}, 翻译键数量: ${Object.keys(this.translations[lang]).length}`);
+                    } else {
+                        console.warn(`⚠️ 加载语言文件失败: ${lang}, 状态: ${response.status}`);
+                    }
+                } catch (error) {
+                    console.warn(`⚠️ 加载语言文件出错: ${lang}`, error);
+                }
             }
 
             console.log('🌐 语言文件加载完成，已加载:', Object.keys(this.translations));
