@@ -23,10 +23,20 @@
   },
   "hero": {
     "title": "Intelligent Web Data Extraction Assistant",
-    "subtitle": "Easily extract structured data from any webpage through visual operations. No programming knowledge required, making data collection simple and efficient.",
+    "subtitle": "Easily extract structured data from any web page through visual operations. No programming knowledge required, making data collection simple and efficient.",
     "cta": "Get Started",
     "watchDemo": "Watch Demo",
-    "download": "Free Download"
+    "download": "Free Download",
+    "stats": {
+      "users": "Active Users",
+      "extractions": "Data Extractions",
+      "success": "Success Rate"
+    },
+    "cards": {
+      "extraction": "Data Extraction",
+      "auto": "Auto Execution",
+      "storage": "Rule Storage"
+    }
   },
   "features": {
     "title": "Powerful Features",
@@ -74,7 +84,27 @@
   },
   "screenshots": {
     "title": "Interface Showcase",
-    "subtitle": "Intuitive and friendly user interface makes data extraction simple"
+    "subtitle": "Intuitive and user-friendly interface that makes data extraction simple",
+    "main": {
+      "title": "Plugin Main Interface",
+      "description": "Clear functional layout, one-click data extraction startup"
+    },
+    "extraction": {
+      "title": "Data Extraction Process",
+      "description": "Visual element selection with real-time extraction result preview"
+    },
+    "auto": {
+      "title": "Automatic Extraction",
+      "description": "Rule-based automatic data extraction without repetitive operations"
+    },
+    "rules": {
+      "title": "Rule Management",
+      "description": "Centralized management of all extraction rules with edit and delete support"
+    },
+    "data": {
+      "title": "Data Viewing",
+      "description": "Table format display of extracted data with multiple export formats"
+    }
   },
   "useCases": {
     "title": "Use Cases",

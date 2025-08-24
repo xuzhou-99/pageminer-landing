@@ -26,7 +26,17 @@
     "subtitle": "通过可视化操作，轻松从任意网页中提取结构化数据。无需编程知识，让数据采集变得简单高效。",
     "cta": "立即开始",
     "watchDemo": "观看演示",
-    "download": "免费下载"
+    "download": "无料ダウンロード",
+    "stats": {
+      "users": "活跃用户",
+      "extractions": "数据提取",
+      "success": "成功率"
+    },
+    "cards": {
+      "extraction": "数据提取",
+      "auto": "自动执行",
+      "storage": "规则保存"
+    }
   },
   "features": {
     "title": "强大功能特性",
@@ -74,7 +84,27 @@
   },
   "screenshots": {
     "title": "界面展示",
-    "subtitle": "直观友好的用户界面，让数据提取变得简单"
+    "subtitle": "直观友好的用户界面，让数据提取变得简单",
+    "main": {
+      "title": "插件主界面",
+      "description": "清晰的功能布局，一键启动数据提取"
+    },
+    "extraction": {
+      "title": "数据提取过程",
+      "description": "可视化选择元素，实时预览提取结果"
+    },
+    "auto": {
+      "title": "自动提取",
+      "description": "基于规则自动提取数据，无需重复操作"
+    },
+    "rules": {
+      "title": "规则管理",
+      "description": "集中管理所有提取规则，支持编辑和删除"
+    },
+    "data": {
+      "title": "数据查看",
+      "description": "表格形式展示提取数据，支持多种导出格式"
+    }
   },
   "useCases": {
     "title": "适用场景",
