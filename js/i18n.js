@@ -16,26 +16,26 @@ class I18nManager {
     async init() {
         try {
             console.log('🌐 开始初始化国际化系统...');
-            
+
             // 检测用户语言偏好
             this.detectUserLanguage();
             console.log('🌐 检测到语言:', this.currentLang);
-            
+
             // 加载语言文件
             await this.loadTranslations();
             console.log('🌐 语言文件加载完成');
-            
+
             // 应用当前语言
             this.applyLanguage();
             console.log('🌐 语言应用完成');
-            
+
             // 设置语言切换事件
             this.setupLanguageSwitcher();
             console.log('🌐 语言切换器设置完成');
-            
+
             this.isInitialized = true;
             console.log('✅ 国际化系统初始化完成');
-            
+
         } catch (error) {
             console.error('❌ 国际化系统初始化失败:', error);
         }
@@ -45,7 +45,7 @@ class I18nManager {
         // 从URL参数获取语言
         const urlParams = new URLSearchParams(window.location.search);
         const langFromUrl = urlParams.get('lang');
-        
+
         if (langFromUrl && this.supportedLangs.includes(langFromUrl)) {
             this.currentLang = langFromUrl;
             console.log('🌐 从URL参数设置语言:', this.currentLang);
@@ -58,10 +58,10 @@ class I18nManager {
             } else {
                 // 从浏览器语言检测
                 const browserLang = navigator.language || navigator.userLanguage;
-                const detectedLang = this.supportedLangs.find(lang => 
+                const detectedLang = this.supportedLangs.find(lang =>
                     browserLang.startsWith(lang) || browserLang.startsWith(lang.split('-')[0])
                 );
-                
+
                 if (detectedLang) {
                     this.currentLang = detectedLang;
                     console.log('🌐 从浏览器检测语言:', this.currentLang);
@@ -76,24 +76,47 @@ class I18nManager {
     async loadTranslations() {
         try {
             console.log('🌐 开始加载语言文件...');
-            
+
             // 加载所有支持的语言文件
             for (const lang of this.supportedLangs) {
+                let response;
                 try {
-                    const response = await fetch(`https://xuzhou-99.github.io/pageminer-landing/locales/${lang}.json`);
-                    if (response.ok) {
-                        this.translations[lang] = await response.json();
-                        console.log(`✅ 加载语言文件成功: ${lang}`);
-                    } else {
-                        console.warn(`⚠️ 加载语言文件失败: ${lang}, 状态: ${response.status}`);
-                    }
+                    console.log(`🌐 尝试加载语言文件: ${lang}`);
+
+                    // 尝试从相对路径加载（本地开发）
+                    response = await fetch(`./locales/${lang}.json`);
+                    console.log(`🌐 相对路径加载结果: ${lang}, 状态: ${response.status}`);
                 } catch (error) {
                     console.warn(`⚠️ 加载语言文件出错: ${lang}`, error);
                 }
+
+                if (!response) {
+                    try {
+                        console.log(`🌐 尝试加载语言文件: ${lang}`);
+
+                        // 如果失败，尝试从GitHub Pages加载
+                        if (!response || !response.ok) {
+                            console.log(`🌐 尝试从GitHub Pages加载: ${lang}`);
+                            response = await fetch(`https://xuzhou-99.github.io/pageminer-landing/locales/${lang}.json`);
+                            console.log(`🌐 GitHub Pages加载结果: ${lang}, 状态: ${response.status}`);
+                        }
+
+                        if (response.ok) {
+                            this.translations[lang] = await response.json();
+                            console.log(`✅ 加载语言文件成功: ${lang}, 翻译键数量: ${Object.keys(this.translations[lang]).length}`);
+                        } else {
+                            console.warn(`⚠️ 加载语言文件失败: ${lang}, 状态: ${response.status}`);
+                        }
+                    } catch (error) {
+                        console.warn(`⚠️ 加载语言文件出错: ${lang}`, error);
+                    }
+                }
+
             }
-            
+
             console.log('🌐 语言文件加载完成，已加载:', Object.keys(this.translations));
-            
+            console.log('🌐 翻译内容预览:', this.translations);
+
         } catch (error) {
             console.error('❌ 加载语言文件时发生错误:', error);
         }
@@ -103,37 +126,58 @@ class I18nManager {
         const targetLang = lang || this.currentLang;
         const fallback = this.translations[this.fallbackLang] || {};
         const target = this.translations[targetLang] || {};
-        
-        const result = target[key] || fallback[key] || key;
-        
+
+        const result = this._deepGet(target, key) || this._deepGet(fallback, key) || key;
+
         // 调试信息
         if (result === key) {
             console.warn(`⚠️ 未找到翻译键: ${key}, 语言: ${targetLang}`);
         }
-        
+
         return result;
+    }
+
+    /**
+    * 深度获取嵌套对象属性
+    * @param {Object} obj - 目标对象
+    * @param {string|Array} path - 路径（如 "a.b.c" 或 ["a", "b", "c"]）
+    * @returns {*} 找到的值或 undefined
+    */
+    _deepGet(obj, path) {
+        if (!obj || !path) return undefined;
+
+        // 如果 path 是字符串，按点号分割成数组
+        const keys = Array.isArray(path) ? path : path.split('.');
+
+        // 递归查找
+        return keys.reduce((current, key) => {
+            if (current && current[key] !== undefined) {
+                return current[key];
+            }
+            return undefined;
+        }, obj);
     }
 
     applyLanguage() {
         console.log('🌐 开始应用语言:', this.currentLang);
-        
+
         // 更新HTML lang属性
         document.documentElement.lang = this.currentLang;
-        
+
         // 更新所有带有data-i18n属性的元素
         const elements = document.querySelectorAll('[data-i18n]');
         console.log(`🌐 找到 ${elements.length} 个需要翻译的元素`);
-        
+
         elements.forEach((element, index) => {
             const key = element.getAttribute('data-i18n');
             const text = this.getText(key);
-            
+
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
             } else {
                 element.textContent = text;
             }
-            
+
             if (index < 5) { // 只显示前5个的调试信息
                 console.log(`🌐 翻译元素 ${index + 1}: ${key} -> ${text}`);
             }
@@ -141,15 +185,15 @@ class I18nManager {
 
         // 更新meta标签
         this.updateMetaTags();
-        
+
         // 更新页面标题
         this.updatePageTitle();
-        
+
         // 触发自定义事件
         document.dispatchEvent(new CustomEvent('languageChanged', {
             detail: { language: this.currentLang }
         }));
-        
+
         console.log('✅ 语言应用完成');
     }
 
@@ -175,10 +219,10 @@ class I18nManager {
 
             // 更新Open Graph标签
             this.updateOpenGraphTags();
-            
+
             // 更新Twitter Card标签
             this.updateTwitterCardTags();
-            
+
         } catch (error) {
             console.warn('⚠️ 更新meta标签时出错:', error);
         }
@@ -249,31 +293,42 @@ class I18nManager {
         }
 
         console.log(`🌐 切换语言: ${this.currentLang} -> ${lang}`);
-        
+
         this.currentLang = lang;
         localStorage.setItem('pageminer-lang', lang);
-        
+
         // 更新URL参数
         const url = new URL(window.location);
         url.searchParams.set('lang', lang);
         window.history.replaceState({}, '', url);
-        
+
         // 重新应用语言
         this.applyLanguage();
+
+        // 更新语言切换器显示
+        this.updateLanguageSwitcherDisplay();
+
+        // 触发自定义事件
+        window.dispatchEvent(new CustomEvent('languageChanged', {
+            detail: { language: lang }
+        }));
+
+        console.log(`✅ 语言切换完成: ${lang}`);
     }
 
     setupLanguageSwitcher() {
         try {
-            // 查找或创建语言切换器
-            let switcher = document.querySelector('.language-switcher');
-            
-            if (!switcher) {
-                switcher = this.createLanguageSwitcher();
+            // 查找现有的语言切换器
+            const switcher = document.querySelector('.language-switcher');
+
+            if (switcher) {
+                this.bindLanguageSwitcherEvents(switcher);
+                this.updateLanguageSwitcherDisplay();
+                console.log('✅ 语言切换器设置完成');
+            } else {
+                console.warn('⚠️ 未找到语言切换器元素');
             }
-            
-            this.bindLanguageSwitcherEvents(switcher);
-            console.log('✅ 语言切换器设置完成');
-            
+
         } catch (error) {
             console.warn('⚠️ 设置语言切换器时出错:', error);
         }
@@ -282,7 +337,7 @@ class I18nManager {
     createLanguageSwitcher() {
         const switcher = document.createElement('div');
         switcher.className = 'language-switcher';
-        
+
         const currentLang = document.createElement('div');
         currentLang.className = 'lang-current';
         currentLang.innerHTML = `
@@ -290,10 +345,10 @@ class I18nManager {
             <span class="lang-name">${this.getLanguageName(this.currentLang)}</span>
             <span class="lang-arrow">▼</span>
         `;
-        
+
         const dropdown = document.createElement('div');
         dropdown.className = 'lang-dropdown';
-        
+
         this.supportedLangs.forEach(lang => {
             if (lang !== this.currentLang) {
                 const langItem = document.createElement('div');
@@ -306,51 +361,66 @@ class I18nManager {
                 dropdown.appendChild(langItem);
             }
         });
-        
+
         switcher.appendChild(currentLang);
         switcher.appendChild(dropdown);
-        
+
         // 插入到导航栏
         const navMenu = document.querySelector('.nav-menu');
         if (navMenu) {
             navMenu.appendChild(switcher);
         }
-        
+
         return switcher;
     }
 
     bindLanguageSwitcherEvents(switcher) {
         const currentLang = switcher.querySelector('.lang-current');
         const dropdown = switcher.querySelector('.lang-dropdown');
-        
-        // 切换下拉菜单
-        currentLang.addEventListener('click', () => {
+
+        if (!currentLang || !dropdown) {
+            console.warn('⚠️ 语言切换器元素不完整');
+            return;
+        }
+
+        // 移除可能存在的旧事件监听器
+        currentLang.removeEventListener('click', this.toggleDropdown);
+        dropdown.removeEventListener('click', this.handleLanguageSelect);
+
+        // 绑定新的事件监听器
+        this.toggleDropdown = () => {
             dropdown.classList.toggle('show');
-        });
-        
-        // 选择语言
-        dropdown.addEventListener('click', (e) => {
+        };
+
+        this.handleLanguageSelect = (e) => {
             const langItem = e.target.closest('.lang-item');
             if (langItem) {
                 const lang = langItem.getAttribute('data-lang');
+                console.log('🌐 用户选择语言:', lang);
                 this.switchLanguage(lang);
                 dropdown.classList.remove('show');
             }
-        });
-        
+        };
+
+        currentLang.addEventListener('click', this.toggleDropdown);
+        dropdown.addEventListener('click', this.handleLanguageSelect);
+
         // 点击外部关闭下拉菜单
-        document.addEventListener('click', (e) => {
+        document.removeEventListener('click', this.handleOutsideClick);
+        this.handleOutsideClick = (e) => {
             if (!switcher.contains(e.target)) {
                 dropdown.classList.remove('show');
             }
-        });
+        };
+        document.addEventListener('click', this.handleOutsideClick);
+
+        console.log('✅ 语言切换器事件绑定完成');
     }
 
     getLanguageFlag(lang) {
         const flags = {
             'zh-CN': '🇨🇳',
-            'en': '🇺🇸',
-            'ja': '🇯🇵'
+            'en': '🇺🇸'
         };
         return flags[lang] || '🌐';
     }
@@ -358,14 +428,30 @@ class I18nManager {
     getLanguageName(lang) {
         const names = {
             'zh-CN': '中文',
-            'en': 'English',
-            'ja': '日本語'
+            'en': 'English'
         };
         return names[lang] || lang;
     }
 
     getCurrentLanguage() {
         return this.currentLang;
+    }
+
+    updateLanguageSwitcherDisplay() {
+        const switcher = document.querySelector('.language-switcher');
+        if (!switcher) return;
+
+        const currentLangElement = switcher.querySelector('.lang-current .lang-name');
+        const currentFlagElement = switcher.querySelector('.lang-current .lang-flag');
+
+        if (currentLangElement) {
+            currentLangElement.textContent = this.getLanguageName(this.currentLang);
+        }
+        if (currentFlagElement) {
+            currentFlagElement.textContent = this.getLanguageFlag(this.currentLang);
+        }
+
+        console.log('✅ 语言切换器显示已更新');
     }
 
     getSupportedLanguages() {
@@ -382,10 +468,20 @@ if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
         console.log('🌐 DOM加载完成，初始化国际化系统...');
         window.i18n = new I18nManager();
+        window.i18n.init().then(() => {
+            console.log('✅ 国际化系统初始化完成');
+        }).catch(error => {
+            console.error('❌ 国际化系统初始化失败:', error);
+        });
     });
 } else {
     console.log('🌐 DOM已加载，立即初始化国际化系统...');
     window.i18n = new I18nManager();
+    window.i18n.init().then(() => {
+        console.log('✅ 国际化系统初始化完成');
+    }).catch(error => {
+        console.error('❌ 国际化系统初始化失败:', error);
+    });
 }
 
 // 导出到全局作用域

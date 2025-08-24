@@ -59,7 +59,7 @@
     },
     "storage": {
       "title": "💾 Local Storage",
-      "description": "All data is saved locally by default, protecting user privacy, supporting rule import and export"
+      "description": "All data is saved locally by default, protecting your privacy and data security, supporting rule import and export"
     },
     "sync": {
       "title": "☁️ Cloud Sync",
@@ -124,6 +124,14 @@
     "content": {
       "title": "📰 Content Creation",
       "description": "Collect trending topics, user comments, trend data"
+    },
+    "marketing": {
+      "title": "💼 Marketing",
+      "description": "Collect competitor information, product prices, marketing activities and other data to provide data support for market strategies"
+    },
+    "intelligence": {
+      "title": "🏢 Business Intelligence",
+      "description": "Monitor competitor dynamics, industry trends, policy changes, etc., to provide intelligence support for corporate strategy"
     }
   },
   "pricing": {
@@ -140,11 +148,12 @@
         "CSV format export",
         "Local data storage",
         "Basic technical support"
-      ]
+      ],
+      "cta": "Get Started Free"
     },
     "pro": {
       "title": "Pro",
-      "price": "$14.99",
+      "price": "$99",
       "period": "/month",
       "description": "Suitable for professional users and teams",
       "features": [
@@ -152,10 +161,11 @@
         "Unlimited extraction rules",
         "Multiple format export",
         "Cloud synchronization",
-        "Priority technical support",
+        "Advanced technical support",
         "Team collaboration features"
-      ],
-      "popular": "Most Popular"
+        ],
+      "popular": "Most Popular",
+      "cta": "Upgrade Now"
     },
     "enterprise": {
       "title": "Enterprise",
@@ -169,7 +179,8 @@
         "API interface",
         "Data security guarantee",
         "SLA service commitment"
-      ]
+      ],
+      "cta": "Contact Sales"
     }
   },
   "download": {

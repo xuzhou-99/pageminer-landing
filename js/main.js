@@ -6,11 +6,242 @@ class PageMiner {
     }
 
     init() {
-        this.setupEventListeners();
-        this.setupAnimations();
-        this.setupMobileMenu();
-        this.setupScrollEffects();
-        this.setupIntersectionObserver();
+        this.initSmoothScrolling();
+        this.initMobileMenu();
+        this.initAnimations();
+        this.initCarousel(); // 新增轮播图初始化
+    }
+
+    // 初始化轮播图
+    initCarousel() {
+        const carousel = document.querySelector('.screenshots-carousel');
+        if (!carousel) return;
+
+        this.currentSlide = 0;
+        this.slides = carousel.querySelectorAll('.carousel-slide');
+        this.indicators = carousel.querySelectorAll('.indicator');
+        this.prevBtn = carousel.querySelector('.carousel-prev');
+        this.nextBtn = carousel.querySelector('.carousel-next');
+        this.totalSlides = this.slides.length;
+
+        if (this.totalSlides === 0) return;
+
+        // 绑定事件
+        this.bindCarouselEvents();
+        
+        // 自动播放
+        this.startAutoPlay();
+        
+        // 触摸滑动支持
+        this.initTouchSupport();
+    }
+
+    // 绑定轮播图事件
+    bindCarouselEvents() {
+        // 上一张/下一张按钮
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => this.prevSlide());
+        }
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => this.nextSlide());
+        }
+
+        // 指示器点击
+        this.indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+
+        // 键盘控制
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                this.prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                this.nextSlide();
+            }
+        });
+
+        // 鼠标悬停暂停自动播放
+        const carousel = document.querySelector('.screenshots-carousel');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', () => this.pauseAutoPlay());
+            carousel.addEventListener('mouseleave', () => this.startAutoPlay());
+        }
+    }
+
+    // 切换到指定幻灯片
+    goToSlide(index) {
+        if (index < 0 || index >= this.totalSlides) return;
+
+        // 移除当前活动状态
+        this.slides[this.currentSlide].classList.remove('active');
+        this.indicators[this.currentSlide].classList.remove('active');
+
+        // 设置新的活动状态
+        this.currentSlide = index;
+        this.slides[this.currentSlide].classList.add('active');
+        this.indicators[this.currentSlide].classList.add('active');
+
+        // 更新指示器状态
+        this.updateIndicators();
+    }
+
+    // 下一张幻灯片
+    nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(nextIndex);
+    }
+
+    // 上一张幻灯片
+    prevSlide() {
+        const prevIndex = this.currentSlide === 0 ? this.totalSlides - 1 : this.currentSlide - 1;
+        this.goToSlide(prevIndex);
+    }
+
+    // 更新指示器状态
+    updateIndicators() {
+        this.indicators.forEach((indicator, index) => {
+            if (index === this.currentSlide) {
+                indicator.classList.add('active');
+            } else {
+                indicator.classList.remove('active');
+            }
+        });
+    }
+
+    // 开始自动播放
+    startAutoPlay() {
+        if (this.autoPlayInterval) return;
+        
+        this.autoPlayInterval = setInterval(() => {
+            this.nextSlide();
+        }, 5000); // 5秒切换一次
+    }
+
+    // 暂停自动播放
+    pauseAutoPlay() {
+        if (this.autoPlayInterval) {
+            clearInterval(this.autoPlayInterval);
+            this.autoPlayInterval = null;
+        }
+    }
+
+    // 初始化触摸支持
+    initTouchSupport() {
+        const carousel = document.querySelector('.screenshots-carousel');
+        if (!carousel) return;
+
+        let startX = 0;
+        let endX = 0;
+        let isDragging = false;
+
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+            this.pauseAutoPlay();
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            
+            endX = e.changedTouches[0].clientX;
+            const diffX = startX - endX;
+            const threshold = 50; // 最小滑动距离
+
+            if (Math.abs(diffX) > threshold) {
+                if (diffX > 0) {
+                    this.nextSlide(); // 向左滑动，下一张
+                } else {
+                    this.prevSlide(); // 向右滑动，上一张
+                }
+            }
+
+            isDragging = false;
+            this.startAutoPlay();
+        });
+    }
+
+    // 初始化平滑滚动
+    initSmoothScrolling() {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - 80; // 考虑导航栏高度
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    }
+
+    // 初始化移动端菜单
+    initMobileMenu() {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+
+            // 点击菜单项后关闭菜单
+            const navLinks = navMenu.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                });
+            });
+        }
+    }
+
+    // 初始化动画效果
+    initAnimations() {
+        // 浮动卡片动画
+        this.initFloatingCards();
+        
+        // 滚动触发动画
+        this.initScrollAnimations();
+    }
+
+    // 浮动卡片动画
+    initFloatingCards() {
+        const cards = document.querySelectorAll('.floating-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
+    }
+
+    // 滚动触发动画
+    initScrollAnimations() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // 观察需要动画的元素
+        const animatedElements = document.querySelectorAll('.feature-card, .step, .screenshot-item, .use-case-card, .pricing-card');
+        animatedElements.forEach(el => observer.observe(el));
     }
 
     // 设置事件监听器

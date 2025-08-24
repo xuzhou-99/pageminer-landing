@@ -82,6 +82,24 @@
                 <a href="video-demo.html" class="nav-link" data-i18n="nav.video">演示视频</a>
                 <a href="#download" class="nav-link download-btn" data-i18n="nav.downloadNow">立即下载</a>
             </div>
+            <!-- 国际化切换器 -->
+            <div class="language-switcher">
+                <div class="lang-current">
+                    <span class="lang-flag">🇨🇳</span>
+                    <span class="lang-name">中文</span>
+                    <span class="lang-arrow">▼</span>
+                </div>
+                <div class="lang-dropdown">
+                    <div class="lang-item" data-lang="en">
+                        <span class="lang-flag">🇺🇸</span>
+                        <span class="lang-name">English</span>
+                    </div>
+                    <div class="lang-item" data-lang="zh-CN">
+                        <span class="lang-flag">🇨🇳</span>
+                        <span class="lang-name">中文</span>
+                    </div>
+                </div>
+            </div>
             <div class="nav-toggle">
                 <span></span>
                 <span></span>
@@ -104,15 +122,15 @@
                     <div class="hero-stats">
                         <div class="stat-item">
                             <span class="stat-number">10K+</span>
-                            <span class="stat-label">活跃用户</span>
+                            <span class="stat-label" data-i18n="hero.stats.users">活跃用户</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">1M+</span>
-                            <span class="stat-label">数据提取</span>
+                            <span class="stat-label" data-i18n="hero.stats.extractions">数据提取</span>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number">99.9%</span>
-                            <span class="stat-label">成功率</span>
+                            <span class="stat-label" data-i18n="hero.stats.success">成功率</span>
                         </div>
                     </div>
                 </div>
@@ -121,15 +139,15 @@
                         <img src="images/plugin.png" alt="PageMiner Plugin Interface" class="main-image">
                         <div class="floating-card card-1">
                             <span class="card-icon">📊</span>
-                            <span class="card-text">数据提取</span>
+                            <span class="card-text" data-i18n="hero.cards.extraction">数据提取</span>
                         </div>
                         <div class="floating-card card-2">
                             <span class="card-icon">⚡</span>
-                            <span class="card-text">自动执行</span>
+                            <span class="card-text" data-i18n="hero.cards.auto">自动执行</span>
                         </div>
                         <div class="floating-card card-3">
                             <span class="card-icon">💾</span>
-                            <span class="card-text">规则保存</span>
+                            <span class="card-text" data-i18n="hero.cards.storage">规则保存</span>
                         </div>
                     </div>
                 </div>
@@ -167,8 +185,8 @@
 
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <h3 data-i18n="features.export.title">数据管理</h3>
-                    <p data-i18n="features.export.description">表格形式展示已提取数据，支持CSV、Excel、JSON等多种格式，数据可直接用于分析工具</p>
+                    <h3 data-i18n="features.export.title">多种格式导出</h3>
+                    <p data-i18n="features.export.description">支持CSV、Excel、JSON等多种格式，数据可直接用于分析工具</p>
                 </div>
 
                 <div class="feature-card">
@@ -230,41 +248,68 @@
                 <p class="section-subtitle" data-i18n="screenshots.subtitle">直观友好的用户界面，让数据提取变得简单</p>
             </div>
 
-            <div class="screenshots-grid">
-                <div class="screenshot-item">
-                    <img src="images/plugin.png" alt="插件主界面" class="screenshot-image">
-                    <div class="screenshot-overlay">
-                        <h4>插件主界面</h4>
-                        <p>清晰的功能布局，一键启动数据提取</p>
+            <div class="screenshots-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active" data-slide="0">
+                        <img src="images/plugin.png" alt="插件主界面" class="screenshot-image">
+                        <div class="screenshot-overlay">
+                            <h4 data-i18n="screenshots.main.title">插件主界面</h4>
+                            <p data-i18n="screenshots.main.description">清晰的功能布局，一键启动数据提取</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide" data-slide="1">
+                        <img src="images/extraction.png" alt="数据提取过程" class="screenshot-image">
+                        <div class="screenshot-overlay">
+                            <h4 data-i18n="screenshots.extraction.title">数据提取过程</h4>
+                            <p data-i18n="screenshots.extraction.description">可视化选择元素，实时预览提取结果</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide" data-slide="2">
+                        <img src="images/plugin-work-1.png" alt="自动提取" class="screenshot-image">
+                        <div class="screenshot-overlay">
+                            <h4 data-i18n="screenshots.auto.title">自动提取</h4>
+                            <p data-i18n="screenshots.auto.description">基于规则自动提取数据，无需重复操作</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide" data-slide="3">
+                        <img src="images/view-rule.png" alt="规则管理" class="screenshot-image">
+                        <div class="screenshot-overlay">
+                            <h4 data-i18n="screenshots.rules.title">规则管理</h4>
+                            <p data-i18n="screenshots.rules.description">集中管理所有提取规则，支持编辑和删除</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide" data-slide="4">
+                        <img src="images/view-data.png" alt="数据查看" class="screenshot-image">
+                        <div class="screenshot-overlay">
+                            <h4 data-i18n="screenshots.data.title">数据查看</h4>
+                            <p data-i18n="screenshots.data.description">表格形式展示提取数据，支持多种导出格式</p>
+                        </div>
                     </div>
                 </div>
-                <div class="screenshot-item">
-                    <img src="images/extraction.png" alt="数据提取过程" class="screenshot-image">
-                    <div class="screenshot-overlay">
-                        <h4>数据提取过程</h4>
-                        <p>可视化选择元素，实时预览提取结果</p>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/plugin-work-1.png" alt="自动提取" class="screenshot-image">
-                    <div class="screenshot-overlay">
-                        <h4>自动提取</h4>
-                        <p>基于规则自动提取数据，无需重复操作</p>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/view-rule.png" alt="规则管理" class="screenshot-image">
-                    <div class="screenshot-overlay">
-                        <h4>规则管理</h4>
-                        <p>集中管理所有提取规则，支持编辑和删除</p>
-                    </div>
-                </div>
-                <div class="screenshot-item">
-                    <img src="images/view-data.png" alt="数据查看" class="screenshot-image">
-                    <div class="screenshot-overlay">
-                        <h4>数据查看</h4>
-                        <p>表格形式展示提取数据，支持多种导出格式</p>
-                    </div>
+                
+                <!-- 轮播图控制按钮 -->
+                <button class="carousel-btn carousel-prev" aria-label="上一张">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-next" aria-label="下一张">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+                
+                <!-- 轮播图指示器 -->
+                <div class="carousel-indicators">
+                    <button class="indicator active" data-slide="0" aria-label="第1张图片"></button>
+                    <button class="indicator" data-slide="1" aria-label="第2张图片"></button>
+                    <button class="indicator" data-slide="2" aria-label="第3张图片"></button>
+                    <button class="indicator" data-slide="3" aria-label="第4张图片"></button>
+                    <button class="indicator" data-slide="4" aria-label="第5张图片"></button>
                 </div>
             </div>
         </div>
@@ -275,7 +320,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="useCases.title">适用场景</h2>
-                <p class="section-subtitle" data-i18n="useCases.subtitle">无论您是个人用户还是企业团队，PageMiner适用于各种数据采集需求</p>
+                <p class="section-subtitle" data-i18n="useCases.subtitle">PageMiner适用于各种数据采集需求</p>
             </div>
 
             <div class="use-cases-grid">
@@ -302,35 +347,17 @@
                     <h3 data-i18n="useCases.content.title">内容创作</h3>
                     <p data-i18n="useCases.content.description">收集热点话题、用户评论、趋势数据</p>
                 </div>
+
                 <div class="use-case-card">
                     <div class="use-case-icon">💼</div>
-                    <h3 class="use-case-title">市场营销</h3>
-                    <p class="use-case-description">收集竞品信息、产品价格、营销活动等数据，为市场策略提供数据支持。</p>
+                    <h3 data-i18n="useCases.marketing.title">市场营销</h3>
+                    <p data-i18n="useCases.marketing.description">收集竞品信息、产品价格、营销活动等数据，为市场策略提供数据支持</p>
                 </div>
+
                 <div class="use-case-card">
-                    <div class="use-case-icon">👥</div>
-                    <h3 class="use-case-title">人力资源</h3>
-                    <p class="use-case-description">抓取招聘信息、候选人资料、薪资数据等，优化招聘和人才管理流程。</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">📊</div>
-                    <h3 class="use-case-title">数据分析</h3>
-                    <p class="use-case-description">收集研究数据、行业报告、统计数据等，为分析和决策提供数据基础。</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🛒</div>
-                    <h3 class="use-case-title">电商运营</h3>
-                    <p class="use-case-description">监控产品价格、库存状态、用户评价等，优化产品策略和定价。</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">📰</div>
-                    <h3 class="use-case-title">新闻媒体</h3>
-                    <p class="use-case-description">收集新闻资讯、热点话题、舆论数据等，为内容创作和传播提供素材。</p>
-                </div>
-                <div class="use-case-card">
-                    <div class="use-case-title">🏢</div>
-                    <h3 class="use-case-title">企业情报</h3>
-                    <p class="use-case-description">监控竞争对手动态、行业趋势、政策变化等，为企业战略提供情报支持。</p>
+                    <div class="use-case-icon">🏢</div>
+                    <h3 data-i18n="useCases.intelligence.title">企业情报</h3>
+                    <p data-i18n="useCases.intelligence.description">监控竞争对手动态、行业趋势、政策变化等，为企业战略提供情报支持</p>
                 </div>
             </div>
         </div>
@@ -340,7 +367,7 @@
     <section id="pricing" class="section pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="pricing.title">灵活的价格方案</h2>
+                <h2 class="section-title" data-i18n="pricing.title">价格方案</h2>
                 <p class="section-subtitle" data-i18n="pricing.subtitle">选择最适合您的方案</p>
             </div>
 
@@ -355,12 +382,10 @@
                     </div>
                     <ul class="pricing-features">
                         <li data-i18n="pricing.free.features.0">✅ 基础数据提取功能</li>
-                        <li data-i18n="pricing.free.features.1">✅ 最多保存10个规则</li>
+                        <li data-i18n="pricing.free.features.1">✅ 最多10个提取规则</li>
                         <li data-i18n="pricing.free.features.2">✅ CSV格式导出</li>
                         <li data-i18n="pricing.free.features.3">✅ 本地数据存储</li>
                         <li data-i18n="pricing.free.features.4">✅ 基础技术支持</li>
-                        <li>❌ 高级功能</li>
-                        <li>❌ 云同步</li>
                     </ul>
                     <a href="#download" class="pricing-btn" data-i18n="pricing.free.cta">免费使用</a>
                 </div>
@@ -376,11 +401,11 @@
                     </div>
                     <ul class="pricing-features">
                         <li data-i18n="pricing.pro.features.0">✅ 所有免费版功能</li>
-                        <li data-i18n="pricing.pro.features.1">✅ 无限规则保存</li>
+                        <li data-i18n="pricing.pro.features.1">✅ 无限提取规则</li>
                         <li data-i18n="pricing.pro.features.2">✅ 多种格式导出</li>
-                        <li data-i18n="pricing.pro.features.3">✅ 规则云同步</li>
-                        <li data-i18n="pricing.pro.features.4">✅ 定时任务</li>
-                        <li data-i18n="pricing.pro.features.5">✅ 优先客服支持</li>
+                        <li data-i18n="pricing.pro.features.3">✅ 云端同步</li>
+                        <li data-i18n="pricing.pro.features.4">✅ 高级技术支持</li>
+                        <li data-i18n="pricing.pro.features.5">✅ 团队协作功能</li>
                     </ul>
                     <a href="#download" class="pricing-btn featured" data-i18n="pricing.pro.cta">立即升级</a>
                 </div>
@@ -392,21 +417,21 @@
     <section id="download" class="section download">
         <div class="container">
             <div class="download-content">
-                <h2 class="download-title" data-i18n="download.title">立即开始使用PageMiner</h2>
-                <p class="download-subtitle" data-i18n="download.subtitle">加入10,000+用户的行列，体验智能数据提取的魅力</p>
+                <h2 class="download-title" data-i18n="download.title">立即开始使用</h2>
+                <p class="download-subtitle" data-i18n="download.subtitle">下载PageMiner，体验智能数据提取的强大功能</p>
                 <div class="download-actions">
                     <a href="https://chrome.google.com/webstore/detail/pageminer" class="btn-primary" target="_blank">
                         <span class="btn-icon">🌐</span>
-                        <span data-i18n="download.chromeStore">从Chrome商店下载</span>
+                        <span data-i18n="download.chrome">从Chrome商店下载</span>
                     </a>
                     <a href="video-demo.html" class="btn-secondary">
                         <span class="btn-icon">🎥</span>
-                        <span data-i18n="download.watchDemo">观看演示视频</span>
+                        <span data-i18n="hero.watchDemo">观看演示</span>
                     </a>
                 </div>
                 <div class="download-info">
-                    <p data-i18n="download.info.0">支持Chrome、Edge、Firefox等主流浏览器</p>
-                    <p data-i18n="download.info.1">安装后即可使用，无需额外配置</p>
+                    <p data-i18n="download.requirementsDesc">Chrome 88+ / Edge 88+ / Firefox 85+</p>
+                    <p data-i18n="download.manualDesc">下载CRX文件，拖拽到Chrome扩展页面安装</p>
                 </div>
             </div>
         </div>
