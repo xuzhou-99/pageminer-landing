@@ -51,7 +51,7 @@ PageMiner是一款智能网页数据提取浏览器扩展，旨在帮助用户�
 ```
 pageminer-landing/
 ├── index.html          # 主页面 - 产品介绍和功能展示
-├── demo.html           # 演示页面 - 功能演示和交互体验
+├── function.html           # 演示页面 - 功能演示和交互体验
 ├── css/
 │   └── style.css      # 主样式文件
 ├── js/

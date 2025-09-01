@@ -63,8 +63,8 @@ locales/
 ```
 pageminer-landing/
 ├── index.html              # 主页面
-├── demo.html               # 功能演示页面
-├── video-demo.html         # 视频演示页面
+├── function.html               # 功能演示页面
+├── function-video.html         # 视频演示页面
 ├── css/
 │   ├── style.css          # 主样式文件
 │   └── i18n.css           # 国际化样式

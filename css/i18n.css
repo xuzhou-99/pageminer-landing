@@ -36,13 +36,13 @@
 .lang-name {
     font-size: 0.875rem;
     font-weight: 500;
-    color: white;
+    /* color: white; */
     white-space: nowrap;
 }
 
 .lang-arrow {
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.8);
+    /* color: rgba(255, 255, 255, 0.8); */
     transition: transform 0.3s ease;
 }
 
