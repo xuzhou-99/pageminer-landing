@@ -42,27 +42,27 @@
     "title": "Powerful Features",
     "subtitle": "PageMiner provides a complete web data extraction solution",
     "visual": {
-      "title": "🎯 Visual Selection",
+      "title": "Visual Selection",
       "description": "Directly select data elements on webpages through mouse hover and click operations"
     },
     "smart": {
-      "title": "🧠 Smart Rule Generation",
+      "title": "Smart Rule Generation",
       "description": "Automatically analyze page structure and generate precise CSS selectors without manual coding"
     },
     "auto": {
-      "title": "⚡ Auto Execution",
+      "title": "Auto Execution",
       "description": "Automatically execute data extraction on similar pages after configuration, greatly improving work efficiency"
     },
     "export": {
-      "title": "📊 Multiple Export Formats",
+      "title": "Multiple Export Formats",
       "description": "Support CSV, Excel, JSON and other formats, data can be directly used in analysis tools"
     },
     "storage": {
-      "title": "💾 Local Storage",
+      "title": "Local Storage",
       "description": "All data is saved locally by default, protecting your privacy and data security, supporting rule import and export"
     },
     "sync": {
-      "title": "☁️ Cloud Sync",
+      "title": "Cloud Sync",
       "description": "Support cloud synchronization of rules and data, seamless collaboration across multiple devices"
     }
   },
@@ -114,23 +114,23 @@
       "description": "Monitor competitor prices, collect product information, analyze market trends"
     },
     "research": {
-      "title": "📊 Market Research",
+      "title": "Market Research",
       "description": "Collect industry reports, statistical data, news and information"
     },
     "hr": {
-      "title": "👥 Human Resources",
+      "title": "Human Resources",
       "description": "Scrape recruitment information, candidate profiles, salary data"
     },
     "content": {
-      "title": "📰 Content Creation",
+      "title": "Content Creation",
       "description": "Collect trending topics, user comments, trend data"
     },
     "marketing": {
-      "title": "💼 Marketing",
+      "title": "Marketing",
       "description": "Collect competitor information, product prices, marketing activities and other data to provide data support for market strategies"
     },
     "intelligence": {
-      "title": "🏢 Business Intelligence",
+      "title": "Business Intelligence",
       "description": "Monitor competitor dynamics, industry trends, policy changes, etc., to provide intelligence support for corporate strategy"
     }
   },
@@ -216,22 +216,22 @@
       "title": "Core Feature Demo",
       "subtitle": "Learn how PageMiner changes your data collection workflow",
       "visual": {
-        "title": "🎯 Visual Selection",
+        "title": "Visual Selection",
         "description": "Directly select data elements on webpages through mouse hover and click operations. The system automatically highlights selectable elements and generates unique CSS selectors.",
         "cta": "Experience Selection"
       },
       "smart": {
-        "title": "🧠 Smart Rule Generation",
+        "title": "Smart Rule Generation",
         "description": "No need to manually write CSS selectors, PageMiner automatically analyzes page structure and generates precise extraction rules, supporting text, images, links and other data types.",
         "cta": "View Rules"
       },
       "auto": {
-        "title": "⚡ Auto Execution",
+        "title": "Auto Execution",
         "description": "After configuration, the system automatically executes data extraction on similar pages without repeated operations, greatly improving work efficiency.",
         "cta": "Test Execution"
       },
       "data": {
-        "title": "📊 Data Management",
+        "title": "Data Management",
         "description": "Extracted data is displayed in structured form, supporting multiple format exports for convenient subsequent analysis and processing.",
         "cta": "View Data"
       }
@@ -263,19 +263,19 @@
       "title": "Feature Showcase",
       "subtitle": "Deeply understand PageMiner's technical advantages and usage methods",
       "recognition": {
-        "title": "🔍 Smart Element Recognition",
+        "title": "Smart Element Recognition",
         "description": "PageMiner can intelligently recognize list structures, table data, repeated elements and more in pages, automatically generating optimal extraction strategies. Supports multiple element type detection."
       },
       "configuration": {
-        "title": "⚙️ Rule Configuration",
+        "title": "Rule Configuration",
         "description": "Supports multiple selector types including CSS selectors, XPath, DOM paths, etc., meeting different scenario needs. Automatically generates unique selectors."
       },
       "reuse": {
-        "title": "🔄 Rule Reuse",
+        "title": "Rule Reuse",
         "description": "Configure once, use everywhere. Supports rule import and export for more efficient team collaboration."
       },
       "export": {
-        "title": "📈 Data Export",
+        "title": "Data Export",
         "description": "Supports CSV, Excel, JSON and other format exports, data can be directly used in analysis tools or databases."
       }
     },
@@ -283,19 +283,19 @@
       "title": "Plugin Feature Showcase",
       "subtitle": "Core feature display based on actual code implementation",
       "visualMode": {
-        "title": "🎨 Visual Extraction Mode",
+        "title": "Visual Extraction Mode",
         "description": "After starting extraction mode, hovering over page elements shows red border highlighting, clicking elements to select and configure extraction rules."
       },
       "typeDetection": {
-        "title": "🔍 Smart Type Detection",
+        "title": "Smart Type Detection",
         "description": "Automatically detect element types, intelligently recommend field types, supporting text, images, links and other data types."
       },
       "progress": {
-        "title": "⚡ Real-time Extraction Progress",
+        "title": "Real-time Extraction Progress",
         "description": "Shows real-time progress during extraction, highlighting elements being extracted, providing visual feedback and status indication."
       },
       "storage": {
-        "title": "💾 Local Data Storage",
+        "title": "Local Data Storage",
         "description": "All extraction rules and data are saved locally by default, protecting user privacy, supporting rule import and export."
       }
     },
@@ -303,22 +303,22 @@
       "title": "Practical Application Scenarios",
       "subtitle": "Understand PageMiner's application value in different industries",
       "ecommerce": {
-        "title": "🛒 E-commerce Operations",
+        "title": "E-commerce Operations",
         "description": "Monitor competitor prices, collect product information, analyze market trends, providing data support for product strategies.",
         "applicable": "Applicable: Price monitoring, competitor analysis, product research"
       },
       "research": {
-        "title": "📊 Market Research",
+        "title": "Market Research",
         "description": "Collect industry reports, statistical data, news and information, building complete research databases.",
         "applicable": "Applicable: Industry analysis, trend research, data collection"
       },
       "hr": {
-        "title": "👥 Human Resources",
+        "title": "Human Resources",
         "description": "Scrape recruitment information, candidate profiles, salary data, optimizing recruitment and talent management processes.",
         "applicable": "Applicable: Recruitment information, talent analysis, market research"
       },
       "content": {
-        "title": "📰 Content Creation",
+        "title": "Content Creation",
         "description": "Collect trending topics, user comments, trend data, providing inspiration and materials for content creation.",
         "applicable": "Applicable: Trend tracking, user insights, content planning"
       }
@@ -412,10 +412,6 @@
       "button2": "Test Button 2",
       "label": "Test Label:",
       "placeholder": "Please enter test text"
-    },
-    "meta": {
-      "title": "Meta Tag Test",
-      "description": "Test dynamic update of page title and description"
     },
     "debug": {
       "title": "Debug Information",

@@ -42,27 +42,27 @@
     "title": "强大功能特性",
     "subtitle": "PageMiner提供完整的网页数据提取解决方案",
     "visual": {
-      "title": "🎯 可视化选择",
+      "title": "可视化选择",
       "description": "通过鼠标悬停和点击操作，直接在网页上选择需要提取的数据元素"
     },
     "smart": {
-      "title": "🧠 智能规则生成",
+      "title": "智能规则生成",
       "description": "自动分析页面结构，生成精确的CSS选择器，无需手动编写代码"
     },
     "auto": {
-      "title": "⚡ 自动执行",
+      "title": "自动执行",
       "description": "配置完成后自动在相似页面上执行数据提取，大大提高工作效率"
     },
     "export": {
-      "title": "📊 多种格式导出",
+      "title": "多种格式导出",
       "description": "支持CSV、Excel、JSON等多种格式，数据可直接用于分析工具"
     },
     "storage": {
-      "title": "💾 本地存储",
+      "title": "本地存储",
       "description": "所有数据默认保存在本地，保护您的隐私和数据安全，支持规则导入导出"
     },
     "sync": {
-      "title": "☁️ 云端同步",
+      "title": "云端同步",
       "description": "支持规则和数据的云端同步，多设备间无缝协作"
     }
   },
@@ -110,27 +110,27 @@
     "title": "适用场景",
     "subtitle": "PageMiner适用于各种数据采集需求",
     "ecommerce": {
-      "title": "🛒 电商运营",
+      "title": "电商运营",
       "description": "监控竞品价格、收集产品信息、分析市场趋势"
     },
     "research": {
-      "title": "📊 市场研究",
+      "title": "市场研究",
       "description": "收集行业报告、统计数据、新闻资讯"
     },
     "hr": {
-      "title": "👥 人力资源",
+      "title": "人力资源",
       "description": "抓取招聘信息、候选人资料、薪资数据"
     },
     "content": {
-      "title": "📰 内容创作",
+      "title": "内容创作",
       "description": "收集热点话题、用户评论、趋势数据"
     },
     "marketing": {
-      "title": "💼 市场营销",
+      "title": "市场营销",
       "description": "收集竞品信息、产品价格、营销活动等数据，为市场策略提供数据支持"
     },
     "intelligence": {
-      "title": "🏢 企业情报",
+      "title": "企业情报",
       "description": "监控竞争对手动态、行业趋势、政策变化等，为企业战略提供情报支持"
     }
   },
@@ -216,22 +216,22 @@
       "title": "核心功能演示",
       "subtitle": "了解PageMiner如何改变您的数据采集工作流程",
       "visual": {
-        "title": "🎯 可视化选择",
+        "title": "可视化选择",
         "description": "通过鼠标悬停和点击操作，直接在网页上选择需要提取的数据元素。系统会自动高亮显示可选择的元素，并生成唯一的CSS选择器。",
         "cta": "体验选择"
       },
       "smart": {
-        "title": "🧠 智能规则生成",
+        "title": "智能规则生成",
         "description": "无需手动编写CSS选择器，PageMiner会自动分析页面结构，生成精确的提取规则，支持文本、图片、链接等多种数据类型。",
         "cta": "查看规则"
       },
       "auto": {
-        "title": "⚡ 自动执行",
+        "title": "自动执行",
         "description": "配置完成后，系统会自动在相似页面上执行数据提取，无需重复操作，大大提高工作效率。",
         "cta": "测试执行"
       },
       "data": {
-        "title": "📊 数据管理",
+        "title": "数据管理",
         "description": "提取的数据以结构化形式展示，支持多种格式导出，方便后续分析和处理。",
         "cta": "查看数据"
       }
@@ -263,19 +263,19 @@
       "title": "功能特性展示",
       "subtitle": "深入了解PageMiner的技术优势和使用方法",
       "recognition": {
-        "title": "🔍 智能元素识别",
+        "title": "智能元素识别",
         "description": "PageMiner能够智能识别页面中的列表结构、表格数据、重复元素等，自动生成最优的提取策略。支持多种元素类型检测。"
       },
       "configuration": {
-        "title": "⚙️ 规则配置",
+        "title": "规则配置",
         "description": "支持多种选择器类型，包括CSS选择器、XPath、DOM路径等，满足不同场景的需求。自动生成唯一选择器。"
       },
       "reuse": {
-        "title": "🔄 规则复用",
+        "title": "规则复用",
         "description": "一次配置，多处使用。支持规则的导入导出，团队协作更高效。"
       },
       "export": {
-        "title": "📈 数据导出",
+        "title": "数据导出",
         "description": "支持CSV、Excel、JSON等多种格式导出，数据可直接用于分析工具或数据库。"
       }
     },
@@ -283,19 +283,19 @@
       "title": "插件功能特性",
       "subtitle": "基于实际代码实现的核心功能展示",
       "visualMode": {
-        "title": "🎨 可视化提取模式",
+        "title": "可视化提取模式",
         "description": "启动提取模式后，鼠标悬停页面元素会显示红色边框高亮，点击元素即可选择并配置提取规则。"
       },
       "typeDetection": {
-        "title": "🔍 智能类型检测",
+        "title": "智能类型检测",
         "description": "自动检测元素类型，智能推荐字段类型，支持文本、图片、链接等多种数据类型。"
       },
       "progress": {
-        "title": "⚡ 实时提取进度",
+        "title": "实时提取进度",
         "description": "提取过程中显示实时进度，高亮正在提取的元素，提供视觉反馈和状态指示。"
       },
       "storage": {
-        "title": "💾 本地数据存储",
+        "title": "本地数据存储",
         "description": "所有提取规则和数据默认保存在本地，保护用户隐私，支持规则导入导出。"
       }
     },
@@ -303,22 +303,22 @@
       "title": "实际应用场景",
       "subtitle": "了解PageMiner在不同行业中的应用价值",
       "ecommerce": {
-        "title": "🛒 电商运营",
+        "title": "电商运营",
         "description": "监控竞品价格、收集产品信息、分析市场趋势，为产品策略提供数据支持。",
         "applicable": "适用：价格监控、竞品分析、产品调研"
       },
       "research": {
-        "title": "📊 市场研究",
+        "title": "市场研究",
         "description": "收集行业报告、统计数据、新闻资讯，构建完整的研究数据库。",
         "applicable": "适用：行业分析、趋势研究、数据收集"
       },
       "hr": {
-        "title": "👥 人力资源",
+        "title": "人力资源",
         "description": "抓取招聘信息、候选人资料、薪资数据，优化招聘和人才管理流程。",
         "applicable": "适用：招聘信息、人才分析、市场调研"
       },
       "content": {
-        "title": "📰 内容创作",
+        "title": "内容创作",
         "description": "收集热点话题、用户评论、趋势数据，为内容创作提供灵感和素材。",
         "applicable": "适用：热点追踪、用户洞察、内容策划"
       }
@@ -412,10 +412,6 @@
       "button2": "测试按钮2",
       "label": "测试标签：",
       "placeholder": "请输入测试文本"
-    },
-    "meta": {
-      "title": "Meta标签测试",
-      "description": "测试页面标题和描述的动态更新"
     },
     "debug": {
       "title": "调试信息",
