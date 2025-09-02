@@ -13,15 +13,6 @@ PageMiner是一款智能网页数据提取助手，通过可视化操作帮助�
 ## 🚀 快速开始
 
 
-### 方法3：测试国际化系统
-
-我们提供了一个专门的测试页面来验证国际化系统是否正常工作：
-
-1. 启动本地服务器后，访问：`http://localhost:8000/test-i18n.html`
-2. 使用页面右上角的语言切换器测试不同语言
-3. 点击"检查国际化状态"按钮查看系统运行状态
-4. 观察页面标题、描述和内容的动态更新
-
 ## 🌐 国际化系统
 
 ### 支持的语言
@@ -63,8 +54,7 @@ locales/
 ```
 pageminer-landing/
 ├── index.html              # 主页面
-├── function.html               # 功能演示页面
-├── function-video.html         # 视频演示页面
+├── function.html               # 功能视频演示页面
 ├── css/
 │   ├── style.css          # 主样式文件
 │   └── i18n.css           # 国际化样式
@@ -73,8 +63,6 @@ pageminer-landing/
 │   └── i18n.js            # 国际化管理脚本
 ├── locales/                # 语言文件目录
 ├── images/                 # 图片资源
-├── start-server.py         # Python本地服务器
-├── start-server.bat        # Windows批处理文件
 ├── README.md               # 项目说明
 └── pageminer-site.md       # 设计文档
 ```

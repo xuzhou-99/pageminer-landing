@@ -1,0 +1,47 @@
+---
+description: PageMiner 网站开发开发规则
+globs:
+alwaysApply: true
+---
+
+## 1. 网站框架
+
+* 网站设计说明文档：pageminer-site.md
+* 所有的新增、修改都要基于以下的目录结构，禁止随意更改目录层级和文件
+  pageminer-landing/
+  ├── index.html          # 主页面 - 产品介绍和功能展示
+  ├── function.html       # 演示页面 - 功能演示和交互体验
+  ├── pageminer-site.md   # 说明文档 - 网站设计框架和主要风格、标准文档
+  ├── pageminer-plugin.md # 说明文档 - PageMiner插件功能说明及设计文档
+  ├── readme.md           # 说明文档 - 本项目说明
+  ├── css/
+  │   └── style.css      # 主样式文件
+  │   └── i18n.css      # 国际化样式
+  ├── js/
+  │   └── main.js        # 主JavaScript文件
+  │   └── i18n.js        # 国际化JavaScript文件
+  ├── locales/           # 国际化翻译资源
+  └── images/            # 图片资源目录
+
+## 2. UI设计要求
+
+* UI风格：简洁 美观
+* 风格一致：遵循现有页面简洁卡片化风格。
+* 多语言：所有文案均从 i18n 语言包读取，禁止写死文案。
+
+## 3. 开发要求
+
+* SEO优化：所有页面要有利于SEO优化。
+* 最小改动：修改已有文件时，保持原有函数签名和调用逻辑不变，如需扩展优先考虑新增方法。
+* 所有的新增、修改、优化都要先参考 pageminer-site.md。
+* 变更日志文件：所有功能和修复必须记录在 pageminer-site.md，加到文档的最后面日志部分
+  * 日志格式规范：
+  ```md
+    ## [版本号] - YYYY-MM-DD
+    ### 新增
+    - 功能描述（简洁）
+    ### 优化
+    - 优化点说明
+    ### 修复
+    - 问题 & 修复说明
+  ```

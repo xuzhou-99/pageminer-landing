@@ -117,7 +117,7 @@ class I18nManager {
         }
     }
 
-    getText(key, lang = null) {
+    getText(key, defaultText = null, lang = null) {
         const targetLang = lang || this.currentLang;
         const fallback = this.translations[this.fallbackLang] || {};
         const target = this.translations[targetLang] || {};
@@ -127,6 +127,7 @@ class I18nManager {
         // 调试信息
         if (result === key) {
             console.warn(`⚠️ 未找到翻译键: ${key}, 语言: ${targetLang}`);
+            result = defaultText || result;
         }
 
         return result;
@@ -165,7 +166,8 @@ class I18nManager {
 
         elements.forEach((element, index) => {
             const key = element.getAttribute('data-i18n');
-            const text = this.getText(key);
+            const defaultText = element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' ? element.placeholder : element.textContent;
+            const text = this.getText(key, defaultText);
 
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = text;
@@ -198,8 +200,9 @@ class I18nManager {
             const descMeta = document.querySelector('meta[name="description"]');
             if (descMeta) {
                 const descKey = descMeta.getAttribute('data-i18n');
+                const defaultText = descMeta.getAttribute('content');
                 if (descKey) {
-                    descMeta.setAttribute('content', this.getText(descKey));
+                    descMeta.setAttribute('content', this.getText(descKey, defaultText));
                 }
             }
 
@@ -207,8 +210,9 @@ class I18nManager {
             const keywordsMeta = document.querySelector('meta[name="keywords"]');
             if (keywordsMeta) {
                 const keywordsKey = keywordsMeta.getAttribute('data-i18n');
+                const defaultText = keywordsMeta.getAttribute('content');
                 if (keywordsKey) {
-                    keywordsMeta.setAttribute('content', this.getText(keywordsKey));
+                    keywordsMeta.setAttribute('content', this.getText(keywordsKey, defaultText));
                 }
             }
 
@@ -228,16 +232,18 @@ class I18nManager {
             const ogTitle = document.querySelector('meta[property="og:title"]');
             if (ogTitle) {
                 const titleKey = ogTitle.getAttribute('data-i18n');
+                const defaultText = ogTitle.getAttribute('content');
                 if (titleKey) {
-                    ogTitle.setAttribute('content', this.getText(titleKey));
+                    ogTitle.setAttribute('content', this.getText(titleKey, defaultText));
                 }
             }
 
             const ogDesc = document.querySelector('meta[property="og:description"]');
             if (ogDesc) {
                 const descKey = ogDesc.getAttribute('data-i18n');
+                const defaultText = ogDesc.getAttribute('content');
                 if (descKey) {
-                    ogDesc.setAttribute('content', this.getText(descKey));
+                    ogDesc.setAttribute('content', this.getText(descKey, defaultText));
                 }
             }
         } catch (error) {
@@ -250,16 +256,18 @@ class I18nManager {
             const twitterTitle = document.querySelector('meta[property="twitter:title"]');
             if (twitterTitle) {
                 const titleKey = twitterTitle.getAttribute('data-i18n');
+                const defaultText = twitterTitle.getAttribute('content');
                 if (titleKey) {
-                    twitterTitle.setAttribute('content', this.getText(titleKey));
+                    twitterTitle.setAttribute('content', this.getText(titleKey, defaultText));
                 }
             }
 
             const twitterDesc = document.querySelector('meta[property="twitter:description"]');
             if (twitterDesc) {
                 const descKey = twitterDesc.getAttribute('data-i18n');
+                const defaultText = twitterDesc.getAttribute('content');
                 if (descKey) {
-                    twitterDesc.setAttribute('content', this.getText(descKey));
+                    twitterDesc.setAttribute('content', this.getText(descKey, defaultText));
                 }
             }
         } catch (error) {
@@ -272,8 +280,9 @@ class I18nManager {
             const titleElement = document.querySelector('title[data-i18n]');
             if (titleElement) {
                 const titleKey = titleElement.getAttribute('data-i18n');
+                const defaultText = document.title;
                 if (titleKey) {
-                    document.title = this.getText(titleKey);
+                    document.title = this.getText(titleKey, defaultText);
                 }
             }
         } catch (error) {
