@@ -147,7 +147,8 @@
         "Up to 10 extraction rules",
         "CSV format export",
         "Local data storage",
-        "Basic technical support"
+        "Basic technical support",
+        "Community support"
       ],
       "cta": "Get Started Free"
     },
@@ -212,6 +213,13 @@
     "title": "🚀 PageMiner Feature Demo",
     "subtitle": "Experience the powerful features of intelligent web data extraction and learn how to easily achieve data automation collection",
     "startExperience": "Start Experience",
+    "hero": {
+      "stats": {
+        "steps": "Simple Steps",
+        "success": "Success Rate",
+        "formats": "Export Formats"
+      }
+    },
     "coreFeatures": {
       "title": "Core Feature Demo",
       "subtitle": "Learn how PageMiner changes your data collection workflow",
@@ -237,8 +245,43 @@
       }
     },
     "interactive": {
-      "title": "Interactive Experience",
-      "subtitle": "Personally experience PageMiner's data extraction process",
+      "title": "🎮 Interactive Demo",
+      "subtitle": "Experience PageMiner's core features through simulated operations",
+      "form": {
+        "title": "Simulate Data Extraction",
+        "subtitle": "Choose the data type to extract and experience PageMiner's intelligent extraction features",
+        "url": {
+          "label": "Target Website URL"
+        },
+        "dataType": {
+          "label": "Data Type",
+          "titles": "Article Titles",
+          "links": "Link Addresses",
+          "prices": "Price Information",
+          "images": "Image Links"
+        },
+        "quantity": {
+          "label": "Extraction Quantity",
+          "5": "5 items",
+          "10": "10 items",
+          "20": "20 items",
+          "50": "50 items"
+        },
+        "submit": "Start Extraction"
+      },
+      "results": {
+        "title": "Extraction Results",
+        "extracted": "Extracted: {count} items",
+        "success": "Success Rate: {rate}%",
+        "time": "Time: {time}s",
+        "table": {
+          "index": "Index",
+          "content": "Content",
+          "status": "Status"
+        },
+        "export": "Export Data",
+        "clear": "Clear Results"
+      },
       "step1": "Configure Rules",
       "step2": "Select Fields",
       "step3": "Extract Data",
@@ -340,6 +383,7 @@
       "title": "Feature Demo Video",
       "subtitle": "Understand PageMiner's complete workflow through actual operation demonstrations",
       "description": "This video demonstrates the complete usage process of the PageMiner plugin, including visual selection, intelligent rule generation, data extraction, and result management.",
+      "noSupport": "Your browser does not support video playback.",
       "visual": {
         "title": "Visual Selection",
         "description": "Demonstrates how to select page elements through mouse hover and click operations, with the system automatically highlighting selectable elements."
@@ -373,7 +417,9 @@
       "title": "Ready to get started?",
       "subtitle": "After watching the demo video, you can:",
       "tutorial": "View Usage Tutorial",
-      "download": "Download Plugin Now"
+      "tutorialText": "View Usage Tutorial",
+      "download": "Download Plugin Now",
+      "downloadText": "Download Plugin Now"
     }
   },
   "common": {
