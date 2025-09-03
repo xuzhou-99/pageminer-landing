@@ -280,7 +280,10 @@
           "status": "Status"
         },
         "export": "Export Data",
-        "clear": "Clear Results"
+        "clear": "Clear Results",
+        "success": "Success",
+        "error": "Failed",
+        "sampleData": "Sample Data"
       },
       "step1": "Configure Rules",
       "step2": "Select Fields",
@@ -384,6 +387,9 @@
       "subtitle": "Understand PageMiner's complete workflow through actual operation demonstrations",
       "description": "This video demonstrates the complete usage process of the PageMiner plugin, including visual selection, intelligent rule generation, data extraction, and result management.",
       "noSupport": "Your browser does not support video playback.",
+      "loadError": "Video Load Failed",
+      "loadErrorDesc": "Please check if the video file exists or contact technical support",
+      "contactSupport": "Contact Support",
       "visual": {
         "title": "Visual Selection",
         "description": "Demonstrates how to select page elements through mouse hover and click operations, with the system automatically highlighting selectable elements."

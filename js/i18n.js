@@ -17,6 +17,9 @@ class I18nManager {
         try {
             console.log('🌐 开始初始化国际化系统...');
 
+            // 创建语言切换器
+            this.createLanguageSwitcher();
+
             // 检测用户语言偏好
             this.detectUserLanguage();
             console.log('🌐 检测到语言:', this.currentLang);
@@ -117,7 +120,7 @@ class I18nManager {
         }
     }
 
-    getText(key, defaultText = null, lang = null) {
+    getText(key, defaultText = '', lang = null) {
         const targetLang = lang || this.currentLang;
         const fallback = this.translations[this.fallbackLang] || {};
         const target = this.translations[targetLang] || {};
@@ -127,7 +130,7 @@ class I18nManager {
         // 调试信息
         if (result === key) {
             console.warn(`⚠️ 未找到翻译键: ${key}, 语言: ${targetLang}`);
-            result = defaultText || result;
+            return defaultText || result;
         }
 
         return result;
@@ -339,7 +342,13 @@ class I18nManager {
     }
 
     createLanguageSwitcher() {
-        const switcher = document.createElement('div');
+
+        const switcher = document.querySelector('.language-switcher');
+        if (!switcher) {
+           return
+        } else {
+            switcher.innerHTML = '';
+        }
         switcher.className = 'language-switcher';
 
         const currentLang = document.createElement('div');
@@ -354,26 +363,20 @@ class I18nManager {
         dropdown.className = 'lang-dropdown';
 
         this.supportedLangs.forEach(lang => {
-            if (lang !== this.currentLang) {
+            // if (lang !== this.currentLang) {
                 const langItem = document.createElement('div');
-                langItem.className = 'lang-item';
+                langItem.className = 'lang-option';
                 langItem.setAttribute('data-lang', lang);
                 langItem.innerHTML = `
                     <span class="lang-flag">${this.getLanguageFlag(lang)}</span>
                     <span class="lang-name">${this.getLanguageName(lang)}</span>
                 `;
                 dropdown.appendChild(langItem);
-            }
+            // }
         });
 
         switcher.appendChild(currentLang);
         switcher.appendChild(dropdown);
-
-        // 插入到导航栏
-        const navMenu = document.querySelector('.nav-menu');
-        if (navMenu) {
-            navMenu.appendChild(switcher);
-        }
 
         return switcher;
     }
@@ -397,7 +400,7 @@ class I18nManager {
         };
 
         this.handleLanguageSelect = (e) => {
-            const langItem = e.target.closest('.lang-item');
+            const langItem = e.target.closest('.lang-option');
             if (langItem) {
                 const lang = langItem.getAttribute('data-lang');
                 console.log('🌐 用户选择语言:', lang);

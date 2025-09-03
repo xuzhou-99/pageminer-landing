@@ -280,7 +280,10 @@
           "status": "状态"
         },
         "export": "导出数据",
-        "clear": "清空结果"
+        "clear": "清空结果",
+        "success": "成功",
+        "error": "失败",
+        "sampleData": "示例数据"
       },
       "step1": "配置规则",
       "step2": "选择字段",
@@ -383,6 +386,9 @@
       "subtitle": "通过实际操作演示，了解PageMiner的完整工作流程",
       "description": "本视频展示了PageMiner插件的完整使用流程，包括可视化选择、智能规则生成、数据提取和结果管理等核心功能。",
       "noSupport": "您的浏览器不支持视频播放。",
+      "loadError": "视频加载失败",
+      "loadErrorDesc": "请检查视频文件是否存在或联系技术支持",
+      "contactSupport": "联系支持",
       "visual": {
         "title": "可视化选择",
         "description": "演示如何通过鼠标悬停和点击操作选择页面元素，系统自动高亮显示可选择的元素。"
