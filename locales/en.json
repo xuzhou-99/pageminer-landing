@@ -193,6 +193,104 @@
     "requirements": "System Requirements",
     "requirementsDesc": "Chrome 88+ / Edge 88+ / Firefox 85+"
   },
+  "comparison": {
+    "title": "Traditional Way vs PageMiner",
+    "subtitle": "See how PageMiner makes data collection so simple",
+    "vs": "VS",
+    "traditional": {
+      "title": "Traditional Way",
+      "subtitle": "Complex, time-consuming, error-prone",
+      "features": [
+        "Requires programming skills and coding knowledge",
+        "Takes hours to write and debug code",
+        "Prone to errors, requires repeated debugging",
+        "High maintenance cost, needs rewriting when websites change",
+        "High learning curve, high barrier to entry"
+      ],
+      "stats": {
+        "time": "hours development",
+        "difficulty": "technical barrier"
+      }
+    },
+    "pageminer": {
+      "title": "PageMiner",
+      "subtitle": "Simple, fast, intelligent",
+      "features": [
+        "Click to select, no programming required",
+        "3 minutes to complete setup, ready to use",
+        "Intelligent recognition, 99.9% accuracy",
+        "Automatically adapts to website changes",
+        "Zero learning cost, accessible to everyone"
+      ],
+      "stats": {
+        "time": "minutes setup",
+        "difficulty": "technical barrier"
+      }
+    },
+    "cta": "Try PageMiner Now"
+  },
+  "testimonials": {
+    "title": "User Testimonials",
+    "subtitle": "Hear what users say about how PageMiner has changed their work",
+    "testimonial1": {
+      "content": "PageMiner has increased our competitive analysis efficiency by 10x! What used to take a full day of manual data collection now takes just minutes. The interface is clean and easy to use, even our non-technical team members can easily get started.",
+      "author": {
+        "name": "Manager Zhang",
+        "title": "Product Manager at E-commerce Company",
+        "company": "Using PageMiner for 6 months"
+      }
+    },
+    "testimonial2": {
+      "content": "As a data analyst, I often need to collect data from various websites. PageMiner's intelligent recognition feature is very accurate, greatly reducing the workload of data cleaning. Support for multiple export formats perfectly fits our workflow.",
+      "author": {
+        "name": "Analyst Li",
+        "title": "Data Analyst",
+        "company": "Using PageMiner for 4 months"
+      }
+    },
+    "testimonial3": {
+      "content": "Our company needs to regularly monitor industry trends and competitor information. PageMiner's scheduled task feature has been a great help, set it once and it runs automatically, saving a lot of manpower costs. The data accuracy rate is very high and trustworthy.",
+      "author": {
+        "name": "Director Wang",
+        "title": "Marketing Director",
+        "company": "Using PageMiner for 8 months"
+      }
+    },
+    "testimonial4": {
+      "content": "As a freelancer, I often need to collect various data for clients. PageMiner has greatly improved my work efficiency and increased client satisfaction. The interface is friendly with low learning cost, highly recommended!",
+      "author": {
+        "name": "Consultant Chen",
+        "title": "Independent Consultant",
+        "company": "Using PageMiner for 3 months"
+      }
+    },
+    "testimonial5": {
+      "content": "Our team uses PageMiner for academic research data collection with excellent results. It supports complex webpage structures with high data extraction accuracy. Customer service responds promptly and quickly resolves any issues.",
+      "author": {
+        "name": "Professor Liu",
+        "title": "University Professor",
+        "company": "Using PageMiner for 1 year"
+      }
+    },
+    "testimonial6": {
+      "content": "PageMiner's batch processing feature is very powerful, allowing simultaneous processing of data extraction tasks from multiple websites. The cloud sync feature makes our team collaboration more efficient, highly recommended for users who need team collaboration.",
+      "author": {
+        "name": "Engineer Zhao",
+        "title": "Technical Engineer",
+        "company": "Using PageMiner for 5 months"
+      }
+    },
+    "stats": {
+      "rating": "Average Rating",
+      "users": "Satisfied Users",
+      "satisfaction": "Satisfaction Rate",
+      "recommend": "Recommendation Rate"
+    },
+    "cta": {
+      "text": "Are you also using PageMiner? Share your experience",
+      "button": "Share Review"
+    }
+  },
   "footer": {
     "description": "Intelligent web data extraction assistant, making data collection simple and efficient.",
     "product": "Product",
