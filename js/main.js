@@ -10,6 +10,7 @@ class PageMiner {
         this.initMobileMenu();
         this.initAnimations();
         this.initCarousel(); // 新增轮播图初始化
+        this.initDemoPageEffects(); // 演示页面特殊效果
     }
 
     // 初始化轮播图
@@ -133,16 +134,29 @@ class PageMiner {
         let startX = 0;
         let endX = 0;
         let isDragging = false;
+        let startTime = 0;
 
         carousel.addEventListener('touchstart', (e) => {
             startX = e.touches[0].clientX;
+            startTime = Date.now();
             isDragging = true;
             this.pauseAutoPlay();
+            
+            // 添加触摸反馈
+            carousel.style.transition = 'none';
         });
 
         carousel.addEventListener('touchmove', (e) => {
             if (!isDragging) return;
             e.preventDefault();
+            
+            // 添加轻微的视觉反馈
+            const currentX = e.touches[0].clientX;
+            const diffX = startX - currentX;
+            const maxOffset = 20;
+            const offset = Math.max(-maxOffset, Math.min(maxOffset, diffX * 0.1));
+            
+            carousel.style.transform = `translateX(${offset}px)`;
         });
 
         carousel.addEventListener('touchend', (e) => {
@@ -150,9 +164,15 @@ class PageMiner {
             
             endX = e.changedTouches[0].clientX;
             const diffX = startX - endX;
+            const diffTime = Date.now() - startTime;
             const threshold = 50; // 最小滑动距离
+            const velocity = Math.abs(diffX) / diffTime; // 滑动速度
 
-            if (Math.abs(diffX) > threshold) {
+            // 重置变换
+            carousel.style.transition = '';
+            carousel.style.transform = '';
+
+            if (Math.abs(diffX) > threshold || velocity > 0.5) {
                 if (diffX > 0) {
                     this.nextSlide(); // 向左滑动，下一张
                 } else {
@@ -224,6 +244,63 @@ class PageMiner {
         });
     }
 
+    // 初始化演示页面特殊效果
+    initDemoPageEffects() {
+        // 为演示页面的hero区域添加特殊动画
+        const heroDemo = document.querySelector('.hero-demo');
+        if (heroDemo) {
+            // 添加进入动画
+            heroDemo.style.opacity = '0';
+            heroDemo.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                heroDemo.style.transition = 'all 0.8s ease-out';
+                heroDemo.style.opacity = '1';
+                heroDemo.style.transform = 'translateY(0)';
+            }, 100);
+        }
+
+        // 为演示页面的统计数字添加计数动画
+        this.initDemoStatsAnimation();
+    }
+
+    // 演示页面统计数字动画
+    initDemoStatsAnimation() {
+        const statNumbers = document.querySelectorAll('.hero-demo .stat-number');
+        statNumbers.forEach(stat => {
+            const finalValue = stat.textContent;
+            if (finalValue && !isNaN(parseInt(finalValue))) {
+                this.animateNumber(stat, 0, parseInt(finalValue), 2000);
+            }
+        });
+    }
+
+    // 数字动画方法
+    animateNumber(element, start, end, duration) {
+        const startTime = performance.now();
+        const isPercentage = element.textContent.includes('%');
+        const isPlus = element.textContent.includes('+');
+        
+        const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            const current = Math.floor(start + (end - start) * progress);
+            let displayValue = current.toString();
+            
+            if (isPercentage) displayValue += '%';
+            if (isPlus) displayValue += '+';
+            
+            element.textContent = displayValue;
+            
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        };
+        
+        requestAnimationFrame(animate);
+    }
+
     // 滚动触发动画
     initScrollAnimations() {
         const observerOptions = {
@@ -235,12 +312,25 @@ class PageMiner {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-in');
+                    
+                    // 为不同类型的元素添加特定的动画类
+                    if (entry.target.classList.contains('feature-card')) {
+                        entry.target.classList.add('fade-in-up');
+                    } else if (entry.target.classList.contains('carousel-slide')) {
+                        entry.target.classList.add('fade-in-scale');
+                    } else if (entry.target.classList.contains('pricing-card')) {
+                        entry.target.classList.add('fade-in-up');
+                    } else if (entry.target.classList.contains('showcase-item')) {
+                        entry.target.classList.add('fade-in-left');
+                    } else if (entry.target.classList.contains('video-feature')) {
+                        entry.target.classList.add('fade-in-right');
+                    }
                 }
             });
         }, observerOptions);
 
         // 观察需要动画的元素
-        const animatedElements = document.querySelectorAll('.feature-card, .step, .screenshot-item, .use-case-card, .pricing-card');
+        const animatedElements = document.querySelectorAll('.feature-card, .step, .carousel-slide, .use-case-card, .pricing-card, .showcase-item, .video-feature');
         animatedElements.forEach(el => observer.observe(el));
     }
 
@@ -282,7 +372,7 @@ class PageMiner {
     // 设置动画效果
     setupAnimations() {
         // 添加进入动画类
-        const animatedElements = document.querySelectorAll('.feature-card, .step-item, .screenshot-item, .use-case-card, .pricing-card');
+        const animatedElements = document.querySelectorAll('.feature-card, .step, .carousel-slide, .use-case-card, .pricing-card, .showcase-item, .video-feature');
         
         animatedElements.forEach((el, index) => {
             el.style.animationDelay = `${index * 0.1}s`;
@@ -366,7 +456,7 @@ class PageMiner {
 
     // 设置截图效果
     setupScreenshotEffects() {
-        const screenshotItems = document.querySelectorAll('.screenshot-item');
+        const screenshotItems = document.querySelectorAll('.carousel-slide');
         
         screenshotItems.forEach(item => {
             item.addEventListener('mouseenter', () => {
@@ -475,7 +565,7 @@ class PageMiner {
         }, observerOptions);
 
         // 观察所有需要动画的元素
-        const animatedElements = document.querySelectorAll('.feature-card, .step-item, .screenshot-item, .use-case-card, .pricing-card');
+        const animatedElements = document.querySelectorAll('.feature-card, .step, .carousel-slide, .use-case-card, .pricing-card, .showcase-item, .video-feature');
         animatedElements.forEach(el => observer.observe(el));
     }
 
@@ -506,7 +596,11 @@ class PageMiner {
     addBackToTop() {
         const backToTop = document.createElement('button');
         backToTop.className = 'back-to-top';
-        backToTop.innerHTML = '↑';
+        backToTop.innerHTML = `
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+        `;
         backToTop.setAttribute('aria-label', '返回顶部');
         document.body.appendChild(backToTop);
 
@@ -858,7 +952,7 @@ addStyles(`
         right: 30px;
         width: 50px;
         height: 50px;
-        background: var(--primary-color);
+        background: linear-gradient(135deg, #fbbf24, #f59e0b);
         color: white;
         border: none;
         border-radius: 50%;
@@ -867,7 +961,10 @@ addStyles(`
         visibility: hidden;
         transition: all 0.3s ease;
         z-index: 1000;
-        box-shadow: var(--shadow-lg);
+        box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .back-to-top.visible {
@@ -876,9 +973,47 @@ addStyles(`
     }
 
     .back-to-top:hover {
-        background: var(--primary-dark);
+        background: linear-gradient(135deg, #f59e0b, #d97706);
         transform: translateY(-3px);
-        box-shadow: var(--shadow-xl);
+        box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+    }
+
+    .back-to-top svg {
+        transition: transform 0.3s ease;
+    }
+
+    .back-to-top:hover svg {
+        transform: translateY(-2px);
+    }
+
+    /* 下载按钮样式 */
+    .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        color: white !important;
+        padding: 8px 16px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    }
+
+    .download-btn:hover {
+        background: linear-gradient(135deg, #1d4ed8, #1e40af);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    }
+
+    .download-btn svg {
+        transition: transform 0.3s ease;
+    }
+
+    .download-btn:hover svg {
+        transform: translate(2px, -2px);
     }
 
     .dark-theme {

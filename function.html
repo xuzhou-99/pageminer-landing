@@ -1,268 +1,35 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="demo.meta.title">PageMiner 功能演示 - 体验智能数据提取</title>
     <meta name="description" data-i18n="demo.meta.description" content="体验PageMiner的强大功能，包括可视化数据提取、智能规则生成、自动化执行等特性。">
     <meta name="keywords" data-i18n="demo.meta.keywords" content="PageMiner演示,数据提取演示,智能规则生成,可视化选择,自动化执行">
-    
+
     <!-- SEO优化 -->
     <meta name="author" content="PageMiner Team">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" data-i18n="demo.meta.og.title" content="PageMiner 功能演示">
-    <meta property="og:description" data-i18n="demo.meta.og.description" content="体验PageMiner的强大功能，包括可视化数据提取、智能规则生成、自动化执行等特性。">
+    <meta property="og:description" data-i18n="demo.meta.og.description"
+        content="体验PageMiner的强大功能，包括可视化数据提取、智能规则生成、自动化执行等特性。">
     <meta property="og:image" content="https://pageminer.com/images/demo-og.png">
-    
+
     <!-- 多语言支持 -->
     <link rel="alternate" hreflang="zh-CN" href="https://pageminer.com/function.html">
     <link rel="alternate" hreflang="en" href="https://pageminer.com/function.html?lang=en">
-    <link rel="alternate" hreflang="ja" href="https://pageminer.com/function.html?lang=ja">
-    
+    <style>
+    </style>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/i18n.css">
+
     <link rel="icon" href="images/icon_48.png">
-    <style>
-        .demo-hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-        }
-
-        .demo-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .demo-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-
-        .demo-section {
-            padding: 60px 0;
-            border-bottom: 1px solid var(--border-light);
-        }
-
-        .demo-section:last-child {
-            border-bottom: none;
-        }
-
-        .demo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .demo-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border: 1px solid var(--border-light);
-        }
-
-        .demo-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .demo-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .demo-card p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .demo-btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .demo-btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .interactive-demo {
-            background: var(--bg-secondary);
-            padding: 3rem;
-            border-radius: 16px;
-            margin: 2rem 0;
-        }
-
-        .demo-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid var(--border-light);
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .demo-results {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-top: 2rem;
-            border: 2px solid var(--border-light);
-            display: none;
-        }
-
-        .demo-results.show {
-            display: block;
-        }
-
-        .result-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        .result-table th,
-        .result-table td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-light);
-        }
-
-        .result-table th {
-            background: var(--bg-secondary);
-            font-weight: 600;
-        }
-
-        .highlight {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.875rem;
-        }
-
-        .feature-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .showcase-item {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            border: 1px solid var(--border-light);
-        }
-
-        .showcase-item h4 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .showcase-item .icon {
-            font-size: 1.5rem;
-        }
-
-        .code-block {
-            background: var(--bg-tertiary);
-            border-radius: 8px;
-            padding: 1rem;
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-            font-size: 0.875rem;
-            overflow-x: auto;
-            margin: 1rem 0;
-        }
-
-        .step-indicator {
-            display: flex;
-            justify-content: center;
-            margin: 2rem 0;
-        }
-
-        .step {
-            display: flex;
-            align-items: center;
-            margin: 0 1rem;
-        }
-
-        .step-number {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            margin-right: 0.5rem;
-        }
-
-        .step.active .step-number {
-            background: var(--success-color);
-        }
-
-        .step.completed .step-number {
-            background: var(--success-color);
-        }
-
-        .step-line {
-            width: 60px;
-            height: 2px;
-            background: var(--border-light);
-            margin: 0 0.5rem;
-        }
-
-        .step.active .step-line,
-        .step.completed .step-line {
-            background: var(--success-color);
-        }
-    </style>
 </head>
+
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
@@ -275,10 +42,12 @@
             </div>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link" data-i18n="nav.home">首页</a>
-                <a href="#features" class="nav-link" data-i18n="nav.demo">使用教程</a>
-                <a href="#interactive" class="nav-link" data-i18n="demo.interactive.title">交互体验</a>
-                <a href="#showcase" class="nav-link" data-i18n="demo.showcase.title">功能展示</a>
-                <a href="index.html#download" class="nav-link download-btn" data-i18n="nav.downloadNow">立即下载</a>
+                <a href="index.html#download" class="nav-link">
+                    <span data-i18n="nav.downloadNow">立即开始</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </a>
             </div>
             <div class="nav-toggle">
                 <span></span>
@@ -289,160 +58,245 @@
     </nav>
 
     <!-- 演示英雄区域 -->
-    <section class="demo-hero">
+    <section class="hero hero-demo">
         <div class="container">
             <h1 data-i18n="demo.title">🚀 PageMiner 功能演示</h1>
             <p data-i18n="demo.subtitle">体验智能网页数据提取的强大功能，了解如何轻松实现数据自动化采集</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label" data-i18n="demo.hero.stats.steps">简单步骤</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label" data-i18n="demo.hero.stats.success">提取成功率</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label" data-i18n="demo.hero.stats.formats">导出格式</span>
+                </div>
+            </div>
             <a href="#interactive" class="btn-primary" data-i18n="demo.startExperience">开始体验</a>
         </div>
     </section>
 
-    <!-- 功能演示 -->
-    <section id="features" class="demo-section">
+    <!-- 核心功能演示 -->
+    <section id="features" class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="demo.coreFeatures.title">核心功能演示</h2>
                 <p class="section-subtitle" data-i18n="demo.coreFeatures.subtitle">了解PageMiner如何改变您的数据采集工作流程</p>
             </div>
-            
-            <div class="demo-grid">
-                <div class="demo-card">
-                    <h3 data-i18n="demo.coreFeatures.visual.title">🎯 可视化选择</h3>
-                    <p data-i18n="demo.coreFeatures.visual.description">通过鼠标悬停和点击操作，直接在网页上选择需要提取的数据元素。系统会自动高亮显示可选择的元素，并生成唯一的CSS选择器。</p>
-                    <a href="#interactive" class="demo-btn" data-i18n="demo.coreFeatures.visual.cta">体验选择</a>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 data-i18n="demo.coreFeatures.visual.title">可视化选择</h3>
+                    <p data-i18n="demo.coreFeatures.visual.description">
+                        通过鼠标悬停和点击操作，直接在网页上选择需要提取的数据元素。系统会自动高亮显示可选择的元素，并生成唯一的CSS选择器。</p>
+                    <a href="#interactive" class="btn-primary" data-i18n="demo.coreFeatures.visual.cta">体验选择</a>
                 </div>
-                
-                <div class="demo-card">
-                    <h3 data-i18n="demo.coreFeatures.smart.title">🧠 智能规则生成</h3>
-                    <p data-i18n="demo.coreFeatures.smart.description">无需手动编写CSS选择器，PageMiner会自动分析页面结构，生成精确的提取规则，支持文本、图片、链接等多种数据类型。</p>
-                    <a href="#showcase" class="demo-btn" data-i18n="demo.coreFeatures.smart.cta">查看规则</a>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 data-i18n="demo.coreFeatures.smart.title">智能规则生成</h3>
+                    <p data-i18n="demo.coreFeatures.smart.description">
+                        无需手动编写CSS选择器，PageMiner会自动分析页面结构，生成精确的提取规则，支持文本、图片、链接等多种数据类型。</p>
+                    <a href="#showcase" class="btn-primary" data-i18n="demo.coreFeatures.smart.cta">查看规则</a>
                 </div>
-                
-                <div class="demo-card">
-                    <h3 data-i18n="demo.coreFeatures.auto.title">⚡ 自动执行</h3>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 data-i18n="demo.coreFeatures.auto.title">自动执行</h3>
                     <p data-i18n="demo.coreFeatures.auto.description">配置完成后，系统会自动在相似页面上执行数据提取，无需重复操作，大大提高工作效率。</p>
-                    <a href="#interactive" class="demo-btn" data-i18n="demo.coreFeatures.auto.cta">测试执行</a>
+                    <a href="#interactive" class="btn-primary" data-i18n="demo.coreFeatures.auto.cta">测试执行</a>
                 </div>
-                
-                <div class="demo-card">
-                    <h3 data-i18n="demo.coreFeatures.data.title">📊 数据管理</h3>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 data-i18n="demo.coreFeatures.data.title">数据管理</h3>
                     <p data-i18n="demo.coreFeatures.data.description">提取的数据以结构化形式展示，支持多种格式导出，方便后续分析和处理。</p>
-                    <a href="#showcase" class="demo-btn" data-i18n="demo.coreFeatures.data.cta">查看数据</a>
+                    <a href="#showcase" class="btn-primary" data-i18n="demo.coreFeatures.data.cta">查看数据</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 交互式演示 -->
-    <section id="interactive" class="demo-section">
+    <section id="interactive" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="demo.interactive.title">交互式体验</h2>
-                <p class="section-subtitle" data-i18n="demo.interactive.subtitle">亲身体验PageMiner的数据提取流程</p>
+                <h2 class="section-title" data-i18n="demo.interactive.title">🎮 交互式演示</h2>
+                <p class="section-subtitle" data-i18n="demo.interactive.subtitle">通过模拟操作体验PageMiner的核心功能</p>
             </div>
-            
+
             <div class="interactive-demo">
-                <div class="step-indicator">
-                    <div class="step active" data-step="1">
-                        <div class="step-number">1</div>
-                        <span data-i18n="demo.interactive.step1">配置规则</span>
-                    </div>
-                    <div class="step-line"></div>
-                    <div class="step" data-step="2">
-                        <div class="step-number">2</div>
-                        <span data-i18n="demo.interactive.step2">选择字段</span>
-                    </div>
-                    <div class="step-line"></div>
-                    <div class="step" data-step="3">
-                        <div class="step-number">3</div>
-                        <span data-i18n="demo.interactive.step3">提取数据</span>
-                    </div>
-                </div>
-                
                 <div class="demo-form">
+                    <h3 data-i18n="demo.interactive.form.title">模拟数据提取</h3>
+                    <p data-i18n="demo.interactive.form.subtitle">选择要提取的数据类型，体验PageMiner的智能提取功能</p>
+
                     <div class="form-group">
-                        <label for="ruleName" data-i18n="demo.interactive.ruleName">规则名称</label>
-                        <input type="text" id="ruleName" data-i18n="demo.interactive.ruleNamePlaceholder" placeholder="例如：电商产品信息" value="电商产品信息">
+                        <label data-i18n="demo.interactive.form.url.label">目标网站URL</label>
+                        <input type="url" id="demoUrl" placeholder="https://example.com"
+                            value="https://news.ycombinator.com">
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="ruleKey" data-i18n="demo.interactive.ruleKey">规则标识</label>
-                        <input type="text" id="ruleKey" data-i18n="demo.interactive.ruleKeyPlaceholder" placeholder="例如：product-info" value="product-info">
+                        <label data-i18n="demo.interactive.form.dataType.label">数据类型</label>
+                        <select id="demoDataType">
+                            <option value="titles" data-i18n="demo.interactive.form.dataType.titles">文章标题</option>
+                            <option value="links" data-i18n="demo.interactive.form.dataType.links">链接地址</option>
+                            <option value="prices" data-i18n="demo.interactive.form.dataType.prices">价格信息</option>
+                            <option value="images" data-i18n="demo.interactive.form.dataType.images">图片链接</option>
+                        </select>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="targetUrl" data-i18n="demo.interactive.targetUrl">目标网站</label>
-                        <input type="url" id="targetUrl" data-i18n="demo.interactive.targetUrlPlaceholder" placeholder="例如：https://example.com" value="https://example.com">
+                        <label data-i18n="demo.interactive.form.quantity.label">提取数量</label>
+                        <select id="demoQuantity">
+                            <option value="5" data-i18n="demo.interactive.form.quantity.5">5 条</option>
+                            <option value="10" selected data-i18n="demo.interactive.form.quantity.10">10 条</option>
+                            <option value="20" data-i18n="demo.interactive.form.quantity.20">20 条</option>
+                            <option value="50" data-i18n="demo.interactive.form.quantity.50">50 条</option>
+                        </select>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="fieldName" data-i18n="demo.interactive.fieldName">字段名称</label>
-                        <input type="text" id="fieldName" data-i18n="demo.interactive.fieldNamePlaceholder" placeholder="例如：产品名称" value="产品名称">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="fieldSelector" data-i18n="demo.interactive.fieldSelector">选择器</label>
-                        <input type="text" id="fieldSelector" data-i18n="demo.interactive.fieldSelectorPlaceholder" placeholder="例如：.product-title" value=".product-title">
-                    </div>
-                    
-                    <button type="button" class="btn-primary" onclick="simulateExtraction()" data-i18n="demo.interactive.startExtraction">开始提取</button>
+
+                    <button type="button" class="btn-primary" onclick="runDemo()"
+                        data-i18n="demo.interactive.form.submit">开始提取</button>
                 </div>
-                
+
                 <div class="demo-results" id="demoResults">
-                    <h3 data-i18n="demo.interactive.results">提取结果</h3>
+                    <h4 data-i18n="demo.interactive.results.title">提取结果</h4>
+                    <div class="result-stats">
+                        <span class="stat" data-i18n="demo.interactive.results.extracted">已提取: <strong
+                                id="extractedCount">0</strong> 条</span>
+                        <span class="stat" data-i18n="demo.interactive.results.success">成功率: <strong
+                                id="successRate">0%</strong></span>
+                        <span class="stat" data-i18n="demo.interactive.results.time">用时: <strong
+                                id="extractionTime">0s</strong></span>
+                    </div>
                     <div class="result-table-container">
-                        <table class="result-table">
+                        <table class="result-table" id="resultTable">
                             <thead>
                                 <tr>
-                                    <th data-i18n="demo.interactive.field">字段</th>
-                                    <th data-i18n="demo.interactive.selector">选择器</th>
-                                    <th data-i18n="demo.interactive.extractedValue">提取值</th>
-                                    <th data-i18n="demo.interactive.status">状态</th>
+                                    <th data-i18n="demo.interactive.results.table.index">序号</th>
+                                    <th data-i18n="demo.interactive.results.table.content">内容</th>
+                                    <th data-i18n="demo.interactive.results.table.status">状态</th>
                                 </tr>
                             </thead>
                             <tbody id="resultTableBody">
-                                <!-- 结果将在这里动态生成 -->
                             </tbody>
                         </table>
+                    </div>
+                    <div class="result-actions">
+                        <button class="btn-secondary" onclick="exportResults()"
+                            data-i18n="demo.interactive.results.export">导出数据</button>
+                        <button class="btn-secondary" onclick="clearResults()"
+                            data-i18n="demo.interactive.results.clear">清空结果</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 视频演示区域 -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="">视频演示</h2>
+                <p class="section-subtitle" data-i18n="">通过视频演示了解PageMiner的核心功能</p>
+            </div>
+            <div class="video-container">
+                <div class="video-player">
+                    <video id="demoVideo" controls poster="images/plugin-work-1.png">
+                        <source src="images/PageMiner-video-1.mp4" type="video/mp4">
+                        <span data-i18n="video.demo.noSupport">您的浏览器不支持视频播放。</span>
+                    </video>
+                </div>
+
+                <div class="video-info">
+                    <h3 data-i18n="video.demo.title">功能演示视频</h3>
+                    <p data-i18n="video.demo.subtitle">通过实际操作演示，了解PageMiner的完整工作流程</p>
+                    <p data-i18n="video.demo.description">本视频展示了PageMiner插件的完整使用流程，包括可视化选择、智能规则生成、数据提取和结果管理等核心功能。</p>
+
+                    <div class="video-features">
+                        <div class="video-feature">
+                            <h4><span class="icon">🎨</span><span data-i18n="video.demo.visual.title">可视化选择</span></h4>
+                            <p data-i18n="video.demo.visual.description">演示如何通过鼠标悬停和点击操作选择页面元素，系统自动高亮显示可选择的元素。</p>
+                        </div>
+
+                        <div class="video-feature">
+                            <h4><span class="icon">🧠</span><span data-i18n="video.demo.smart.title">智能规则生成</span></h4>
+                            <p data-i18n="video.demo.smart.description">展示系统如何自动分析页面结构，生成精确的CSS选择器和提取规则。</p>
+                        </div>
+
+                        <div class="video-feature">
+                            <h4><span class="icon">⚡</span><span data-i18n="video.demo.execution.title">数据提取执行</span>
+                            </h4>
+                            <p data-i18n="video.demo.execution.description">演示配置完成后如何自动执行数据提取，显示实时进度和结果。</p>
+                        </div>
+
+                        <div class="video-feature">
+                            <h4><span class="icon">📊</span><span data-i18n="video.demo.management.title">结果管理</span>
+                            </h4>
+                            <p data-i18n="video.demo.management.description">展示提取数据的结构化展示、导出功能和本地存储管理。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 视频内容概览 -->
+    <section class="video-section">
+        <div class="container">
+            <div class="video-tip">
+                <h4 data-i18n="video.overview.tip">💡 提示</h4>
+                <p data-i18n="video.overview.tip">建议在观看视频的同时，打开function.html页面跟随操作，获得最佳学习效果。</p>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- 功能展示 -->
-    <section id="showcase" class="demo-section">
+    <section id="showcase" class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="demo.showcase.title">功能特性展示</h2>
                 <p class="section-subtitle" data-i18n="demo.showcase.subtitle">深入了解PageMiner的技术优势和使用方法</p>
             </div>
-            
+
             <div class="feature-showcase">
                 <div class="showcase-item">
                     <h4><span class="icon">🔍</span><span data-i18n="demo.showcase.recognition.title">智能元素识别</span></h4>
-                    <p data-i18n="demo.showcase.recognition.description">PageMiner能够智能识别页面中的列表结构、表格数据、重复元素等，自动生成最优的提取策略。支持多种元素类型检测。</p>
-                    <div class="code-block">
+                    <p data-i18n="demo.showcase.recognition.description">
+                        PageMiner能够智能识别页面中的列表结构、表格数据、重复元素等，自动生成最优的提取策略。支持多种元素类型检测。</p>
+                    <div class="showcase-content">
+                        <pre><code class="language-javascript">
 // 自动识别的选择器示例
 .product-list .product-item:nth-of-type(1) {
-    .title: .product-title
-    .price: .product-price
-    .image: .product-image
+.title: .product-title
+.price: .product-price
+.image: .product-image
 }
 
 // 智能类型检测
 function detectElementType(element) {
-    if (element.tagName === 'IMG') return 'image';
-    if (element.tagName === 'A') return 'link';
-    return 'text';
+if (element.tagName === 'IMG') return 'image';
+if (element.tagName === 'A') return 'link';
+return 'text';
 }
+                    </code></pre>
                     </div>
                 </div>
-                
+
                 <div class="showcase-item">
                     <h4><span class="icon">⚙️</span><span data-i18n="demo.showcase.configuration.title">规则配置</span></h4>
-                    <p data-i18n="demo.showcase.configuration.description">支持多种选择器类型，包括CSS选择器、XPath、DOM路径等，满足不同场景的需求。自动生成唯一选择器。</p>
-                    <div class="code-block">
+                    <p data-i18n="demo.showcase.configuration.description">
+                        支持多种选择器类型，包括CSS选择器、XPath、DOM路径等，满足不同场景的需求。自动生成唯一选择器。</p>
+                    <div class="showcase-content">
+                        <pre><code class="language-javascript">
 // 支持的规则类型
 CSS: .product-title
 XPath: //div[@class='product-title']
@@ -450,50 +304,55 @@ DOM: body > div.product > h1
 
 // 自动生成唯一选择器
 function getUniqueSelector(el) {
-    const path = [];
-    while (el && el.nodeType === Node.ELEMENT_NODE) {
-        let selector = el.nodeName.toLowerCase();
-        if (el.id) {
-            selector += `#${el.id}`;
-            break;
-        } else {
-            let sibling = el;
-            let nth = 1;
-            while (sibling = sibling.previousElementSibling) {
-                if (sibling.nodeName === el.nodeName) nth++;
-            }
-            selector += `:nth-of-type(${nth})`;
-        }
-        path.unshift(selector);
-        el = el.parentNode;
-    }
-    return path.join(" > ");
+const path = [];
+while (el && el.nodeType === Node.ELEMENT_NODE) {
+let selector = el.nodeName.toLowerCase();
+if (el.id) {
+selector += `#${el.id}`;
+break;
+} else {
+let sibling = el;
+let nth = 1;
+while (sibling = sibling.previousElementSibling) {
+if (sibling.nodeName === el.nodeName) nth++;
 }
+selector += `:nth-of-type(${nth})`;
+}
+path.unshift(selector);
+el = el.parentNode;
+}
+return path.join(" > ");
+}
+                    </code></pre>
                     </div>
                 </div>
-                
+
                 <div class="showcase-item">
                     <h4><span class="icon">🔄</span><span data-i18n="demo.showcase.reuse.title">规则复用</span></h4>
                     <p data-i18n="demo.showcase.reuse.description">一次配置，多处使用。支持规则的导入导出，团队协作更高效。</p>
-                    <div class="code-block">
+                    <div class="showcase-content">
+                        <pre><code class="language-json">
 // 规则导出格式
 {
-  "name": "电商产品信息",
-  "key": "product-info",
-  "fields": ["title", "price", "image"],
-  "selectors": {...}
+"name": "电商产品信息",
+"key": "product-info",
+"fields": ["title", "price", "image"],
+"selectors": {...}
 }
+                    </code></pre>
                     </div>
                 </div>
-                
+
                 <div class="showcase-item">
                     <h4><span class="icon">📈</span><span data-i18n="demo.showcase.export.title">数据导出</span></h4>
                     <p data-i18n="demo.showcase.export.description">支持CSV、Excel、JSON等多种格式导出，数据可直接用于分析工具或数据库。</p>
-                    <div class="code-block">
+                    <div class="showcase-content">
+                        <pre><code class="language-text">
 // 导出格式示例
 CSV: title,price,image
 Excel: 表格形式
 JSON: 结构化数据
+                    </code></pre>
                     </div>
                 </div>
             </div>
@@ -501,93 +360,107 @@ JSON: 结构化数据
     </section>
 
     <!-- 插件功能特性 -->
-    <section class="demo-section">
+    <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="demo.pluginFeatures.title">插件功能特性</h2>
                 <p class="section-subtitle" data-i18n="demo.pluginFeatures.subtitle">基于实际代码实现的核心功能展示</p>
             </div>
-            
+
             <div class="feature-showcase">
                 <div class="showcase-item">
-                    <h4><span class="icon">🎨</span><span data-i18n="demo.pluginFeatures.visualMode.title">可视化提取模式</span></h4>
-                    <p data-i18n="demo.pluginFeatures.visualMode.description">启动提取模式后，鼠标悬停页面元素会显示红色边框高亮，点击元素即可选择并配置提取规则。</p>
-                    <div class="code-block">
+                    <h4><span class="icon">🎨</span><span
+                            data-i18n="demo.pluginFeatures.visualMode.title">可视化提取模式</span></h4>
+                    <p data-i18n="demo.pluginFeatures.visualMode.description">启动提取模式后，鼠标悬停页面元素会显示红色边框高亮，点击元素即可选择并配置提取规则。
+                    </p>
+                    <div class="showcase-content">
+                        <pre><code class="language-javascript">
 // 提取模式启动
 function enableExtractionMode() {
-    document.addEventListener("mouseover", mouseoverHandler, true);
-    document.addEventListener("mouseout", mouseoutHandler, true);
-    document.addEventListener("click", clickHandler, true);
+document.addEventListener("mouseover", mouseoverHandler, true);
+document.addEventListener("mouseout", mouseoutHandler, true);
+document.addEventListener("click", clickHandler, true);
 }
 
 // 元素高亮效果
 function highlight(el) {
-    if (el) {
-        el.style.outline = "2px solid red";
-        highlightedElement = el;
-    }
+if (el) {
+el.style.outline = "2px solid red";
+highlightedElement = el;
 }
+}
+                    </code></pre>
                     </div>
                 </div>
-                
+
                 <div class="showcase-item">
-                    <h4><span class="icon">🔍</span><span data-i18n="demo.pluginFeatures.typeDetection.title">智能类型检测</span></h4>
-                    <p data-i18n="demo.pluginFeatures.typeDetection.description">自动检测元素类型，智能推荐字段类型，支持文本、图片、链接等多种数据类型。</p>
-                    <div class="code-block">
+                    <h4><span class="icon">🔍</span><span
+                            data-i18n="demo.pluginFeatures.typeDetection.title">智能类型检测</span></h4>
+                    <p data-i18n="demo.pluginFeatures.typeDetection.description">自动检测元素类型，智能推荐字段类型，支持文本、图片、链接等多种数据类型。
+                    </p>
+                    <div class="showcase-content">
+                        <pre><code class="language-javascript">
 // 智能类型检测
 function detectElementType(target) {
-    if (target.tagName === 'IMG') return 'image';
-    if (target.tagName === 'A') return 'link';
-    if (target.tagName === 'INPUT') return 'input';
-    return 'text';
+if (target.tagName === 'IMG') return 'image';
+if (target.tagName === 'A') return 'link';
+if (target.tagName === 'INPUT') return 'input';
+return 'text';
 }
 
 // 支持的数据类型
 const supportedTypes = ['text', 'image', 'link', 'input', 'auto'];
+                    </code></pre>
                     </div>
                 </div>
-                
+
                 <div class="showcase-item">
-                    <h4><span class="icon">⚡</span><span data-i18n="demo.pluginFeatures.progress.title">实时提取进度</span></h4>
+                    <h4><span class="icon">⚡</span><span data-i18n="demo.pluginFeatures.progress.title">实时提取进度</span>
+                    </h4>
                     <p data-i18n="demo.pluginFeatures.progress.description">提取过程中显示实时进度，高亮正在提取的元素，提供视觉反馈和状态指示。</p>
-                    <div class="code-block">
+                    <div class="showcase-content">
+                        <pre><code class="language-javascript">
 // 提取进度高亮
 function highlightExtractingElement(selector, fieldName) {
-    const element = document.querySelector(selector);
-    if (!element) return null;
+const element = document.querySelector(selector);
+if (!element) return null;
 
-    const highlightContainer = document.createElement('div');
-    highlightContainer.className = 'pageminer-extraction-highlight';
-    highlightContainer.setAttribute('data-pageminer-highlight', fieldName);
-    
-    // 设置高亮样式和动画
-    Object.assign(highlightContainer.style, {
-        border: '3px solid #10b981',
-        backgroundColor: 'rgba(16, 185, 129, 0.08)',
-        animation: 'pageminer-pulse 1.5s ease-in-out infinite'
-    });
+const highlightContainer = document.createElement('div');
+highlightContainer.className = 'pageminer-extraction-highlight';
+highlightContainer.setAttribute('data-pageminer-highlight', fieldName);
+
+// 设置高亮样式和动画
+Object.assign(highlightContainer.style, {
+border: '3px solid #10b981',
+backgroundColor: 'rgba(16, 185, 129, 0.08)',
+animation: 'pageminer-pulse 1.5s ease-in-out infinite'
+});
 }
+                    </code></pre>
                     </div>
                 </div>
-                
+
                 <div class="showcase-item">
-                    <h4><span class="icon">💾</span><span data-i18n="demo.pluginFeatures.storage.title">本地数据存储</span></h4>
+                    <h4><span class="icon">💾</span><span data-i18n="demo.pluginFeatures.storage.title">本地数据存储</span>
+                    </h4>
                     <p data-i18n="demo.pluginFeatures.storage.description">所有提取规则和数据默认保存在本地，保护用户隐私，支持规则导入导出。</p>
-                    <div class="code-block">
+                    <div class="showcase-content">
+                        <pre><code class="language-javascript">
 // 数据存储结构
 const ruleData = {
-    name: "电商产品信息",
-    key: "product-info",
-    url: "https://example.com",
-    fields: [
-        { name: "产品名称", selector: ".product-title", type: "text" },
-        { name: "产品价格", selector: ".product-price", type: "text" },
-        { name: "产品图片", selector: ".product-image", type: "image" }
-    ]
+name: "电商产品信息",
+key: "product-info",
+url: "https://example.com",
+fields: [
+{ name: "产品名称", selector: ".product-title", type: "text" },
+{ name: "产品价格", selector: ".product-price", type: "text" },
+{ name: "产品图片", selector: ".product-image", type: "image" }
+]
 };
 
 // 保存到本地存储
 chrome.storage.local.set({ [ruleData.key]: ruleData });
+                    </code></pre>
                     </div>
                 </div>
             </div>
@@ -595,33 +468,33 @@ chrome.storage.local.set({ [ruleData.key]: ruleData });
     </section>
 
     <!-- 使用场景 -->
-    <section class="demo-section">
+    <section class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-i18n="demo.scenarios.title">实际应用场景</h2>
                 <p class="section-subtitle" data-i18n="demo.scenarios.subtitle">了解PageMiner在不同行业中的应用价值</p>
             </div>
-            
-            <div class="demo-grid">
-                <div class="demo-card">
-                    <h3 data-i18n="demo.scenarios.ecommerce.title">🛒 电商运营</h3>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 data-i18n=" demo.scenarios.ecommerce.title">🛒 电商运营</h3>
                     <p data-i18n="demo.scenarios.ecommerce.description">监控竞品价格、收集产品信息、分析市场趋势，为产品策略提供数据支持。</p>
                     <div class="highlight" data-i18n="demo.scenarios.ecommerce.applicable">适用：价格监控、竞品分析、产品调研</div>
                 </div>
-                
-                <div class="demo-card">
+
+                <div class="feature-card">
                     <h3 data-i18n="demo.scenarios.research.title">📊 市场研究</h3>
                     <p data-i18n="demo.scenarios.research.description">收集行业报告、统计数据、新闻资讯，构建完整的研究数据库。</p>
                     <div class="highlight" data-i18n="demo.scenarios.research.applicable">适用：行业分析、趋势研究、数据收集</div>
                 </div>
-                
-                <div class="demo-card">
+
+                <div class="feature-card">
                     <h3 data-i18n="demo.scenarios.hr.title">👥 人力资源</h3>
                     <p data-i18n="demo.scenarios.hr.description">抓取招聘信息、候选人资料、薪资数据，优化招聘和人才管理流程。</p>
                     <div class="highlight" data-i18n="demo.scenarios.hr.applicable">适用：招聘信息、人才分析、市场调研</div>
                 </div>
-                
-                <div class="demo-card">
+
+                <div class="feature-card">
                     <h3 data-i18n="demo.scenarios.content.title">📰 内容创作</h3>
                     <p data-i18n="demo.scenarios.content.description">收集热点话题、用户评论、趋势数据，为内容创作提供灵感和素材。</p>
                     <div class="highlight" data-i18n="demo.scenarios.content.applicable">适用：热点追踪、用户洞察、内容策划</div>
@@ -687,6 +560,164 @@ chrome.storage.local.set({ [ruleData.key]: ruleData });
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script>
+        // 交互式演示功能
+        function runDemo() {
+            const url = document.getElementById('demoUrl').value;
+            const dataType = document.getElementById('demoDataType').value;
+            const quantity = parseInt(document.getElementById('demoQuantity').value);
+
+            if (!url) {
+                alert('请输入目标网站URL');
+                return;
+            }
+
+            // 显示结果区域
+            const results = document.getElementById('demoResults');
+            results.classList.add('show');
+
+            // 清空之前的结果
+            const tableBody = document.getElementById('resultTableBody');
+            tableBody.innerHTML = '';
+
+            // 模拟提取过程
+            simulateDataExtraction(dataType, quantity);
+        }
+
+        function simulateDataExtraction(dataType, quantity) {
+            const tableBody = document.getElementById('resultTableBody');
+            const extractedCount = document.getElementById('extractedCount');
+            const successRate = document.getElementById('successRate');
+            const extractionTime = document.getElementById('extractionTime');
+
+            let extracted = 0;
+            let success = 0;
+            const startTime = Date.now();
+
+            // 模拟数据
+            const sampleData = {
+                titles: [
+                    'PageMiner：智能网页数据提取工具',
+                    '如何使用PageMiner进行数据采集',
+                    'PageMiner插件安装指南',
+                    '数据提取的最佳实践',
+                    'PageMiner高级功能详解',
+                    '网页数据采集技巧分享',
+                    'PageMiner使用案例研究',
+                    '数据提取常见问题解答',
+                    'PageMiner更新日志',
+                    '数据采集工具对比分析'
+                ],
+                links: [
+                    'https://pageminer.com/features',
+                    'https://pageminer.com/download',
+                    'https://pageminer.com/tutorial',
+                    'https://pageminer.com/support',
+                    'https://pageminer.com/blog',
+                    'https://pageminer.com/api',
+                    'https://pageminer.com/docs',
+                    'https://pageminer.com/community',
+                    'https://pageminer.com/help',
+                    'https://pageminer.com/contact'
+                ],
+                prices: [
+                    '¥0.00',
+                    '¥14.90',
+                    '¥29.90',
+                    '¥49.90',
+                    '¥99.90',
+                    '¥199.90',
+                    '¥299.90',
+                    '¥499.90',
+                    '¥799.90',
+                    '¥999.90'
+                ],
+                images: [
+                    'https://pageminer.com/images/feature1.png',
+                    'https://pageminer.com/images/feature2.png',
+                    'https://pageminer.com/images/feature3.png',
+                    'https://pageminer.com/images/feature4.png',
+                    'https://pageminer.com/images/feature5.png',
+                    'https://pageminer.com/images/feature6.png',
+                    'https://pageminer.com/images/feature7.png',
+                    'https://pageminer.com/images/feature8.png',
+                    'https://pageminer.com/images/feature9.png',
+                    'https://pageminer.com/images/feature10.png'
+                ]
+            };
+
+            const data = sampleData[dataType] || [];
+
+            // 逐条添加结果，模拟实时提取
+            const interval = setInterval(() => {
+                if (extracted >= quantity) {
+                    clearInterval(interval);
+                    return;
+                }
+
+                const index = extracted;
+                const content = data[index] || `示例数据 ${index + 1}`;
+                const isSuccess = Math.random() > 0.1; // 90% 成功率
+
+                if (isSuccess) success++;
+                extracted++;
+
+                // 添加表格行
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${content}</td>
+                    <td><span class="status ${isSuccess ? 'success' : 'error'}">${isSuccess ? '成功' : '失败'}</span></td>
+                `;
+                tableBody.appendChild(row);
+
+                // 更新统计
+                extractedCount.textContent = extracted;
+                successRate.textContent = Math.round((success / extracted) * 100) + '%';
+                extractionTime.textContent = ((Date.now() - startTime) / 1000).toFixed(1) + 's';
+
+                // 滚动到最新结果
+                row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            }, 200); // 每200ms添加一条结果
+        }
+
+        function exportResults() {
+            const table = document.getElementById('resultTable');
+            const rows = Array.from(table.querySelectorAll('tbody tr'));
+
+            if (rows.length === 0) {
+                alert('没有数据可导出');
+                return;
+            }
+
+            let csv = '序号,内容,状态\n';
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                csv += `"${cells[0].textContent}","${cells[1].textContent}","${cells[2].textContent}"\n`;
+            });
+
+            // 创建下载链接
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'pageminer_demo_results.csv';
+            link.click();
+        }
+
+        function clearResults() {
+            const results = document.getElementById('demoResults');
+            const tableBody = document.getElementById('resultTableBody');
+            const extractedCount = document.getElementById('extractedCount');
+            const successRate = document.getElementById('successRate');
+            const extractionTime = document.getElementById('extractionTime');
+
+            results.classList.remove('show');
+            tableBody.innerHTML = '';
+            extractedCount.textContent = '0';
+            successRate.textContent = '0%';
+            extractionTime.textContent = '0s';
+        }
+
         // 演示页面的特殊功能
         function simulateExtraction() {
             const ruleName = document.getElementById('ruleName').value;
@@ -694,21 +725,21 @@ chrome.storage.local.set({ [ruleData.key]: ruleData });
             const targetUrl = document.getElementById('targetUrl').value;
             const fieldName = document.getElementById('fieldName').value;
             const fieldSelector = document.getElementById('fieldSelector').value;
-            
+
             if (!ruleName || !ruleKey || !targetUrl || !fieldName || !fieldSelector) {
                 alert('请填写所有字段');
                 return;
             }
-            
+
             // 模拟提取过程
             updateStep(2);
-            
+
             setTimeout(() => {
                 updateStep(3);
                 showResults(ruleName, fieldName, fieldSelector);
             }, 2000);
         }
-        
+
         function updateStep(stepNumber) {
             // 更新步骤指示器
             document.querySelectorAll('.step').forEach((step, index) => {
@@ -724,11 +755,11 @@ chrome.storage.local.set({ [ruleData.key]: ruleData });
                 }
             });
         }
-        
+
         function showResults(ruleName, fieldName, fieldSelector) {
             const results = document.getElementById('demoResults');
             const tableBody = document.getElementById('resultTableBody');
-            
+
             // 模拟提取的数据
             const mockData = [
                 {
@@ -750,7 +781,7 @@ chrome.storage.local.set({ [ruleData.key]: ruleData });
                     status: '✅ 成功'
                 }
             ];
-            
+
             // 生成表格行
             tableBody.innerHTML = mockData.map(item => `
                 <tr>
@@ -760,31 +791,31 @@ chrome.storage.local.set({ [ruleData.key]: ruleData });
                     <td><span class="highlight">${item.status}</span></td>
                 </tr>
             `).join('');
-            
+
             // 显示结果
             results.classList.add('show');
-            
+
             // 滚动到结果区域
             results.scrollIntoView({ behavior: 'smooth' });
         }
-        
+
         // 页面加载完成后的初始化
         document.addEventListener('DOMContentLoaded', () => {
             // 重置步骤指示器
             updateStep(1);
-            
+
             // 添加演示页面的特殊样式
             addDemoStyles();
         });
-        
+
         function addDemoStyles() {
             const style = document.createElement('style');
             style.textContent = `
-                .demo-section:nth-child(even) {
+                .section:nth-child(even) {
                     background: var(--bg-secondary);
                 }
                 
-                .demo-card:hover {
+                .feature-card:hover {
                     border-color: var(--primary-color);
                 }
                 
@@ -805,5 +836,28 @@ chrome.storage.local.set({ [ruleData.key]: ruleData });
             document.head.appendChild(style);
         }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const video = document.getElementById('demoVideo');
+
+            video.addEventListener('loadeddata', () => {
+                console.log('PageMiner 演示视频已加载完成！🎥');
+            });
+
+            video.addEventListener('error', (e) => {
+                console.error('视频加载失败:', e);
+                const videoContainer = document.querySelector('.video-player');
+                videoContainer.innerHTML = `
+                    <div class="video-placeholder">
+                        <div class="play-icon">❌</div>
+                        <h3>视频加载失败</h3>
+                        <p>请检查视频文件是否存在或联系技术支持</p>
+                        <a href="mailto:support@pageminer.com" class="btn-primary">联系支持</a>
+                    </div>
+                `;
+            });
+        });
+    </script>
 </body>
+
 </html>

@@ -139,7 +139,7 @@
     "subtitle": "选择最适合您的方案",
     "free": {
       "title": "免费版",
-      "price": "¥0",
+      "price": "$0",
       "period": "/月",
       "description": "适合个人用户和小型项目",
       "features": [
@@ -154,7 +154,7 @@
     },
     "pro": {
       "title": "专业版",
-      "price": "¥14.9",
+      "price": "$14.9",
       "period": "/月",
       "description": "适合专业用户和团队",
       "features": [
@@ -171,7 +171,7 @@
     "enterprise": {
       "title": "企业版",
       "price": "定制",
-      "period": "",
+      "period": " ",
       "description": "适合大型企业和机构",
       "features": [
         "所有专业版功能",
