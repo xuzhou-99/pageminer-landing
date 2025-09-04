@@ -340,7 +340,7 @@ body {
     text-decoration: none;
     color: var(--text-secondary);
     font-weight: var(--font-medium);
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
     transition: all var(--transition-fast);
     position: relative;
     padding: var(--space-2) 0;

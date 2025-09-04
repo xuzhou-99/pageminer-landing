@@ -107,31 +107,37 @@
     }
   },
   "useCases": {
-    "title": "适用场景",
-    "subtitle": "PageMiner适用于各种数据采集需求",
+    "title": "实际应用场景",
+    "subtitle": "了解PageMiner在不同行业中的应用价值",
     "ecommerce": {
-      "title": "电商运营",
-      "description": "监控竞品价格、收集产品信息、分析市场趋势"
-    },
-    "research": {
-      "title": "市场研究",
-      "description": "收集行业报告、统计数据、新闻资讯"
+      "title": "电商卖家",
+      "description": "快速采集竞品标题、价格、销量、评价和图片，批量导出用于竞品分析和选品。",
+      "applicable": "适用：价格监控、竞品分析、选品调研"
     },
     "hr": {
-      "title": "人力资源",
-      "description": "抓取招聘信息、候选人资料、薪资数据"
+      "title": "招聘/人脉",
+      "description": "批量收集招聘信息、候选人资料、LinkedIn人脉数据，提升招聘效率和人才搜寻速度。",
+      "applicable": "适用：招聘信息、候选人库、人才分析"
+    },
+    "research": {
+      "title": "学术研究",
+      "description": "自动提取论文标题、作者、引用次数和新闻资讯，快速构建研究数据库。",
+      "applicable": "适用：学术研究、趋势分析、数据采集"
+    },
+    "finance": {
+      "title": "投资分析",
+      "description": "采集公司公告、财务数据、市场新闻和消费趋势，助力快速投资决策。",
+      "applicable": "适用：股票监控、财经资讯、市场分析"
+    },
+    "local": {
+      "title": "本地服务",
+      "description": "抓取房源信息、客户联系方式、黄页和点评网站数据，快速建立客户数据库。",
+      "applicable": "适用：房产中介、商家获客、本地服务"
     },
     "content": {
-      "title": "内容创作",
-      "description": "收集热点话题、用户评论、趋势数据"
-    },
-    "marketing": {
-      "title": "市场营销",
-      "description": "收集竞品信息、产品价格、营销活动等数据，为市场策略提供数据支持"
-    },
-    "intelligence": {
-      "title": "企业情报",
-      "description": "监控竞争对手动态、行业趋势、政策变化等，为企业战略提供情报支持"
+      "title": "自媒体创作",
+      "description": "收集热门文章、标题、评论和趋势数据，快速找到选题灵感和热点素材。",
+      "applicable": "适用：内容策划、热点追踪、用户洞察"
     }
   },
   "pricing": {
@@ -440,30 +446,6 @@
       "storage": {
         "title": "本地数据存储",
         "description": "所有提取规则和数据默认保存在本地，保护用户隐私，支持规则导入导出。"
-      }
-    },
-    "scenarios": {
-      "title": "实际应用场景",
-      "subtitle": "了解PageMiner在不同行业中的应用价值",
-      "ecommerce": {
-        "title": "电商运营",
-        "description": "监控竞品价格、收集产品信息、分析市场趋势，为产品策略提供数据支持。",
-        "applicable": "适用：价格监控、竞品分析、产品调研"
-      },
-      "research": {
-        "title": "市场研究",
-        "description": "收集行业报告、统计数据、新闻资讯，构建完整的研究数据库。",
-        "applicable": "适用：行业分析、趋势研究、数据收集"
-      },
-      "hr": {
-        "title": "人力资源",
-        "description": "抓取招聘信息、候选人资料、薪资数据，优化招聘和人才管理流程。",
-        "applicable": "适用：招聘信息、人才分析、市场调研"
-      },
-      "content": {
-        "title": "内容创作",
-        "description": "收集热点话题、用户评论、趋势数据，为内容创作提供灵感和素材。",
-        "applicable": "适用：热点追踪、用户洞察、内容策划"
       }
     }
   },

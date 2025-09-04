@@ -108,30 +108,36 @@
   },
   "useCases": {
     "title": "Use Cases",
-    "subtitle": "PageMiner is suitable for various data collection needs",
+    "subtitle": "Discover how PageMiner creates value across different industries",
     "ecommerce": {
-      "title": "🛒 E-commerce Operations",
-      "description": "Monitor competitor prices, collect product information, analyze market trends"
-    },
-    "research": {
-      "title": "Market Research",
-      "description": "Collect industry reports, statistical data, news and information"
+      "title": "E-commerce Sellers",
+      "description": "Quickly extract competitor titles, prices, sales, reviews, and images, then export in bulk for product research and analysis.",
+      "applicable": "Applicable: Price monitoring, competitor analysis, product research"
     },
     "hr": {
-      "title": "Human Resources",
-      "description": "Scrape recruitment information, candidate profiles, salary data"
+      "title": "Recruitment & Networking",
+      "description": "Collect job postings, candidate profiles, and LinkedIn contacts in bulk to boost hiring efficiency and talent sourcing speed.",
+      "applicable": "Applicable: Job listings, candidate database, talent analysis"
+    },
+    "research": {
+      "title": "Academic Research",
+      "description": "Automatically extract paper titles, authors, citation counts, and news articles to quickly build research databases.",
+      "applicable": "Applicable: Academic studies, trend analysis, data collection"
+    },
+    "finance": {
+      "title": "Investment Analysis",
+      "description": "Extract company announcements, financial data, market news, and consumer trends to support faster investment decisions.",
+      "applicable": "Applicable: Stock monitoring, financial news, market analysis"
+    },
+    "local": {
+      "title": "Local Services",
+      "description": "Collect property listings, customer contact info, and yellow pages/review site data to quickly build customer databases.",
+      "applicable": "Applicable: Real estate agents, business leads, local services"
     },
     "content": {
       "title": "Content Creation",
-      "description": "Collect trending topics, user comments, trend data"
-    },
-    "marketing": {
-      "title": "Marketing",
-      "description": "Collect competitor information, product prices, marketing activities and other data to provide data support for market strategies"
-    },
-    "intelligence": {
-      "title": "Business Intelligence",
-      "description": "Monitor competitor dynamics, industry trends, policy changes, etc., to provide intelligence support for corporate strategy"
+      "description": "Gather trending articles, titles, comments, and data to quickly find inspiration and hot topics for content creation.",
+      "applicable": "Applicable: Content planning, trend tracking, user insights"
     }
   },
   "pricing": {
@@ -164,7 +170,7 @@
         "Cloud synchronization",
         "Advanced technical support",
         "Team collaboration features"
-        ],
+      ],
       "popular": "Most Popular",
       "cta": "Upgrade Now"
     },
@@ -379,7 +385,7 @@
         },
         "export": "Export Data",
         "clear": "Clear Results",
-        "success": "Success",
+        "statusSuccess": "Success",
         "error": "Failed",
         "sampleData": "Sample Data"
       },
@@ -397,7 +403,7 @@
       "fieldSelector": "Selector",
       "fieldSelectorPlaceholder": "e.g., .product-title",
       "startExtraction": "Start Extraction",
-      "results": "Extraction Results",
+      "resultsTitle": "Extraction Results",
       "field": "Field",
       "selector": "Selector",
       "extractedValue": "Extracted Value",
@@ -441,30 +447,6 @@
       "storage": {
         "title": "Local Data Storage",
         "description": "All extraction rules and data are saved locally by default, protecting user privacy, supporting rule import and export."
-      }
-    },
-    "scenarios": {
-      "title": "Practical Application Scenarios",
-      "subtitle": "Understand PageMiner's application value in different industries",
-      "ecommerce": {
-        "title": "E-commerce Operations",
-        "description": "Monitor competitor prices, collect product information, analyze market trends, providing data support for product strategies.",
-        "applicable": "Applicable: Price monitoring, competitor analysis, product research"
-      },
-      "research": {
-        "title": "Market Research",
-        "description": "Collect industry reports, statistical data, news and information, building complete research databases.",
-        "applicable": "Applicable: Industry analysis, trend research, data collection"
-      },
-      "hr": {
-        "title": "Human Resources",
-        "description": "Scrape recruitment information, candidate profiles, salary data, optimizing recruitment and talent management processes.",
-        "applicable": "Applicable: Recruitment information, talent analysis, market research"
-      },
-      "content": {
-        "title": "Content Creation",
-        "description": "Collect trending topics, user comments, trend data, providing inspiration and materials for content creation.",
-        "applicable": "Applicable: Trend tracking, user insights, content planning"
       }
     }
   },
