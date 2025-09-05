@@ -43,27 +43,33 @@
     "subtitle": "PageMiner提供完整的网页数据提取解决方案",
     "visual": {
       "title": "可视化选择",
-      "description": "通过鼠标悬停和点击操作，直接在网页上选择需要提取的数据元素"
+      "description": "通过鼠标悬停和点击操作，直接在网页上选择需要提取的数据元素",
+      "highlight": "零编程基础"
     },
     "smart": {
       "title": "智能规则生成",
-      "description": "自动分析页面结构，生成精确的CSS选择器，无需手动编写代码"
+      "description": "自动分析页面结构，生成精确的CSS选择器，无需手动编写代码",
+      "highlight": "AI 驱动"
     },
     "auto": {
       "title": "自动执行",
-      "description": "配置完成后自动在相似页面上执行数据提取，大大提高工作效率"
+      "description": "配置完成后自动在相似页面上执行数据提取，大大提高工作效率",
+      "highlight": "24/7 运行"
     },
     "export": {
       "title": "多种格式导出",
-      "description": "支持CSV、Excel、JSON等多种格式，数据可直接用于分析工具"
+      "description": "支持CSV、Excel、JSON等多种格式，数据可直接用于分析工具",
+      "highlight": "5+ 格式"
     },
     "storage": {
       "title": "本地存储",
-      "description": "所有数据默认保存在本地，保护您的隐私和数据安全，支持规则导入导出"
+      "description": "所有数据默认保存在本地，保护您的隐私和数据安全，支持规则导入导出",
+      "highlight": "隐私保护"
     },
     "sync": {
       "title": "云端同步",
-      "description": "支持规则和数据的云端同步，多设备间无缝协作"
+      "description": "支持规则和数据的云端同步，多设备间无缝协作",
+      "highlight": "多设备同步"
     }
   },
   "howItWorks": {
@@ -85,6 +91,13 @@
   "screenshots": {
     "title": "界面展示",
     "subtitle": "直观友好的用户界面，让数据提取变得简单",
+    "prevButton": "上一张",
+    "nextButton": "下一张",
+    "indicator1": "第1张图片",
+    "indicator2": "第2张图片",
+    "indicator3": "第3张图片",
+    "indicator4": "第4张图片",
+    "indicator5": "第5张图片",
     "main": {
       "title": "插件主界面",
       "description": "清晰的功能布局，一键启动数据提取"
@@ -108,7 +121,7 @@
   },
   "useCases": {
     "title": "实际应用场景",
-    "subtitle": "了解PageMiner在不同行业中的应用价值",
+    "subtitle": "专为不同行业量身定制，让数据采集变得简单高效",
     "ecommerce": {
       "title": "电商卖家",
       "description": "快速采集竞品标题、价格、销量、评价和图片，批量导出用于竞品分析和选品。",
@@ -116,27 +129,27 @@
     },
     "hr": {
       "title": "招聘/人脉",
-      "description": "批量收集招聘信息、候选人资料、LinkedIn人脉数据，提升招聘效率和人才搜寻速度。",
+      "description": "批量收集LinkedIn/招聘网站信息，提取候选人姓名、职位、公司、联系方式，自动整理成结构化表格",
       "applicable": "适用：招聘信息、候选人库、人才分析"
     },
     "research": {
-      "title": "学术研究",
-      "description": "自动提取论文标题、作者、引用次数和新闻资讯，快速构建研究数据库。",
+      "title": "学术/研究",
+      "description": "批量获取公开资料，从新闻/学术网站提取文章标题、摘要、作者、引用次数，数据结构化后直接导入分析工具。",
       "applicable": "适用：学术研究、趋势分析、数据采集"
     },
     "finance": {
-      "title": "投资分析",
+      "title": "投资/金融分析",
       "description": "采集公司公告、财务数据、市场新闻和消费趋势，助力快速投资决策。",
       "applicable": "适用：股票监控、财经资讯、市场分析"
     },
     "local": {
-      "title": "本地服务",
-      "description": "抓取房源信息、客户联系方式、黄页和点评网站数据，快速建立客户数据库。",
+      "title": "本地生活/服务",
+      "description": "采集客户信息，提取房源网站小区信息、价格、联系人，收集黄页/点评网站客户联系方式，快速建立客户数据库",
       "applicable": "适用：房产中介、商家获客、本地服务"
     },
     "content": {
-      "title": "自媒体创作",
-      "description": "收集热门文章、标题、评论和趋势数据，快速找到选题灵感和热点素材。",
+      "title": "内容创作/自媒体",
+      "description": "素材自动收集，抓取热门文章、标题、图片素材，提取评论区高频词/观点用于选题参考，批量收集同类账号数据做对比分析",
       "applicable": "适用：内容策划、热点追踪、用户洞察"
     }
   },
@@ -215,7 +228,8 @@
       ],
       "stats": {
         "time": "小时开发",
-        "difficulty": "技术门槛"
+        "difficulty": "技术门槛",
+        "difficultyValue": "高"
       }
     },
     "pageminer": {
@@ -230,7 +244,8 @@
       ],
       "stats": {
         "time": "分钟设置",
-        "difficulty": "技术门槛"
+        "difficulty": "技术门槛",
+        "difficultyValue": "零"
       }
     },
     "cta": "立即体验PageMiner"
@@ -350,7 +365,41 @@
     },
     "interactive": {
       "title": "🎮 交互式演示",
-      "subtitle": "通过模拟操作体验PageMiner的核心功能",
+      "subtitle": "体验PageMiner的完整工作流程",
+      "workflow": {
+        "step1": "打开网页",
+        "step2": "选择元素",
+        "step3": "配置字段",
+        "step4": "开始提取",
+        "step5": "查看结果"
+      },
+      "website": {
+        "title": "模拟电商网站"
+      },
+      "panel": {
+        "title": "提取配置",
+        "status": {
+          "ready": "准备就绪",
+          "configuring": "配置中",
+          "extracting": "提取中",
+          "completed": "完成"
+        },
+        "startExtraction": "开始提取",
+        "clearFields": "清空字段"
+      },
+      "progress": {
+        "title": "提取进度",
+        "status": "正在提取...",
+        "currentField": "当前字段",
+        "extractedItems": "已提取项目"
+      },
+      "results": {
+        "title": "提取结果",
+        "count": "共提取 {count} 条数据",
+        "time": "用时 {time} 秒",
+        "export": "导出数据",
+        "new": "新建提取"
+      },
       "form": {
         "title": "模拟数据提取",
         "subtitle": "选择要提取的数据类型，体验PageMiner的智能提取功能",
@@ -450,6 +499,8 @@
     }
   },
   "video": {
+    "title": "视频演示",
+    "subtitle": "通过视频演示了解PageMiner的核心功能",
     "meta": {
       "title": "PageMiner 演示视频 - 观看智能数据提取演示",
       "description": "观看PageMiner的完整操作演示，了解智能网页数据提取的强大功能和使用方法。",
@@ -459,8 +510,6 @@
         "description": "观看PageMiner的完整操作演示，了解智能网页数据提取的强大功能和使用方法。"
       }
     },
-    "title": "🎥 PageMiner 演示视频",
-    "subtitle": "观看智能网页数据提取的完整操作演示，了解PageMiner如何让数据采集变得简单高效",
     "demo": {
       "title": "功能演示视频",
       "subtitle": "通过实际操作演示，了解PageMiner的完整工作流程",
@@ -468,7 +517,7 @@
       "noSupport": "您的浏览器不支持视频播放。",
       "loadError": "视频加载失败",
       "loadErrorDesc": "请检查视频文件是否存在或联系技术支持",
-      "contactSupport": "联系支持",
+      "contactSupport": "联系技术支持",
       "visual": {
         "title": "可视化选择",
         "description": "演示如何通过鼠标悬停和点击操作选择页面元素，系统自动高亮显示可选择的元素。"
@@ -487,24 +536,8 @@
       }
     },
     "overview": {
-      "title": "📋 视频内容概览",
-      "timeline": {
-        "0": "插件安装和基本界面介绍",
-        "1": "可视化元素选择演示",
-        "2": "智能规则配置和优化",
-        "3": "数据提取执行和进度监控",
-        "4": "结果查看、导出和管理",
-        "5": "高级功能和使用技巧"
-      },
-      "tip": "💡 提示"
-    },
-    "cta": {
-      "title": "准备好开始了吗？",
-      "subtitle": "观看完演示视频后，您可以：",
-      "tutorial": "查看使用教程",
-      "tutorialText": "查看使用教程",
-      "download": "立即下载插件",
-      "downloadText": "立即下载插件"
+      "tip": "💡 提示",
+      "description": "建议在观看视频的同时，打开function.html页面跟随操作，获得最佳学习效果。"
     }
   },
   "common": {

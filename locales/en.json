@@ -43,27 +43,33 @@
     "subtitle": "PageMiner provides a complete web data extraction solution",
     "visual": {
       "title": "Visual Selection",
-      "description": "Directly select data elements on webpages through mouse hover and click operations"
+      "description": "Directly select data elements on webpages through mouse hover and click operations",
+      "highlight": "No Coding Required"
     },
     "smart": {
       "title": "Smart Rule Generation",
-      "description": "Automatically analyze page structure and generate precise CSS selectors without manual coding"
+      "description": "Automatically analyze page structure and generate precise CSS selectors without manual coding",
+      "highlight": "AI Powered"
     },
     "auto": {
       "title": "Auto Execution",
-      "description": "Automatically execute data extraction on similar pages after configuration, greatly improving work efficiency"
+      "description": "Automatically execute data extraction on similar pages after configuration, greatly improving work efficiency",
+      "highlight": "24/7 Running"
     },
     "export": {
       "title": "Multiple Export Formats",
-      "description": "Support CSV, Excel, JSON and other formats, data can be directly used in analysis tools"
+      "description": "Support CSV, Excel, JSON and other formats, data can be directly used in analysis tools",
+      "highlight": "5+ Formats"
     },
     "storage": {
       "title": "Local Storage",
-      "description": "All data is saved locally by default, protecting your privacy and data security, supporting rule import and export"
+      "description": "All data is saved locally by default, protecting your privacy and data security, supporting rule import and export",
+      "highlight": "Privacy Protected"
     },
     "sync": {
       "title": "Cloud Sync",
-      "description": "Support cloud synchronization of rules and data, seamless collaboration across multiple devices"
+      "description": "Support cloud synchronization of rules and data, seamless collaboration across multiple devices",
+      "highlight": "Multi-Device Sync"
     }
   },
   "howItWorks": {
@@ -85,6 +91,13 @@
   "screenshots": {
     "title": "Interface Showcase",
     "subtitle": "Intuitive and user-friendly interface that makes data extraction simple",
+    "prevButton": "Previous",
+    "nextButton": "Next",
+    "indicator1": "Image 1",
+    "indicator2": "Image 2",
+    "indicator3": "Image 3",
+    "indicator4": "Image 4",
+    "indicator5": "Image 5",
     "main": {
       "title": "Plugin Main Interface",
       "description": "Clear functional layout, one-click data extraction startup"
@@ -108,35 +121,35 @@
   },
   "useCases": {
     "title": "Use Cases",
-    "subtitle": "Discover how PageMiner creates value across different industries",
+    "subtitle": "Tailored for different industries, making data collection simple and efficient",
     "ecommerce": {
       "title": "E-commerce Sellers",
-      "description": "Quickly extract competitor titles, prices, sales, reviews, and images, then export in bulk for product research and analysis.",
+      "description": "Quickly collect competitor titles, prices, sales, reviews and images, batch export for competitor analysis and product selection.",
       "applicable": "Applicable: Price monitoring, competitor analysis, product research"
     },
     "hr": {
-      "title": "Recruitment & Networking",
-      "description": "Collect job postings, candidate profiles, and LinkedIn contacts in bulk to boost hiring efficiency and talent sourcing speed.",
-      "applicable": "Applicable: Job listings, candidate database, talent analysis"
+      "title": "Recruitment/Networking",
+      "description": "Bulk collect LinkedIn/recruitment site info, extract candidate names, positions, companies, contact details, automatically organize into structured tables",
+      "applicable": "Applicable: Recruitment info, candidate database, talent analysis"
     },
     "research": {
-      "title": "Academic Research",
-      "description": "Automatically extract paper titles, authors, citation counts, and news articles to quickly build research databases.",
-      "applicable": "Applicable: Academic studies, trend analysis, data collection"
+      "title": "Academic/Research",
+      "description": "Bulk obtain public materials, extract article titles, abstracts, authors, citation counts from news/academic sites, directly import structured data into analysis tools.",
+      "applicable": "Applicable: Academic research, trend analysis, data collection"
     },
     "finance": {
-      "title": "Investment Analysis",
-      "description": "Extract company announcements, financial data, market news, and consumer trends to support faster investment decisions.",
+      "title": "Investment/Financial Analysis",
+      "description": "Collect company announcements, financial data, market news and consumption trends to facilitate rapid investment decisions.",
       "applicable": "Applicable: Stock monitoring, financial news, market analysis"
     },
     "local": {
-      "title": "Local Services",
-      "description": "Collect property listings, customer contact info, and yellow pages/review site data to quickly build customer databases.",
-      "applicable": "Applicable: Real estate agents, business leads, local services"
+      "title": "Local Life/Services",
+      "description": "Collect customer info, extract property site community info, prices, contacts, gather yellow pages/review site customer contacts, quickly build customer database",
+      "applicable": "Applicable: Real estate agents, business acquisition, local services"
     },
     "content": {
-      "title": "Content Creation",
-      "description": "Gather trending articles, titles, comments, and data to quickly find inspiration and hot topics for content creation.",
+      "title": "Content Creation/Media",
+      "description": "Auto collect materials, scrape trending articles, titles, image materials, extract high-frequency words/opinions from comments for topic reference, bulk collect competitor account data for comparison",
       "applicable": "Applicable: Content planning, trend tracking, user insights"
     }
   },
@@ -170,7 +183,7 @@
         "Cloud synchronization",
         "Advanced technical support",
         "Team collaboration features"
-      ],
+        ],
       "popular": "Most Popular",
       "cta": "Upgrade Now"
     },
@@ -215,7 +228,8 @@
       ],
       "stats": {
         "time": "hours development",
-        "difficulty": "technical barrier"
+        "difficulty": "technical barrier",
+        "difficultyValue": "High"
       }
     },
     "pageminer": {
@@ -230,7 +244,8 @@
       ],
       "stats": {
         "time": "minutes setup",
-        "difficulty": "technical barrier"
+        "difficulty": "technical barrier",
+        "difficultyValue": "Zero"
       }
     },
     "cta": "Try PageMiner Now"
@@ -350,7 +365,41 @@
     },
     "interactive": {
       "title": "🎮 Interactive Demo",
-      "subtitle": "Experience PageMiner's core features through simulated operations",
+      "subtitle": "Experience PageMiner's complete workflow",
+      "workflow": {
+        "step1": "Open Webpage",
+        "step2": "Select Elements",
+        "step3": "Configure Fields",
+        "step4": "Start Extraction",
+        "step5": "View Results"
+      },
+      "website": {
+        "title": "Demo E-commerce Website"
+      },
+      "panel": {
+        "title": "Extraction Configuration",
+        "status": {
+          "ready": "Ready",
+          "configuring": "Configuring",
+          "extracting": "Extracting",
+          "completed": "Completed"
+        },
+        "startExtraction": "Start Extraction",
+        "clearFields": "Clear Fields"
+      },
+      "progress": {
+        "title": "Extraction Progress",
+        "status": "Extracting...",
+        "currentField": "Current Field",
+        "extractedItems": "Extracted Items"
+      },
+      "results": {
+        "title": "Extraction Results",
+        "count": "Total {count} items extracted",
+        "time": "Time: {time} seconds",
+        "export": "Export Data",
+        "new": "New Extraction"
+      },
       "form": {
         "title": "Simulate Data Extraction",
         "subtitle": "Choose the data type to extract and experience PageMiner's intelligent extraction features",
@@ -451,6 +500,8 @@
     }
   },
   "video": {
+    "title": "Video Demo",
+    "subtitle": "Learn about PageMiner's core features through video demonstration",
     "meta": {
       "title": "PageMiner Demo Video - Watch Intelligent Data Extraction Demo",
       "description": "Watch the complete operation demo of PageMiner to understand the powerful features and usage methods of intelligent web data extraction.",
@@ -460,11 +511,9 @@
         "description": "Watch the complete operation demo of PageMiner to understand the powerful features and usage methods of intelligent web data extraction."
       }
     },
-    "title": "🎥 PageMiner Demo Video",
-    "subtitle": "Watch the complete demo of intelligent web data extraction to understand how PageMiner makes data collection simple and efficient",
     "demo": {
       "title": "Feature Demo Video",
-      "subtitle": "Understand PageMiner's complete workflow through actual operation demonstrations",
+      "subtitle": "Learn about PageMiner's complete workflow through actual operation demonstrations",
       "description": "This video demonstrates the complete usage process of the PageMiner plugin, including visual selection, intelligent rule generation, data extraction, and result management.",
       "noSupport": "Your browser does not support video playback.",
       "loadError": "Video Load Failed",
@@ -488,24 +537,8 @@
       }
     },
     "overview": {
-      "title": "📋 Video Content Overview",
-      "timeline": {
-        "0": "Plugin installation and basic interface introduction",
-        "1": "Visual element selection demonstration",
-        "2": "Smart rule configuration and optimization",
-        "3": "Data extraction execution and progress monitoring",
-        "4": "Result viewing, export and management",
-        "5": "Advanced features and usage tips"
-      },
-      "tip": "💡 Tip"
-    },
-    "cta": {
-      "title": "Ready to get started?",
-      "subtitle": "After watching the demo video, you can:",
-      "tutorial": "View Usage Tutorial",
-      "tutorialText": "View Usage Tutorial",
-      "download": "Download Plugin Now",
-      "downloadText": "Download Plugin Now"
+      "tip": "💡 Tip",
+      "description": "We recommend following along with the function.html page while watching the video for the best learning experience."
     }
   },
   "common": {
